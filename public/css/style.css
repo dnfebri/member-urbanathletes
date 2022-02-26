@@ -1,0 +1,8 @@
+@font-face {
+  font-family: AmpleSoft;
+  src: url('/fonts/AmpleSoft.OTF');
+}
+
+* {
+  font-family: AmpleSoft, Georgia, 'Times New Roman', Times, serif;
+}
