@@ -496,6 +496,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: 1rem;
   margin-right: 1rem;
 }
+.my-16 {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+.mx-8 {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
 .ml-1 {
   margin-left: 0.25rem;
 }
@@ -540,6 +548,18 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .hidden {
   display: none;
+}
+.aspect-video {
+  aspect-ratio: 16 / 9;
+}
+.aspect-\[4\/2\] {
+  aspect-ratio: 4 / 2;
+}
+.aspect-\[5\/2\] {
+  aspect-ratio: 5 / 2;
+}
+.aspect-\[6\/3\.3333\] {
+  aspect-ratio: 6 / 3.3333;
 }
 .h-5 {
   height: 1.25rem;
@@ -586,8 +606,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-8\/12 {
   width: 66.666667%;
 }
+.w-1\/5 {
+  width: 20%;
+}
 .max-w-6xl {
   max-width: 72rem;
+}
+.flex-none {
+  flex: none;
 }
 .cursor-pointer {
   cursor: pointer;
@@ -684,6 +710,24 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 1;
   background-color: rgb(250 204 21 / var(--tw-bg-opacity));
 }
+.bg-\[url\(\'\/image\/benner\/bg_content\.png\'\)\] {
+  background-image: url('/image/benner/bg_content.png');
+}
+.bg-cover {
+  background-size: cover;
+}
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.object-center {
+  -o-object-position: center;
+     object-position: center;
+}
+.object-top {
+  -o-object-position: top;
+     object-position: top;
+}
 .p-6 {
   padding: 1.5rem;
 }
@@ -739,6 +783,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-center {
   text-align: center;
 }
+.font-sans {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -763,11 +810,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-size: 8rem;
   line-height: 1;
 }
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
 .font-semibold {
   font-weight: 600;
 }
 .font-extrabold {
   font-weight: 800;
+}
+.font-black {
+  font-weight: 900;
 }
 .italic {
   font-style: italic;

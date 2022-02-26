@@ -22,16 +22,22 @@
   <title>Urban Athletes</title>
 </head>
 <body>
+  @empty($specialPage)
   <nav class="bg-green-ua">
     @include('layouts.navbar')
   </nav>
+  @endempty
+  
   {{-- <header>Header</header> --}}
   <main>
     @yield('content')
   </main>
+
+  @empty($specialPage)
   <footer>
     @include('layouts.footer')
   </footer>
+  @endempty
   <script src="{{ url('js/script.js') }}"></script>
 </body>
 </html>
