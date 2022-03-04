@@ -1373,6 +1373,21 @@ Ensure the default browser behavior of the `hidden` attribute.
     padding-right: 4rem;
   }
 
+  .md\:py-18 {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .md\:px-24 {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+
+  .md\:px-20 {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
   .md\:pl-0 {
     padding-left: 0px;
   }

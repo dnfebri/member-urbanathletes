@@ -82,7 +82,7 @@
   <div class="flex justify-center px-4 my-8">
     <img class="" src="{{ url('/image/content/price.png') }}" alt="price urban">
   </div>
-  <div class="text-white text-base px-6 my-8">
+  <div class="text-white text-base px-6 my-8 md:px-20">
     <p class="text-center">
       Program latihan dengan sistem yang lebih mudah dan hemat biaya. Mengajak Anda untuk lebih bugar dengan cara yang simple, efisien dan hemat Di klub Urban Athletes yang memiliki standar protokol kesehatan yang sesuai dengan ketentuan dari pemerintah, sehingga aman dan nyaman untuk Anda berolaraga.
     </p>
@@ -121,12 +121,12 @@
   </div>
   <div class="max-h-60 w-full aspect-auto bg-[url('/image/content/footer_bg.png')] bg-cover mt-20">
     <div class="flex flex-row">
-      <div class="basis-4/12 relative">
-        <div class="absolute bottom-0 left-0 lg:mr-32">
+      <div class="basis-4/12 md:basis-1/5 relative">
+        <div class="absolute bottom-0 left-0">
           <img class="h-40" src="/image/content/on_mask_treadmill.png" alt="rban Athletes">
         </div>
       </div>
-      <div class="basis-8/12 pl-8 py-4">
+      <div class="basis-8/12 px-4 py-4">
         <div class="text-center uppercase font-bold text-base">
           <p class="italic">
             Urban Athletes adalah Gym dengan Protokol
@@ -175,4 +175,22 @@
       keyboard: true,
     });
   </script>
+
+  <!-- Meta Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js%27');
+  fbq('init', '381650533339615');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=381650533339615&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 @endsection
