@@ -14,6 +14,7 @@ module.exports = {
         '18': '70px',
       },
       colors: {
+        'content-bg': '#222222',
         'green-ua': '#75923d',
         'gray-footer': '#322C31',
         'facebook': '#1877F2',

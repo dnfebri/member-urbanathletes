@@ -1,9 +1,9 @@
 <div class="container items-center justify-between flex flex-row w-full">
   <div class="flex flex-row w-full items-center my-4 justify-between lg:justify-start">
     <div class="pl-4 md:pl-0 w-28">
-      <img src="/image/Logo_Urban-2.png" alt="Urban Athletes" class="h-10">
+      <img src="{{ url('/image/Logo_Urban-2.png') }}" alt="Urban Athletes" class="h-10">
     </div>
-    <div class="">
+    <div class="font-semibold">
       <ul class="hidden lg:flex flex-row text-white text-sm text-shadow-xl">
         <li class="px-5 hover:text-yellow-500 text-shadow-xl"><a href="#">Home</a></li>
         <li class="px-5 hover:text-yellow-500"><a href="#">Abaut</a></li>
@@ -19,9 +19,11 @@
         <svg class="text-gray-800 h-6 w-6" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
-        <div class="menu-mobile absolute top-0 -right-full w-8/12 bg-white border group-focus:opacity-100 transition-all duration-300">
+
+        {{-- Menu Mobile --}}
+        <div class="hidden menu-mobile absolute top-0 -right-full w-8/12 bg-white border group-focus:opacity-100 transition-all duration-500 border-red-500">
           <div class="flex justify-end border-b-2 btn-close-menu mr-4">
-            <svg class="w-6 h-6 py-6 px-6 mx-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg class="w-12 h-12 my-3 mx-4 text-gray-500 hover:h-14 hover:w-14" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </div>
@@ -38,6 +40,7 @@
             <a href="#" class="px-4 py-2 rounded-md bg-yellow-400 hover:bg-yellow-500">Franchise Info</a>
           </div>
         </div>
+
       </button>
     </div>
   </div>
