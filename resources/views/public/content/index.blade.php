@@ -24,7 +24,7 @@
           TAKUT MAHAL</span> <br>
           GAK WORRY COVID
         </h3>
-        <a class="py-2 px-4 rounded-full bg-red-600 text-white text-2xl" href="#">
+        <a class="py-2 px-4 rounded-full bg-red-600 text-white text-2xl" href="https://wa.link/9tenk0" target="_blank">
           Daftar Sekarang!
         </a>
       </div>
@@ -133,20 +133,14 @@
             Covid-19 pertama dan terjamin di Surabaya
           </p>
           <p class="italic mb-4">#buildingabetteryou</p>
-          <a class="py-2 px-2 rounded-full bg-red-600 text-white text-xl" href="#">Daftar sekarang</a>
+          <a class="py-2 px-2 rounded-full bg-red-600 text-white text-xl" href="https://wa.link/9tenk0" target="_blank">
+            Daftar sekarang
+          </a>
         </div>
       </div>
     </div>
   </div>
 
-
-  {{-- <div class="w-full bg-gray-600 text-white text-center mb-8">
-    <h3 class="text-7xl font-extrabold my-4 pt-8">TITLE HERE</h3>
-    <P class="text-5xl mx-8 pb-16">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt qui in sed velit. Molestiae magnam commodi, culpa voluptas consequuntur consectetur labore temporibus. Omnis, quia.
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam ratione, est dolores culpa soluta itaque! Laborum consequatur placeat facere aperiam!
-    </P>
-  </div> --}}
 </div>
 
   <!-- Swiper JS -->
