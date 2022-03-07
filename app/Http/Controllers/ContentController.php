@@ -10,5 +10,6 @@ class ContentController extends Controller
     {
         // echo "hello word";
         return view("public/content/index");
+        // return view("public/content/tes");
     }
 }
