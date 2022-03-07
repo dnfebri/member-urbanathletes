@@ -546,6 +546,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .ml-8 {
   margin-left: 2rem;
 }
+.mb-12 {
+  margin-bottom: 3rem;
+}
 .mb-8 {
   margin-bottom: 2rem;
 }
@@ -554,6 +557,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .mt-20 {
   margin-top: 5rem;
+}
+.mb-3 {
+  margin-bottom: 0.75rem;
 }
 .block {
   display: block;
@@ -647,6 +653,24 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .basis-8\/12 {
   flex-basis: 66.666667%;
+}
+@-webkit-keyframes ping {
+
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+@keyframes ping {
+
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+.animate-ping {
+  -webkit-animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+          animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
 .cursor-pointer {
   cursor: pointer;
@@ -1054,6 +1078,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .hover\:bg-yellow-500:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(234 179 8 / var(--tw-bg-opacity));
+}
+.hover\:text-3xl:hover {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+.hover\:text-2xl:hover {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 .hover\:text-white:hover {
   --tw-text-opacity: 1;

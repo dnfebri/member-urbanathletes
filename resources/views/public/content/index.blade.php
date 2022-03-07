@@ -18,15 +18,20 @@
       <div class="absolute bottom-0 right-0 lg:mr-32">
         <img class="w-40" src="/image/benner/Mis_UN.png" alt="Mis UN">
       </div>
-      <div class="mx-8 lg:pl-32 z-10">
+      <div class="mx-8 mb-12 lg:pl-32 z-10">
         <h3 class="text-white text-4xl font-black font-sans my-4">
           <span class="text-black font-black font-sans">NGE-GYM GAK <br>
           TAKUT MAHAL</span> <br>
           GAK WORRY COVID
         </h3>
-        <a class="py-2 px-4 rounded-full bg-red-600 text-white text-2xl" href="https://wa.link/9tenk0" target="_blank">
-          Daftar Sekarang!
-        </a>
+        <div class="flex items-center justify-center absolute">
+          <span class="animate-ping py-2 px-4 absolute rounded-full bg-red-600 text-red-600 text-sm">
+            Daftar Sekarang!
+          </span>
+          <a class="relative py-2 px-4 rounded-full bg-red-600 text-white text-2xl hover:text-3xl transition-all duration-500" href="https://wa.link/9tenk0" target="_blank">
+            Daftar Sekarang!
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -75,9 +80,16 @@
       MAKA KAMI PUNYA SOLUSINYA!
     </h2>
   </div>
-  <div class="container content-center items-center px-16 py-4">
+  {{-- <div class="container content-center items-center px-16 py-4">
     <iframe class="aspect-video w-full" src="https://www.youtube.com/embed/5Lkfik0qtsk?autoplay=1&mute=1">
     </iframe>
+  </div> --}}
+  <div class="container content-center items-center px-16 py-4">
+    {{-- <video class="aspect-video w-full" src="{{ url('/video/content1.MP4') }}"></video> --}}
+    <video class="aspect-video w-full" controls autoplay loop muted preload="metadata">
+      <source src="{{ url('/video/content1.mp4') }}" type="video/mp4">
+      {{-- <source src="movie.ogg" type="video/ogg"> --}}
+    </video>
   </div>
   <div class="flex justify-center px-4 my-8">
     <img class="" src="{{ url('/image/content/price.png') }}" alt="price urban">
@@ -127,15 +139,23 @@
         </div>
       </div>
       <div class="basis-8/12 px-4 py-4">
-        <div class="text-center uppercase font-bold text-base">
+        <div class="text-center uppercase font-bold items-center text-base">
           <p class="italic">
             Urban Athletes adalah Gym dengan Protokol
             Covid-19 pertama dan terjamin di Surabaya
           </p>
-          <p class="italic mb-4">#buildingabetteryou</p>
-          <a class="py-2 px-2 rounded-full bg-red-600 text-white text-xl" href="https://wa.link/9tenk0" target="_blank">
+          <p class="italic mb-3">#buildingabetteryou</p>
+          {{-- <a class="py-2 px-2 rounded-full bg-red-600 text-white text-xl" href="https://wa.link/9tenk0" target="_blank">
             Daftar sekarang
-          </a>
+          </a> --}}
+          <div class="flex items-center justify-center">
+            <span class="animate-ping py-2 px-4 absolute rounded-full bg-red-600 text-red-600 text-sm">
+              Daftar Sekarang!
+            </span>
+            <a class="relative py-2 px-4 rounded-full bg-red-600 text-white text-xl hover:text-2xl transition-all duration-500" href="https://wa.link/9tenk0" target="_blank">
+              Daftar Sekarang!
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -186,5 +206,5 @@
   src="https://www.facebook.com/tr?id=289229666586307&ev=PageView&noscript=1"
   /></noscript>
   <!-- End Meta Pixel Code -->
-  
+
 @endsection
