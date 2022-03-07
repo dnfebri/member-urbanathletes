@@ -80,16 +80,14 @@
       MAKA KAMI PUNYA SOLUSINYA!
     </h2>
   </div>
-  {{-- <div class="container content-center items-center px-16 py-4">
-    <iframe class="aspect-video w-full" src="https://www.youtube.com/embed/5Lkfik0qtsk?autoplay=1&mute=1">
-    </iframe>
-  </div> --}}
   <div class="container content-center items-center px-16 py-4">
-    {{-- <video class="aspect-video w-full" src="{{ url('/video/content1.MP4') }}"></video> --}}
-    <video class="aspect-video w-full" controls autoplay loop muted preload="metadata">
+    <iframe class="aspect-video w-full" src="https://www.youtube.com/embed/oO6tBg38hRk?playlist=oO6tBg38hRk&loop=1">
+    </iframe>
+  </div>
+  <div class="container content-center items-center px-16 py-4">
+    {{-- <video class="aspect-video w-full" controls autoplay loop muted preload="metadata">
       <source src="{{ url('/video/content1.mp4') }}" type="video/mp4">
-      {{-- <source src="movie.ogg" type="video/ogg"> --}}
-    </video>
+    </video> --}}
   </div>
   <div class="flex justify-center px-4 my-8">
     <img class="" src="{{ url('/image/content/price.png') }}" alt="price urban">
