@@ -22,6 +22,9 @@ module.exports = {
         'youtube': '#FF0000',
       },
     },
+    fontFamily: {
+      'Futura': ['Futura', 'AmpleSoft', 'sans-serif'],
+    }
   },
   variants:{
     extend: {

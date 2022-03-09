@@ -20,11 +20,11 @@
       </div>
       <div class="pb-4 w-full flex aspect-auto bg-[url('/image/benner/bg_content.png')] bg-cover">
         <div class="absolute bottom-0 right-0 lg:mr-32">
-          <img class="w-40" src="/image/benner/Mis_UN.png" alt="Mis UN">
+          <img class="w-40 lg:w-52" src="/image/benner/Mis_UN.png" alt="Mis UN">
         </div>
         <div class="mx-8 mb-12 lg:pl-32 z-10">
-          <h3 class="text-white text-4xl font-black font-sans my-4">
-            <span class="text-black font-black font-sans">NGE-GYM GAK <br>
+          <h3 class="text-white text-2xl md:text-4xl font-[1000] font-Futura tracking-widest my-4 lg:text-5xl italic">
+            <span class="text-black font-Futura tracking-widest">NGE-GYM GAK <br>
             TAKUT MAHAL</span> <br>
             GAK WORRY COVID
           </h3>
@@ -41,7 +41,7 @@
     </div>
     <div class="container px-4 md:px-16">
       <div class="flex justify-center items-center my-4">
-        <h2 class="text-white text-xl text-center font-bold italic">ANDA MASIH TAKUT OLAHRAGA DI GYM?</h2>
+        <h2 class="text-white text-lg md:text-3xl text-center font-bold font-Futura tracking-wider italic">ANDA MASIH TAKUT OLAHRAGA DI GYM?</h2>
       </div>
       {{-- <div class="flex justify-center items-center mb-8 px-16"> --}}
       <div class="flex justify-center items-center">
@@ -52,7 +52,7 @@
       </div>
       <div class="bg-white border-t-2 border-white mt-4"></div>
       <div class="my-8">
-        <h2 class="text-white text-xl text-center font-bold italic">MUNGKINKAH ALASAN ANDA SALAH SATU DI BAWAH INI?</h2>
+        <h2 class="text-white text-lg text-center font-bold font-Futura italic">MUNGKINKAH ALASAN ANDA SALAH SATU DI BAWAH INI?</h2>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
         <div class="border-[3px] border-gray-200 p-2 flex items-center">
@@ -64,7 +64,7 @@
           <p class="text-white">Terikat KONTRAK Tahunan</p>
         </div>
         <div class="border-[3px] border-gray-200 p-2 flex items-center">
-          <img class="w-16 mx-4" src="{{ url('/image/icon/card_icon.jpg') }}" alt="">
+          <img class="w-16 mx-4" src="{{ url('/image/icon/card_icon.png') }}" alt="">
           <p class="text-white">Pembayaran yang Ribet</p>
         </div>
         <div class="border-[3px] border-gray-200 p-2 flex items-center">
@@ -74,12 +74,12 @@
       </div>
     </div>
     <div class="my-8 w-full aspect-auto bg-[url('/image/content/heading_bg.png')] bg-cover">
-      <h2 class="text-black text-xl md:text-3xl text-center font-black py-4">
+      <h2 class="text-black text-xl md:text-3xl text-center font-black py-4 font-Futura italic tracking-tighter">
         JIKA JAWABAN ANDA ADALAH "IYA" <br>
         MAKA KAMI PUNYA SOLUSINYA!
       </h2>
     </div>
-    <div class="container content-center items-center px-16 py-4">
+    <div class="container content-center items-center lg:px-16 py-4">
       <iframe class="aspect-video w-full" src="https://www.youtube.com/embed/oO6tBg38hRk?playlist=oO6tBg38hRk&loop=1">
       </iframe>
     </div>
@@ -91,7 +91,7 @@
     <div class="flex justify-center px-4 my-8">
       <img class="" src="{{ url('/image/content/price.png') }}" alt="price urban">
     </div>
-    <div class="text-white text-base px-6 my-8 md:px-20">
+    <div class="text-white px-4 my-8 md:px-20">
       <p class="text-center">
         Program latihan dengan sistem yang lebih mudah dan hemat biaya. Mengajak Anda untuk lebih bugar dengan cara yang simple, efisien dan hemat Di klub Urban Athletes yang memiliki standar protokol kesehatan yang sesuai dengan ketentuan dari pemerintah, sehingga aman dan nyaman untuk Anda berolaraga.
       </p>
@@ -127,6 +127,18 @@
           <p class="my-4"><i class="fa-solid fa-circle-check text-yellow-500"></i><span class="ml-3">Bebas memilih kelas yang diinginkan</span></p>
         </div>
       </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-4 mx-4 overflow-hidden">
+        <div class="w-full">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.577095637042!2d112.74339441420463!3d-7.288861973662437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fbb8ce4cea55%3A0x6ab0a79c0d2c9cb2!2sUrban%20Athletes%20Marvell%20City%20Mall!5e0!3m2!1sid!2sid!4v1646752301629!5m2!1sid!2sid" class="w-full h-72" width="" height="" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div>
+          <h3 class="text-xl">Jam Operasional Urban Athletes Marvell City Mall</h3>
+          <p class="pt-4"><i class="fa-solid fa-clock text-yellow-500"></i><span class="ml-3">Senin - Jumat</span></p>
+          <p class="indent-4 ml-3">15.00 - 21.00 WIB</p>
+          <p class="pt-4"><i class="fa-solid fa-clock text-yellow-500"></i><span class="ml-3">Sabtu -  Minggu</span></p>
+          <p class="indent-4 ml-3">09.00 - 15.00 WIB</p>
+          </div>
+      </div>
     </div>
     <div class="max-h-60 w-full aspect-auto bg-[url('/image/content/footer_bg.png')] bg-cover mt-20">
       <div class="flex flex-row">
@@ -137,11 +149,11 @@
         </div>
         <div class="basis-8/12 px-4 py-4">
           <div class="text-center uppercase font-bold items-center text-base">
-            <p class="italic">
+            <p class="italic font-Futura">
               Urban Athletes adalah Gym dengan Protokol
               Covid-19 pertama dan terjamin di Surabaya
             </p>
-            <p class="italic mb-3">#buildingabetteryou</p>
+            <p class="font-Futura italic mb-3">#buildingabetteryou</p>
             <div class="flex items-center justify-center">
               <span class="animate-ping py-2 px-4 absolute rounded-full bg-red-600 text-red-600 text-sm">
                 Daftar Sekarang!

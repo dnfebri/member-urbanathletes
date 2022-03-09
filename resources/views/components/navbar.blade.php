@@ -3,7 +3,7 @@
     <div class="pl-4 md:pl-0 w-28">
       <img src="{{ url('/image/Logo_Urban-2.png') }}" alt="Urban Athletes" class="h-10">
     </div>
-    <div class="font-semibold">
+    <div class="font-bold">
       <ul class="hidden lg:flex flex-row text-white text-sm text-shadow-xl">
         <li class="px-5 hover:text-yellow-500 text-shadow-xl"><a href="#">Home</a></li>
         <li class="px-5 hover:text-yellow-500"><a href="#">Abaut</a></li>
