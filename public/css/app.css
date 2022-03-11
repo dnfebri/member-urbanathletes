@@ -657,6 +657,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .basis-8\/12 {
   flex-basis: 66.666667%;
 }
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
 @-webkit-keyframes ping {
 
   75%, 100% {
@@ -874,6 +877,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .indent-4 {
   text-indent: 1rem;
 }
+.font-AmpleSoft {
+  font-family: AmpleSoft, sans-serif;
+}
 .font-Futura {
   font-family: Futura, AmpleSoft, sans-serif;
 }
@@ -1039,6 +1045,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-shadow-color: #FF0000;
   --tw-shadow: var(--tw-shadow-colored);
 }
+.outline {
+  outline-style: solid;
+}
+.transition {
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
 .transition-all {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1193,11 +1209,24 @@ Ensure the default browser behavior of the `hidden` attribute.
   .sm\:text-right {
     text-align: right;
   }
+
+  .sm\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
 }
 @media (min-width: 768px) {
 
+  .md\:ml-8 {
+    margin-left: 2rem;
+  }
+
   .md\:grid {
     display: grid;
+  }
+
+  .md\:h-12 {
+    height: 3rem;
   }
 
   .md\:w-1\/3 {
@@ -1248,6 +1277,11 @@ Ensure the default browser behavior of the `hidden` attribute.
     padding-left: 0px;
   }
 
+  .md\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
   .md\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
@@ -1261,6 +1295,15 @@ Ensure the default browser behavior of the `hidden` attribute.
   .md\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
+  }
+
+  .md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .md\:tracking-\[\.55em\] {
+    letter-spacing: .55em;
   }
 }
 @media (min-width: 1024px) {
@@ -1310,5 +1353,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   .lg\:text-5xl {
     font-size: 3rem;
     line-height: 1;
+  }
+
+  .lg\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }

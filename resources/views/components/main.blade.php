@@ -9,11 +9,11 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="{{ url('/fontawesome/css/all.min.css') }}">
   
-  @stack('styles')
+  @stack('style')
 
   <title>Urban Athletes</title>
 </head>
-<body>
+<body class="font-AmpleSoft">
   {{-- @dd($specialPage) --}}
   @empty($specialPage)
   <nav class="bg-green-ua">
@@ -32,7 +32,7 @@
   </footer>
   @endempty
 
-  @stack('scripts')
+  @stack('script')
   <script src="{{ url('/js/script.js') }}"></script>
 </body>
 </html>

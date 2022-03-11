@@ -24,6 +24,7 @@ module.exports = {
     },
     fontFamily: {
       'Futura': ['Futura', 'AmpleSoft', 'sans-serif'],
+      'AmpleSoft': ['AmpleSoft', 'sans-serif'],
     }
   },
   variants:{

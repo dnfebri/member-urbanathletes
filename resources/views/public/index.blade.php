@@ -1,5 +1,5 @@
 <x-main>
-  @push('styles')
+  @push('style')
     {{-- Swiper JS --}}
     {{-- <link rel="stylesheet" href="{{ url('swiper/js/swiper-bundle.min.css') }}"> --}}
     <link rel="stylesheet" href="{{ url('https://unpkg.com/swiper@8/swiper-bundle.min.css')}}"/>
@@ -56,7 +56,7 @@
     </div>
   </div>
   
-  @push('scripts')
+  @push('script')
     {{-- Swiper JS --}}
     {{-- <script src="{{ url('swiper/js/swiper-bundle.min.js') }}"></script> --}}
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
