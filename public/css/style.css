@@ -1,13 +1,13 @@
 @font-face {
   font-family: AmpleSoft;
-  /* src: url('/fonts/AmpleSoft.otf'); */
-  src: url("//db.onlinewebfonts.com/t/1ee0ba672e34b9d65f2388e7dc3506eb.eot"); 
+  src: url('/fonts/AmpleSoft.OTF');
+  /* src: url("//db.onlinewebfonts.com/t/1ee0ba672e34b9d65f2388e7dc3506eb.eot"); 
   src: url("//db.onlinewebfonts.com/t/1ee0ba672e34b9d65f2388e7dc3506eb.eot?#iefix") format("embedded-opentype"), 
   url("//db.onlinewebfonts.com/t/1ee0ba672e34b9d65f2388e7dc3506eb.woff2") format("woff2"), 
   url("//db.onlinewebfonts.com/t/1ee0ba672e34b9d65f2388e7dc3506eb.woff") format("woff"), 
   url("//db.onlinewebfonts.com/t/1ee0ba672e34b9d65f2388e7dc3506eb.ttf") format("truetype"), 
   url("//db.onlinewebfonts.com/t/1ee0ba672e34b9d65f2388e7dc3506eb.svg#AmpleSoftW00-Light") 
-  format("svg"); 
+  format("svg");  */
 }
 @font-face{
   font-family: Futura;
