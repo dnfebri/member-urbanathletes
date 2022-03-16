@@ -78,7 +78,7 @@
             <span class="animate-ping py-2 px-4 absolute rounded-full bg-red-600 text-red-600 text-sm">
               Daftar Sekarang!
             </span>
-            <a class="relative py-2 px-4 rounded-full bg-red-600 text-white text-2xl hover:text-3xl transition-all duration-500" href="https://wa.link/9tenk0" target="_blank">
+            <a class="relative py-2 px-4 rounded-full bg-red-600 text-white text-2xl hover:text-3xl transition-all duration-500" href="{{ route('daftar.gym') }}">
               Daftar Sekarang!
             </a>
           </div>
