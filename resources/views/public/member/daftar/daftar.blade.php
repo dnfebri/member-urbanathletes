@@ -3,10 +3,15 @@
     <div class="rounded-xl bg-gray-100 w-full mx-8">
       <form action="{{ route('daftar.store') }}" method="post">
         @csrf
-        <input type="hidden" name="kode" value="UA{{ time() }}">
         <div class="flex justify-center border-b my-4 pb-4">
           <h2 class="text-3xl font-Futura">Daftar form GYM</h2>
         </div>
+        <input type="hidden" name="kode" value="UA{{ time() }}">
+        @error('kode')
+          <div id="kode" class="text-sm text-red-500">
+              {{ $message }}
+          </div>
+        @enderror
         <div class="flex-none ">
           <label class="block mx-4 my-4">
             <span class="">Nama Lengkap</span>
