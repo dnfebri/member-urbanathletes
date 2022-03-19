@@ -7,7 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class SendEmail extends Mailable
+class SendEmailConfirm extends Mailable
 {
     public $dataEmail;
     use Queueable, SerializesModels;
@@ -29,8 +29,7 @@ class SendEmail extends Mailable
      */
     public function build()
     {
-        // dd($this->dataEmail);
-        return $this->subject('Hai '. $this->dataEmail->nama . ', Pesanan Anda Sebentar Lagi Kami Proses')
-                    ->view('email.isi_email');
+        return $this->subject('Hai '. $this->dataEmail->nama . ', Pesanan Anda Kami Proses')
+                    ->view('email.isi_email_confirm');
     }
 }

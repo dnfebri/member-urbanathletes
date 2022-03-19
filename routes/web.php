@@ -11,6 +11,7 @@ Route::get('/', [ContentController::class, 'index'])->name('content');
 Route::get('/content', [PublicController::class, 'home']);
 
 Route::prefix('daftar')->name('daftar.')->group(function () {
+  // Route::get('', [PublicController::class, 'daftar'])->name('gym');
   Route::get('/gym', [PublicController::class, 'daftar'])->name('gym');
   Route::get('/send/{kode}', [PublicController::class, 'daftarSend'])->name('send');
   Route::get('/confirm/success', [PublicController::class, 'daftarConfirmSuccess'])->name('confirmSuccess');
@@ -21,7 +22,7 @@ Route::prefix('daftar')->name('daftar.')->group(function () {
 
 });
 
-Route::get('/isiemail', function () { return view('isi_email');});
+Route::get('/isiemail', function () { return view('email.isi_email');});
 // Route::get('/member', function () {
 //   return view('public/member/join');
 // });

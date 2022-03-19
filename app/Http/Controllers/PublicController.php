@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Mail\SendEmail;
+use App\Mail\SendEmailConfirm;
 use App\Models\Invoice;
 use App\Models\Join;
 use Illuminate\Http\Request;
@@ -95,8 +96,9 @@ class PublicController extends Controller
             [
                 // 'kode' => 'required',
                 // 'nama' => 'required',
-                'nominal' => ['required', 'numeric'],
                 'club' => 'required',
+                'tanggal' => 'required',
+                'nominal' => ['required', 'numeric'],
                 'image' => 'required|image|mimes:jpeg,png,jpg|max:2048'
             ],
             [
@@ -110,16 +112,21 @@ class PublicController extends Controller
         Invoice::where('kode', $request->kode)
                     ->update([
                         'club' => $request->club,
+                        'tanggal' => $request->tanggal,
                         'harga' => $request->nominal,
-                        'image' => $namaImage,
+                        'image' => '/' . $namaImage,
                     ]);
         
+        $dataEmail = DB::table('invoices')
+                    ->join('joins', 'invoices.join_id', '=', 'joins.id')
+                    ->where('kode', $request->kode)->first();
+        Mail::to( $request->email )->send(new SendEmailConfirm($dataEmail));
         // return redirect()->route('daftar.confirmSuccess');
         return view('public.ini');
     }
 
     public function daftarConfirmSuccess()
     {
-        dump('Success');
+        return view("public/member/daftar/confirm_success");
     }
 }

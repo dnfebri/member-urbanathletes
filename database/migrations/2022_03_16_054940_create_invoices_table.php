@@ -19,8 +19,9 @@ return new class extends Migration
             $table->integer('join_id');
             $table->integer('club')->nullable();
             $table->integer('harga');
+            $table->date('tanggal')->nullable();
             $table->integer('status');
-            $table->string('image')->default('default-img.png');
+            $table->string('image')->default('/default-img.png');
             $table->timestamps();
         });
     }
