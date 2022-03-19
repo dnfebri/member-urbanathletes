@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\ContentController;
 use App\Http\Controllers\PublicController;
-use Illuminate\Support\Facades\Auth;
+// use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 
@@ -26,6 +26,6 @@ Route::get('/isiemail', function () { return view('email.isi_email');});
 // Route::get('/member', function () {
 //   return view('public/member/join');
 // });
-Auth::routes();
+// Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
