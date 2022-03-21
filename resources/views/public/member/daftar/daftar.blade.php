@@ -62,8 +62,36 @@
         </label>
       </div>
       <div class="flex justify-end my-4">
-        <button class="bg-green-500 py-2 px-6 rounded-lg mx-4 text-white text-lg">Kirim</button>
+        <button id="btn-submit" class="bg-green-500 py-2 px-6 rounded-lg mx-4 text-white text-lg" type="submit">Kirim</button>
+        <span id="btn-disabled" class="hidden">
+          <button class="flex items-center bg-green-500 opacity-80 py-2 px-2 mx-4 rounded-lg text-white text-lg" disabled>
+            <img class="w-7 h-7" src="{{ url('/image/icon/Loading-white.svg') }}" alt="Urban Athletes"/> 
+            Proses...
+          </button>
+        </span>
+      </div>
+      <div class="border-t my-4 pb-4">
+        <ul class="my-4 mx-4">
+          <li>
+            <a href="#" class="text-blue-500 underline">Cek Invoice</a>
+          </li>
+          <li>
+            <a href="#" class="text-blue-500 underline">Lupa Invoice saya!</a>
+          </li>
+        </ul>
       </div>
     </form>
   </x-layout_card_form>
+
+  @push('script')
+    <script>
+      const btnSubmid = document.getElementById('btn-submit');
+      // console.log(btnSubmid);
+      btnSubmid.addEventListener("click", function (e) {
+        const btnDisabled = document.getElementById('btn-disabled');
+        btnDisabled.classList.toggle("hidden");
+        btnSubmid.classList.toggle("hidden");
+      });
+    </script>
+  @endpush
 </x-main>

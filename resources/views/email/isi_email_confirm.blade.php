@@ -93,7 +93,11 @@
       </tr>
       <tr>
         <td>Club Yang di Pilih</td>
-        <td>: (UA Merr, UA Tidar, UA Marvell, UA Lenmarc, All Club)</td>
+        @foreach ($clubs['rows'] as $club)
+          @if ( $dataEmail->club == $club['id'] )
+          <td>: {{ $club['name'] }}</td>
+          @endif
+        @endforeach
       </tr>
     </table>
     <p>Silahkan segera lakukan pembayaran ke salah satu rekening di bawah ini :</p>
@@ -133,7 +137,7 @@
           display:inline-block;border-radius:20px;background-color:#33ff00;color:#fff;
           font-family:San,'Open Sans',Helvetica,Arial,sans-serif;font-size:24px;font-weight:500;margin:16px 0 0;box-sizing:border-box;padding-left: 3rem;padding-right: 3rem;
         ">
-        konfirm Pembarayan
+        Success
       </a>
       <p>Alternatif Link :</p>
       <a target="_blank"

@@ -133,7 +133,7 @@
           display:inline-block;border-radius:20px;background-color:#33ff00;color:#fff;
           font-family:San,'Open Sans',Helvetica,Arial,sans-serif;font-size:24px;font-weight:500;margin:16px 0 0;box-sizing:border-box;padding-left: 3rem;padding-right: 3rem;
         ">
-        Success
+        konfirm Pembarayan
       </a>
       <p>Alternatif Link :</p>
       <a target="_blank"

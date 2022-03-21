@@ -117,12 +117,13 @@ class PublicController extends Controller
                         'image' => '/' . $namaImage,
                     ]);
         
+        $clubs = $this->apiClubs->json('data');
         $dataEmail = DB::table('invoices')
                     ->join('joins', 'invoices.join_id', '=', 'joins.id')
                     ->where('kode', $request->kode)->first();
-        Mail::to( $request->email )->send(new SendEmailConfirm($dataEmail));
-        // return redirect()->route('daftar.confirmSuccess');
-        return view('public.ini');
+        Mail::to( $request->email )->send(new SendEmailConfirm($dataEmail, $clubs));
+        return redirect()->route('daftar.confirmSuccess');
+        // return view('public.ini');
     }
 
     public function daftarConfirmSuccess()

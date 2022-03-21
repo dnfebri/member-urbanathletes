@@ -22,7 +22,7 @@ Route::prefix('daftar')->name('daftar.')->group(function () {
 
 });
 
-Route::get('/isiemail', function () { return view('email.isi_email');});
+Route::get('/isiemail', function () { return view('email.isi_email_confirm');});
 // Route::get('/member', function () {
 //   return view('public/member/join');
 // });
