@@ -10,6 +10,7 @@ use Illuminate\Queue\SerializesModels;
 class SendEmailConfirm extends Mailable
 {
     public $dataEmail;
+    public $clubs;
     use Queueable, SerializesModels;
 
     /**
@@ -17,9 +18,10 @@ class SendEmailConfirm extends Mailable
      *
      * @return void
      */
-    public function __construct($dataEmail)
+    public function __construct($dataEmail, $clubs)
     {
         $this->dataEmail = $dataEmail;
+        $this->clubs = $clubs;
     }
 
     /**
