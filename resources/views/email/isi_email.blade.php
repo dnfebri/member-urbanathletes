@@ -76,10 +76,9 @@
   </div>
 </body>
 </html> --}}
-
 <div style="margin: auto; width: 80%; border: 3px dashed #000; padding: 10px">
   <div>
-    <h2>Hallo Nama</h2>
+    <h2>Hallo {{$dataEmail->nama}}</h2>
     <p>Pesanan Anda telah kami terima dan dalam beberap saat lagi akan segera kami proses.</p>
     <p>Berikut rincian pesanan Anda :</p>
     <table style="width: 100%; line-height: 2">
@@ -93,7 +92,11 @@
       </tr>
       <tr>
         <td>Club Yang di Pilih</td>
-        <td>: (UA Merr, UA Tidar, UA Marvell, UA Lenmarc, All Club)</td>
+        @foreach ( $clubs as $club )
+          @if ($club['id'] == $dataEmail->club)
+            <td>: {{$club['name']}}</td>
+          @endif
+        @endforeach
       </tr>
     </table>
     <p>Silahkan segera lakukan pembayaran ke salah satu rekening di bawah ini :</p>
@@ -104,11 +107,11 @@
       </tr>
       <tr>
         <td>Nomer Rekening</td>
-        <td>:</td>
+        <td>: {{$clubData->bca}}</td>
       </tr>
       <tr>
         <td>Atas Nama</td>
-        <td>: </td>
+        <td>: {{$clubData->an_rek}}</td>
       </tr>
     </table>
     <table>
@@ -118,11 +121,11 @@
       </tr>
       <tr>
         <td>Nomer Rekening</td>
-        <td>:</td>
+        <td>: {{$clubData->mandiri}}</td>
       </tr>
       <tr>
         <td>Atas Nama</td>
-        <td>: </td>
+        <td>: {{$clubData->an_rek}}</td>
       </tr>
     </table>
 
@@ -133,7 +136,7 @@
           display:inline-block;border-radius:20px;background-color:#33ff00;color:#fff;
           font-family:San,'Open Sans',Helvetica,Arial,sans-serif;font-size:24px;font-weight:500;margin:16px 0 0;box-sizing:border-box;padding-left: 3rem;padding-right: 3rem;
         ">
-        konfirm Pembarayan
+        konfirm Pembayaran
       </a>
       <p>Alternatif Link :</p>
       <a target="_blank"

@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\ClubData;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -15,5 +16,46 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // \App\Models\User::factory(10)->create();
+        $clubData = [
+            [   // Merr
+                'club_id' => '2',
+                'email' => 'cs.urbanfitgwmerr@gmail.com',
+                'nowa' => '628113343168',
+                'an_rek' => 'Mitra Sentral Indonesia',
+                'bca' => '885-806-061',
+                'mandiri' => '140-00-789987-89',
+                
+            ],
+            [   // Marvell
+                'club_id' => '3',
+                'email' => 'cs.urbancrossfitmarvell@gmail.com',
+                'nowa' => '628113443168',
+                'an_rek' => 'Urbanfit Valdixon Indonesi',
+                'bca' => '889-901-979',
+                'mandiri' => '140-00-002219-79',
+                
+            ],
+            [   // Tidat
+                'club_id' => '4',
+                'email' => 'cs.urbanathletestidar@gmail.com',
+                'nowa' => '628113432168',
+                'an_rek' => 'Mitra Sentral Indonesiai',
+                'bca' => '885-856-808',
+                'mandiri' => '140-00-555988-83',
+                
+            ],
+            [   // Lenmarc
+                'club_id' => '5', 
+                'email' => 'cs.urbanathleteslenmarc@gmail.com',
+                'nowa' => '628113302168',
+                'an_rek' => 'VALDIXON SUKSES BERSAMA',
+                'bca' => '258-88319-79',
+                'mandiri' => '140-00-8777-197',
+                
+            ],
+        ];
+        foreach($clubData as $data) {
+            ClubData::create($data);
+        }
     }
 }

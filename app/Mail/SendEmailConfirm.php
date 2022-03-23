@@ -2,6 +2,7 @@
 
 namespace App\Mail;
 
+use App\Models\ClubData;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
@@ -31,7 +32,8 @@ class SendEmailConfirm extends Mailable
      */
     public function build()
     {
-        return $this->subject('Hai '. $this->dataEmail->nama . ', Pesanan Anda Kami Proses')
-                    ->view('email.isi_email_confirm');
+        $clubData = ClubData::where('club_id', $this->dataEmail->club)->first();
+        return $this->subject('Konfirmasi Pembayaran Telah Terkirim.')
+                    ->view('email.isi_email_confirm', compact('clubData'));
     }
 }

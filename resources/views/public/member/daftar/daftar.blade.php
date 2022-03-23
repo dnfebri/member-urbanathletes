@@ -13,6 +13,26 @@
       @enderror
       <div class="flex-none ">
         <label class="block mx-4 my-4">
+          <span class="">Club</span>
+          <select name="club" id="club" class="block border-0 border-b-2 w-full focus:border-black @error('nominal') border-red-300 @enderror">
+            <option value="" >Select club</option> 
+            @foreach ($clubs['rows'] as $club)
+              @if ( $club['id'] != '1' && $club['id'] != '6' )
+                @if ( old('club') == $club['id'] )
+                  <option value="{{ $club['id'] }}" selected>{{ $club['name'] }}</option>
+                @else
+                  <option value="{{ $club['id'] }}">{{ $club['name'] }}</option> 
+                @endif
+              @endif
+            @endforeach
+          </select>
+          @error('club')
+            <div id="club" class="text-sm text-red-500">
+                {{ $message }}
+            </div>
+          @enderror
+        </label>
+        <label class="block mx-4 my-4">
           <span class="">Nama Lengkap</span>
           <input name="nama" type="text" 
           value="{{ old('nama') }}"

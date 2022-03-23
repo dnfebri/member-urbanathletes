@@ -8,8 +8,12 @@ class ContentController extends Controller
 {
     public function index()
     {
-        // echo "hello word";
-        return view("public/content/index");
-        // return view("public/content/tes");
+        // return view("public/content/index");
+        return redirect()->route('99k');
+    }
+
+    public function index99k()
+    {
+        return view("public/content/99K");
     }
 }

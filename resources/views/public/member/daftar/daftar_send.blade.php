@@ -24,8 +24,10 @@
     {{-- {{ $invoice }}
     <br>
     {{ $dataInvoice }} --}}
-    <p>Silahkan lakukan transfer senilai 990000</p>
-    <p>ke rekening xxxxxxxx</p>
+    <p>Silahkan lakukan transfer senilai {{ $dataInvoice->harga }}</p>
+    <p>ke rekening kami</p>
+    <p>yang kami kirimkan formnya di email</p>
+    <p>Silahkan cek email anda di pesan masuk atau spam email</p>
     <div class="my-4">
       <a href="{{ route('content') }}" class="underline bg-yellow-400 rounded-md p-1"><i class="fa-solid fa-chevron-left"></i> Kembali</a>
     </div>

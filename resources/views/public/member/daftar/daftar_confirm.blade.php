@@ -7,7 +7,7 @@
     
   @endpush
   <x-layout_card_form>
-    <form action="{{ route('daftar.storeConfirm') }}" method="post" enctype="multipart/form-data">
+    <form action="{{ route('daftar.updateConfirm') }}" method="post" enctype="multipart/form-data">
       @csrf
       <div class="flex justify-center border-b my-4 pb-4">
         <h2 class="text-2xl font-Futura">Confrim Daftar form GYM</h2>
@@ -22,11 +22,11 @@
           <input type="text" name="email" id="email" value="{{ $dataInvoice->email }}" hidden>
         </label>
         <label class="block mx-4 my-4">
-          <span class="">Nama Lengkap</span>
+          <span class="">Nama Lengkap : {{$dataInvoice->nama}}</span>
           <input name="nama" type="text" 
           value="{{$dataInvoice->nama}}"
           class="block w-full px-0.5 border-0 border-b-2 bg-gray-100 focus:ring-0 focus:border-black @error('nama') border-red-300 @enderror"
-          disabled>
+          hidden>
           @error('nama')
             <div id="nama" class="text-sm text-red-500">
                 {{ $message }}
@@ -34,15 +34,20 @@
           @enderror
         </label>
         <label class="block mx-4 my-4">
-          <span class="">Club</span>
-          <select name="club" id="club" class="block border-0 border-b-2 w-full focus:border-black @error('nominal') border-red-300 @enderror">
+          @foreach ($clubs['rows'] as $club)
+            @if ( $club['id'] == $dataInvoice->club )
+              <span class="">Club : {{ $club['name'] }}</span>
+            @endif
+          @endforeach
+          <input type="text" name="club" id="club" value="{{ $dataInvoice->club }}" hidden>
+          {{-- <select name="club" id="club" class="block border-0 border-b-2 w-full focus:border-black @error('nominal') border-red-300 @enderror">
             <option value="" >Select club</option> 
             @foreach ($clubs['rows'] as $club)
               @if ( $club['id'] != '1' && $club['id'] != '6' )
               <option value="{{ $club['id'] }}">{{ $club['name'] }}</option> 
               @endif
             @endforeach
-          </select>
+          </select> --}}
           @error('club')
             <div id="club" class="text-sm text-red-500">
                 {{ $message }}
@@ -51,7 +56,7 @@
         </label>
         <label class="block mx-4 my-4">
           <span class="">Tanggal Transfer</span>
-          <input name="tanggal" class="date form-control" type="text">
+          <input name="tanggal" class="date form-control" type="text" value="{{ old('tanggal') }}" autocomplete="off">
           @error('tanggal')
             <div id="tanggal" class="text-sm text-red-500">
                 {{ $message }}
@@ -71,12 +76,12 @@
           @enderror
         </label>
         <label class="block mx-4 my-4">
-          <table class="my-4">
+          <table class="my-4 w-full">
             <thead>
             </thead>
             <tbody class="leading-relaxed">
               <tr>
-                <td class=""><span class="inline mr-4">Upload Bukti</span></td>
+                <td class="md:w-16"><span class="inline mr-4">Upload Bukti</span></td>
                 <td class="">
                   <input type="file" name="image"
                   class="w-full text-sm text-slate-500 bg-white
@@ -105,7 +110,7 @@
         </label>
       </div>
       <div class="flex justify-end my-4">
-        <button id="btn-submit" class="bg-green-500 py-2 px-6 rounded-lg mx-4 text-white text-lg" type="submit">Kirim</button>
+        <button id="btn-submit" class="bg-green-500 py-2 px-6 rounded-lg mx-4 text-white text-lg" type="submit">Simpan</button>
         <span id="btn-disabled" class="hidden">
           <button class="flex items-center bg-green-500 opacity-80 py-2 px-2 mx-4 rounded-lg text-white text-lg" disabled>
             <img class="w-7 h-7" src="{{ url('/image/icon/Loading-white.svg') }}" alt="Urban Athletes"/> 

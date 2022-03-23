@@ -2,6 +2,7 @@
 
 namespace App\Mail;
 
+use App\Models\ClubData;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
@@ -17,9 +18,10 @@ class SendEmail extends Mailable
      *
      * @return void
      */
-    public function __construct($dataEmail)
+    public function __construct($dataEmail, $clubs)
     {
         $this->dataEmail = $dataEmail;
+        $this->clubs = $clubs;
     }
 
     /**
@@ -29,8 +31,9 @@ class SendEmail extends Mailable
      */
     public function build()
     {
-        // dd($this->dataEmail);
+        $clubData = ClubData::where('club_id', $this->dataEmail->club)->first();
+        $clubs = $this->clubs;
         return $this->subject('Hai '. $this->dataEmail->nama . ', Pesanan Anda Sebentar Lagi Kami Proses')
-                    ->view('email.isi_email');
+                    ->view('email.isi_email', compact('clubData', 'clubs'));
     }
 }
