@@ -14,6 +14,6 @@ class ContentController extends Controller
 
     public function index99k()
     {
-        return view("public/content/99K");
+        return view("public/content/99k");
     }
 }
