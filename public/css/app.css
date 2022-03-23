@@ -725,9 +725,6 @@ select {
 .mr-4 {
   margin-right: 1rem;
 }
-.ml-8 {
-  margin-left: 2rem;
-}
 .mb-12 {
   margin-bottom: 3rem;
 }
@@ -739,6 +736,9 @@ select {
 }
 .mt-20 {
   margin-top: 5rem;
+}
+.ml-8 {
+  margin-left: 2rem;
 }
 .block {
   display: block;
@@ -794,14 +794,11 @@ select {
 .h-40 {
   height: 10rem;
 }
-.h-4 {
-  height: 1rem;
+.h-7 {
+  height: 1.75rem;
 }
 .h-32 {
   height: 8rem;
-}
-.h-7 {
-  height: 1.75rem;
 }
 .max-h-60 {
   max-height: 15rem;
@@ -841,9 +838,6 @@ select {
 }
 .w-16 {
   width: 4rem;
-}
-.w-4 {
-  width: 1rem;
 }
 .w-7 {
   width: 1.75rem;
@@ -1088,6 +1082,10 @@ select {
   padding-left: 4rem;
   padding-right: 4rem;
 }
+.px-14 {
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+}
 .px-0\.5 {
   padding-left: 0.125rem;
   padding-right: 0.125rem;
@@ -1147,13 +1145,13 @@ select {
   font-size: 1rem;
   line-height: 1.5rem;
 }
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 .font-semibold {
   font-weight: 600;
@@ -1187,6 +1185,9 @@ select {
 }
 .tracking-widest {
   letter-spacing: 0.1em;
+}
+.tracking-normal {
+  letter-spacing: 0em;
 }
 .tracking-wider {
   letter-spacing: 0.05em;
@@ -1262,13 +1263,13 @@ select {
   --tw-text-opacity: 1;
   color: rgb(239 68 68 / var(--tw-text-opacity));
 }
-.text-slate-500 {
-  --tw-text-opacity: 1;
-  color: rgb(100 116 139 / var(--tw-text-opacity));
-}
 .text-blue-500 {
   --tw-text-opacity: 1;
   color: rgb(59 130 246 / var(--tw-text-opacity));
+}
+.text-slate-500 {
+  --tw-text-opacity: 1;
+  color: rgb(100 116 139 / var(--tw-text-opacity));
 }
 .underline {
   -webkit-text-decoration-line: underline;
@@ -1579,6 +1580,10 @@ select {
     width: 33.333333%;
   }
 
+  .md\:w-16 {
+    width: 4rem;
+  }
+
   .md\:basis-1\/5 {
     flex-basis: 20%;
   }
@@ -1628,11 +1633,6 @@ select {
     line-height: 1.75rem;
   }
 
-  .md\:text-base {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-
   .md\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
@@ -1641,6 +1641,11 @@ select {
   .md\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
+  }
+
+  .md\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 
   .md\:text-2xl {
@@ -1708,5 +1713,9 @@ select {
   .lg\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+
+  .lg\:tracking-widest {
+    letter-spacing: 0.1em;
   }
 }
