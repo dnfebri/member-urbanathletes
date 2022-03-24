@@ -134,7 +134,7 @@
         style="
           text-decoration: none; font-weight: bold;
           display:inline-block;border-radius:20px;background-color:#33ff00;color:#fff;
-          font-family:San,'Open Sans',Helvetica,Arial,sans-serif;font-size:24px;font-weight:500;margin:16px 0 0;box-sizing:border-box;padding-left: 3rem;padding-right: 3rem;
+          font-family:San,'Open Sans',Helvetica,Arial,sans-serif;font-weight:500;margin:16px 0 0;box-sizing:border-box;padding-left: 3rem;padding-right: 3rem;
         ">
         konfirm Pembayaran
       </a>
