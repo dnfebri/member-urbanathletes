@@ -810,6 +810,9 @@ select {
 .h-2 {
   height: 0.5rem;
 }
+.h-4 {
+  height: 1rem;
+}
 .max-h-60 {
   max-height: 15rem;
 }
@@ -854,6 +857,12 @@ select {
 }
 .w-0 {
   width: 0px;
+}
+.w-1 {
+  width: 0.25rem;
+}
+.w-10 {
+  width: 2.5rem;
 }
 .max-w-6xl {
   max-width: 72rem;

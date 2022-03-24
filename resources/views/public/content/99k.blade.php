@@ -59,7 +59,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
         <div class="border-[3px] border-gray-200 p-2 flex items-center">
           <img class="w-16 mx-4" src="{{ url('/image/icon/money_icon.png') }}" alt="">
-          <p class="text-white">Promo murah, kapan lagi?</p>
+          <p class="text-white">Murah tapi jauh dari murahan</p>
         </div>
         <div class="border-[3px] border-gray-200 p-2 flex items-center">
           <img class="w-16 mx-4" src="{{ url('/image/icon/contract_icon.png') }}" alt="">
@@ -70,7 +70,7 @@
           <p class="text-white">Pembayaran mudah</p>
         </div>
         <div class="border-[3px] border-gray-200 p-2 flex items-center">
-          <img class="w-16 mx-4" src="{{ url('/image/icon/mask_icon.png') }}" alt="">
+          <img class="w-10 mx-4" src="{{ url('/image/icon/PeduliLindungi.png') }}" alt="">
           <p class="text-white">Gym aman dengan Protokol kesehatan yang ketat</p>
         </div>
       </div>
