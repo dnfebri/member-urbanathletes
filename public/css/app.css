@@ -686,6 +686,10 @@ select {
   margin-left: 1rem;
   margin-right: 1rem;
 }
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
 .ml-1 {
   margin-left: 0.25rem;
 }
@@ -739,6 +743,9 @@ select {
 }
 .ml-8 {
   margin-left: 2rem;
+}
+.mb-2 {
+  margin-bottom: 0.5rem;
 }
 .block {
   display: block;
@@ -800,6 +807,9 @@ select {
 .h-32 {
   height: 8rem;
 }
+.h-2 {
+  height: 0.5rem;
+}
 .max-h-60 {
   max-height: 15rem;
 }
@@ -842,6 +852,9 @@ select {
 .w-7 {
   width: 1.75rem;
 }
+.w-0 {
+  width: 0px;
+}
 .max-w-6xl {
   max-width: 72rem;
 }
@@ -883,6 +896,9 @@ select {
 }
 .grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 .flex-row {
   flex-direction: row;
@@ -1098,6 +1114,10 @@ select {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
 .pt-8 {
   padding-top: 2rem;
 }
@@ -1153,6 +1173,16 @@ select {
   font-size: 1.5rem;
   line-height: 2rem;
 }
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+.text-\[8px\] {
+  font-size: 8px;
+}
+.text-\[10px\] {
+  font-size: 10px;
+}
 .font-semibold {
   font-weight: 600;
 }
@@ -1171,6 +1201,12 @@ select {
 .font-black {
   font-weight: 900;
 }
+.font-normal {
+  font-weight: 400;
+}
+.font-light {
+  font-weight: 300;
+}
 .uppercase {
   text-transform: uppercase;
 }
@@ -1182,6 +1218,18 @@ select {
 }
 .leading-relaxed {
   line-height: 1.625;
+}
+.leading-3 {
+  line-height: .75rem;
+}
+.leading-6 {
+  line-height: 1.5rem;
+}
+.leading-4 {
+  line-height: 1rem;
+}
+.leading-5 {
+  line-height: 1.25rem;
 }
 .tracking-widest {
   letter-spacing: 0.1em;
@@ -1564,6 +1612,11 @@ select {
 }
 @media (min-width: 768px) {
 
+  .md\:mx-4 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
   .md\:ml-8 {
     margin-left: 2rem;
   }
@@ -1594,6 +1647,14 @@ select {
 
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .md\:gap-8 {
+    gap: 2rem;
   }
 
   .md\:border-t-0 {
@@ -1651,6 +1712,20 @@ select {
   .md\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+
+  .md\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .md\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .md\:leading-5 {
+    line-height: 1.25rem;
   }
 
   .md\:tracking-\[\.55em\] {
@@ -1713,6 +1788,25 @@ select {
   .lg\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+
+  .lg\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .lg\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .lg\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .lg\:leading-5 {
+    line-height: 1.25rem;
   }
 
   .lg\:tracking-widest {

@@ -40,14 +40,6 @@
             @endif
           @endforeach
           <input type="text" name="club" id="club" value="{{ $dataInvoice->club }}" hidden>
-          {{-- <select name="club" id="club" class="block border-0 border-b-2 w-full focus:border-black @error('nominal') border-red-300 @enderror">
-            <option value="" >Select club</option> 
-            @foreach ($clubs['rows'] as $club)
-              @if ( $club['id'] != '1' && $club['id'] != '6' )
-              <option value="{{ $club['id'] }}">{{ $club['name'] }}</option> 
-              @endif
-            @endforeach
-          </select> --}}
           @error('club')
             <div id="club" class="text-sm text-red-500">
                 {{ $message }}
@@ -56,7 +48,7 @@
         </label>
         <label class="block mx-4 my-4">
           <span class="">Tanggal Transfer</span>
-          <input name="tanggal" class="date form-control" type="text" value="{{ old('tanggal') }}" autocomplete="off">
+          <input name="tanggal" class="date form-control" type="text" value="{{ old('tanggal') ?? $dataInvoice->tanggal }}" autocomplete="off">
           @error('tanggal')
             <div id="tanggal" class="text-sm text-red-500">
                 {{ $message }}
@@ -67,7 +59,7 @@
           <span class="">Nominal Transfer</span>
           <input name="nominal" type="text" 
           placeholder="99000"
-          value="{{ old('nominal') }}"
+          value="{{ old('nominal') ?? $dataInvoice->harga }}"
           class="block w-full px-0.5 border-0 border-b-2 focus:ring-0 focus:border-black @error('nominal') border-red-300 @enderror">
           @error('nominal')
             <div id="nominal" class="text-sm text-red-500">

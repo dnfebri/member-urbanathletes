@@ -26,9 +26,8 @@ class PublicController extends Controller
 
     public function daftar()
     {
-        // $invoice = Invoice::where('kode', 'UA1647500903')->first();
-        // $join = Join::where('id', '1')->first();
         $clubs = $this->apiClubs;
+        // return view("public/member/daftar/daftar", ['clubs' => $clubs]);
         return view("public/member/daftar/daftar", compact('clubs'));
     }
 
@@ -82,8 +81,12 @@ class PublicController extends Controller
         return view("public/member/daftar/daftar_send", compact('dataInvoice'));
     }
 
-    public function daftarConfirmSuccess()
+    public function daftarConfirmSuccess($kode)
     {
-        return view("public/member/daftar/confirm_success");
+        $dataInvoice = DB::table('invoices')
+                        ->join('joins', 'invoices.join_id', '=', 'joins.id')
+                        ->join('club_data', 'invoices.club', '=', 'club_data.club_id')
+                        ->where('kode', $kode)->first();
+        return view("public/member/daftar/confirm_success", compact('dataInvoice'));
     }
 }

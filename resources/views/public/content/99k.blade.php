@@ -43,7 +43,7 @@
     </div>
     <div class="container px-4 md:px-16">
       <div class="flex justify-center items-center my-4">
-        <h2 class="text-white text-lg md:text-3xl text-center font-bold font-Futura tracking-wider italic">HAJAR LEAKMU ! BUKAN DOMPETMU !</h2>
+        <h2 class="text-white text-lg md:text-3xl text-center font-bold font-Futura tracking-wider italic">HAJAR LEMAKMU ! BUKAN DOMPETMU !</h2>
       </div>
       {{-- <div class="flex justify-center items-center mb-8 px-16"> --}}
       <div class="flex justify-center items-center">
@@ -53,7 +53,8 @@
       </div>
       <div class="bg-white border-t-2 border-white mt-4"></div>
       <div class="my-8">
-        <h2 class="text-white text-lg lg:text-2xl text-center font-bold font-Futura italic">GYM STANDAR INTERNASIONAL HARGA RASA REGIONAL</h2>
+        <h2 class="text-white text-lg lg:text-2xl text-center font-bold font-Futura italic uppercase">International standard GYM local price !</h2>
+        
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
         <div class="border-[3px] border-gray-200 p-2 flex items-center">
@@ -84,10 +85,11 @@
       <img class="px-14" src="{{ url('/image/content/alamat.png') }}" alt="alamat urban">
     </div>
     <div class="text-white px-4 my-8 md:px-20">
-      <p class="text-center">
+      {{-- <p class="text-center">
         Program latihan dengan sistem yang lebih mudah dan hemat biaya. Mengajak Anda untuk lebih bugar dengan cara yang simple, efisien dan hemat Di klub Urban Athletes yang memiliki standar protokol kesehatan yang sesuai dengan ketentuan dari pemerintah, sehingga aman dan nyaman untuk Anda berolaraga.
-      </p>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-4 mx-4 overflow-hidden">
+      </p> --}}
+      {{-- UA Merr --}}
+      <div class="grid grid-cols-2 md:grid-cols-2 gap-4 md:gap-8 my-4 md:mx-4 overflow-hidden">
         {{-- SwiperJS --}}
         <div class="swiper mySwiper w-full">
           <div class="swiper-wrapper">
@@ -111,26 +113,128 @@
           <div class="swiper-button-prev"></div>
           <div class="swiper-pagination"></div>
         </div>
-        <div class="">
-          <p class="my-4"><i class="fa-solid fa-circle-check text-yellow-500"></i><span class="ml-3">Tanpa membership</span></p>
-          <p class="my-4"><i class="fa-solid fa-circle-check text-yellow-500"></i><span class="ml-3">Pembayaran instan</span></p>
-          <p class="my-4"><i class="fa-solid fa-circle-check text-yellow-500"></i><span class="ml-3">Protokol kesehatan yang tinggi</span></p>
-          <p class="my-4"><i class="fa-solid fa-circle-check text-yellow-500"></i><span class="ml-3">Garansi diskon membership tahunan</span></p>
-          <p class="my-4"><i class="fa-solid fa-circle-check text-yellow-500"></i><span class="ml-3">Bebas memilih kelas yang diinginkan</span></p>
+        <div class="text-xs md:text-sm lg:text-base leading-4 md:leading-5">
+          <h3 class="text-base lg:text-xl font-Futura">Gunawangsa Merr Appartemen</h3>
+          <a href="https://goo.gl/maps/ATpNBqy4UqQvxnPv5" target="_blank"><p class="mb-2 font-light underline">Alamat UA Merr</p></a>
+          <div class="lg:text-lg">
+            <p class=""><i class="fa-solid fa-circle-check text-yellow-500"></i><span class="ml-3">Ruangan Gym dengan alat yang berstandar</span></p>
+            <p class=""><i class="fa-solid fa-circle-check text-yellow-500"></i><span class="ml-3">Ruangan kelas multi fungsi</span></p>
+            <p class=""><i class="fa-solid fa-circle-check text-yellow-500"></i><span class="ml-3">kelas Yoga, Zumba, LessMills, dll</span></p>
+            <p class=""><i class="fa-solid fa-circle-check text-yellow-500"></i><span class="ml-3">Kolam renang</span></p>
+            <p class=""><i class="fa-solid fa-circle-check text-yellow-500"></i><span class="ml-3">The Valor</span></p>
+          </div>
         </div>
       </div>
-      {{-- Maps --}}
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-8 mx-4 overflow-hidden">
-        <div class="w-full">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.577095637042!2d112.74339441420463!3d-7.288861973662437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fbb8ce4cea55%3A0x6ab0a79c0d2c9cb2!2sUrban%20Athletes%20Marvell%20City%20Mall!5e0!3m2!1sid!2sid!4v1646752301629!5m2!1sid!2sid" class="w-full h-72" width="" height="" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </div>
-        <div>
-          <h3 class="text-xl">Jam Operasional Urban Athletes Marvell City Mall</h3>
-          <p class="pt-4"><i class="fa-solid fa-clock text-yellow-500"></i><span class="ml-3">Senin - Jumat</span></p>
-          <p class="indent-4 ml-3">15.00 - 21.00 WIB</p>
-          <p class="pt-4"><i class="fa-solid fa-clock text-yellow-500"></i><span class="ml-3">Sabtu -  Minggu</span></p>
-          <p class="indent-4 ml-3">09.00 - 15.00 WIB</p>
+      {{-- UA Marvell --}}
+      <div class="grid grid-cols-2 md:grid-cols-2 gap-4 md:gap-8 my-4 md:mx-4 overflow-hidden">
+        {{-- SwiperJS --}}
+        <div class="swiper mySwiper w-full">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img class="w-full" src="{{ url('/image/content/slide/slide1.jpg') }}" alt="Urban Athletes Benner">
+            </div>
+            <div class="swiper-slide">
+              <img class="w-full" src="{{ url('/image/content/slide/slide2.jpg') }}" alt="Urban Athletes Benner 1">
+            </div>
+            <div class="swiper-slide">
+              <img class="w-full" src="{{ url('/image/content/slide/slide3.jpg') }}" alt="Urban Athletes Benner 2">
+            </div>
+            <div class="swiper-slide">
+              <img class="w-full" src="{{ url('/image/content/slide/slide4.jpg') }}" alt="Urban Athletes Benner 3">
+            </div>
+            <div class="swiper-slide">
+              <img class="w-full" src="{{ url('/image/content/slide/slide5.jpg') }}" alt="Urban Athletes Benner 4">
+            </div>
           </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <div class="text-xs md:text-sm lg:text-base leading-4 md:leading-5">
+          <h3 class="text-base lg:text-xl font-Futura">Marvell City</h3>
+          <a href="https://goo.gl/maps/kQoWqnsq7Vutba1Q6" target="_blank"><p class="mb-2 font-light underline">Alamat UA Marvel</p></a>
+          <div class="lg:text-lg">
+            <p class=""><i class="fa-solid fa-circle-check text-yellow-500"></i><span class="ml-3">Ruangan Fungsional Training</span></p>
+            <p class=""><i class="fa-solid fa-circle-check text-yellow-500"></i><span class="ml-3">Ruangan kelas multi fungsi</span></p>
+            <p class=""><i class="fa-solid fa-circle-check text-yellow-500"></i><span class="ml-3">kelas Yoga, Zumba, dll</span></p>
+            <p class=""><i class="fa-solid fa-circle-check text-yellow-500"></i><span class="ml-3">Fungsional training Private & Group</span></p>
+            <p class=""><i class="fa-solid fa-circle-check text-yellow-500"></i><span class="ml-3">The Valor</span></p>
+          </div>
+        </div>
+      </div>
+      {{-- UA Tidar --}}
+      <div class="grid grid-cols-2 md:grid-cols-2 gap-4 md:gap-8 my-4 md:mx-4 overflow-hidden">
+        {{-- SwiperJS --}}
+        <div class="swiper mySwiper w-full">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img class="w-full" src="{{ url('/image/content/slide/slide1.jpg') }}" alt="Urban Athletes Benner">
+            </div>
+            <div class="swiper-slide">
+              <img class="w-full" src="{{ url('/image/content/slide/slide2.jpg') }}" alt="Urban Athletes Benner 1">
+            </div>
+            <div class="swiper-slide">
+              <img class="w-full" src="{{ url('/image/content/slide/slide3.jpg') }}" alt="Urban Athletes Benner 2">
+            </div>
+            <div class="swiper-slide">
+              <img class="w-full" src="{{ url('/image/content/slide/slide4.jpg') }}" alt="Urban Athletes Benner 3">
+            </div>
+            <div class="swiper-slide">
+              <img class="w-full" src="{{ url('/image/content/slide/slide5.jpg') }}" alt="Urban Athletes Benner 4">
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <div class="text-xs md:text-sm lg:text-base leading-4 md:leading-5">
+          <h3 class="text-base lg:text-xl font-Futura">Gunawangsa Tidar / The Central Mall</h3>
+          <a href="https://goo.gl/maps/TgZg3oKhvwGRf4pC8" target="_blank"><p class="mb-2 font-light underline">Alamat UA Tidar</p></a>
+          <div class="lg:text-lg">
+            <p class=""><i class="fa-solid fa-circle-check text-yellow-500"></i><span class="ml-3">Ruangan Gym dengan alat yang berstandar</span></p>
+            <p class=""><i class="fa-solid fa-circle-check text-yellow-500"></i><span class="ml-3">Ruangan kelas multi fungsi</span></p>
+            <p class=""><i class="fa-solid fa-circle-check text-yellow-500"></i><span class="ml-3">kelas Yoga, Zumba, LessMills, dll</span></p>
+            <p class=""><i class="fa-solid fa-circle-check text-yellow-500"></i><span class="ml-3">Kolam renang</span></p>
+            <p class=""><i class="fa-solid fa-circle-check text-yellow-500"></i><span class="ml-3">The Valor</span></p>
+          </div>
+        </div>
+      </div>
+      {{-- UA Lenmarc --}}
+      <div class="grid grid-cols-2 md:grid-cols-2 gap-4 md:gap-8 my-4 md:mx-4 overflow-hidden">
+        {{-- SwiperJS --}}
+        <div class="swiper mySwiper w-full">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img class="w-full" src="{{ url('/image/content/slide/slide1.jpg') }}" alt="Urban Athletes Benner">
+            </div>
+            <div class="swiper-slide">
+              <img class="w-full" src="{{ url('/image/content/slide/slide2.jpg') }}" alt="Urban Athletes Benner 1">
+            </div>
+            <div class="swiper-slide">
+              <img class="w-full" src="{{ url('/image/content/slide/slide3.jpg') }}" alt="Urban Athletes Benner 2">
+            </div>
+            <div class="swiper-slide">
+              <img class="w-full" src="{{ url('/image/content/slide/slide4.jpg') }}" alt="Urban Athletes Benner 3">
+            </div>
+            <div class="swiper-slide">
+              <img class="w-full" src="{{ url('/image/content/slide/slide5.jpg') }}" alt="Urban Athletes Benner 4">
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <div class="text-xs md:text-sm lg:text-base leading-4 md:leading-5">
+          <h3 class="text-base lg:text-xl font-Futura">Lenmarc Mall</h3>
+          <a href="https://goo.gl/maps/nx3vUhxxi9UXoKPn6" target="_blank"><p class="mb-2 font-light underline">Alamat UA Lenmarc</p></a>
+          <div class="lg:text-lg">
+            <p class=""><i class="fa-solid fa-circle-check text-yellow-500"></i><span class="ml-3">Ruangan Gym dengan alat yang berstandar</span></p>
+            <p class=""><i class="fa-solid fa-circle-check text-yellow-500"></i><span class="ml-3">Ruangan kelas multi fungsi</span></p>
+            <p class=""><i class="fa-solid fa-circle-check text-yellow-500"></i><span class="ml-3">kelas Yoga, Zumba, LessMills, dll</span></p>
+            <p class=""><i class="fa-solid fa-circle-check text-yellow-500"></i><span class="ml-3">Kids Class</span></p>
+            <p class=""><i class="fa-solid fa-circle-check text-yellow-500"></i><span class="ml-3">The Valor</span></p>
+          </div>
+        </div>
       </div>
     </div>
     <div class="my-8 w-full aspect-auto bg-[url('/image/content/heading_bg.png')] bg-cover">
@@ -216,6 +320,7 @@
       });
     </script>
 
+    <!-- Meta Pixel Code -->
   <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -225,13 +330,13 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '289229666586307');
+    fbq('init', '544863203544959');
     fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=289229666586307&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=544863203544959&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
     
   @stack('script')
   @endpush

@@ -66,7 +66,7 @@ class InvoiceController extends Controller
         $dataInvoice = DB::table('invoices')
                         ->join('joins', 'invoices.join_id', '=', 'joins.id')
                         ->where('kode', $kode)->first();
-        return view("public/member/daftar/daftar_confirm", compact('dataInvoice', 'clubs'));
+        return view("public/member/daftar/daftar_confirm", compact('dataInvoice'), ['clubs' => $clubs]);
     }
 
     /**
@@ -108,7 +108,7 @@ class InvoiceController extends Controller
                     ->join('joins', 'invoices.join_id', '=', 'joins.id')
                     ->where('kode', $request->kode)->first();
         Mail::to( $request->email )->send(new SendEmailConfirm($dataEmail, $clubs));
-        return redirect()->route('daftar.confirmSuccess');
+        return redirect()->route('daftar.confirmSuccess', ['kode'=>$request->kode]);
     }
 
     /**
