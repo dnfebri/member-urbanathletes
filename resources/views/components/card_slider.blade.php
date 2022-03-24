@@ -24,31 +24,6 @@
       border-radius: 5px;
     }
 
-    #c1 {
-      background: url(./image/schedule/Artboard1.png) no-repeat center center/cover;
-    }
-    #c2 {
-      background: url(./image/schedule/Artboard2.png) no-repeat center center/cover;
-    }
-    #c3 {
-      background: url(./image/schedule/Artboard3.png) no-repeat center center/cover;
-    }
-    #c4 {
-      background: url(./image/schedule/Artboard4.png) no-repeat center center/cover;
-    }
-    #c5 {
-      background: url(./image/schedule/Artboard5.png) no-repeat center center/cover;
-    }
-    #c6 {
-      background: url(./image/schedule/Artboard6.png) no-repeat center center/cover;
-    }
-    #c7 {
-      background: url(./image/schedule/Artboard7.png) no-repeat center center/cover;
-    }
-    #c8 {
-      background: url(./image/schedule/Artboard8.png) no-repeat center center/cover;
-    }
-
     .owl-dots {
       text-align: center;
       margin-top: 20px;
@@ -60,8 +35,8 @@
       border-radius: 50%;
       cursor: pointer;
       outline: none;
-      margin: 0 5px;
-      border: 2px solid #fff !important;
+      margin: 0 3px;
+      border: 1px solid #fff !important;
       transition: all 0.3s ease;
     }
 
@@ -102,6 +77,7 @@
 <div class="wrapper">
   <div class="carousel owl-carousel">
     {{ $slot }}
+  </div>
 </div>
 
 @push('script')

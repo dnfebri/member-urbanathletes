@@ -244,22 +244,46 @@
       </h2>
     </div>
     <div class="flex justify-center px-4 mt-8">
-      <img class="px-14" src="{{ url('/image/content/jadwal-kelas.png') }}" alt="Jadwal urban">
+      <img class="lg:px-14" src="{{ url('/image/content/jadwal-kelas.png') }}" alt="Jadwal urban">
     </div>
     <div>
-      <h3 class="text-center text-white text-2xl md:text-4xl mb-4">GESER UNTUK MENGETAHUI JADWAL KELAS</h3>  
+      <h3 class="text-center text-white text-lg md:text-2xl mb-4">GESER UNTUK MENGETAHUI JADWAL KELAS</h3>  
       {{-- Slider Class --}}
       <!-- Script Crad swiper -->
       <x-card_slider>
-        <div class="card" id="c1"></div>
-        <div class="card" id="c2"></div>
-        <div class="card" id="c3"></div>
-        <div class="card" id="c4"></div>
-        <div class="card" id="c5"></div>
-        <div class="card" id="c6"></div>
-        <div class="card" id="c7"></div>
-        <div class="card" id="c8"></div>
-      </div>
+        {{-- Merr --}}
+        <img src="{{url('/image/schedule/merr/Artboard 1.png')}}" alt="Clas Urban" class="card object-cover object-center">
+        <img src="{{url('/image/schedule/merr/Artboard 2.png')}}" alt="Clas Urban" class="card object-cover object-center">
+        <img src="{{url('/image/schedule/merr/Artboard 3.png')}}" alt="Clas Urban" class="card object-cover object-center">
+        <img src="{{url('/image/schedule/merr/Artboard 4.png')}}" alt="Clas Urban" class="card object-cover object-center">
+        <img src="{{url('/image/schedule/merr/Artboard 5.png')}}" alt="Clas Urban" class="card object-cover object-center">
+        <img src="{{url('/image/schedule/merr/Artboard 6.png')}}" alt="Clas Urban" class="card object-cover object-center">
+        <img src="{{url('/image/schedule/merr/Artboard 7.png')}}" alt="Clas Urban" class="card object-cover object-center">
+        {{-- Marvell --}}
+        <img src="{{url('/image/schedule/marvell/Artboard1.png')}}" alt="Clas Urban" class="card object-cover object-center">
+        <img src="{{url('/image/schedule/marvell/Artboard2.png')}}" alt="Clas Urban" class="card object-cover object-center">
+        <img src="{{url('/image/schedule/marvell/Artboard3.png')}}" alt="Clas Urban" class="card object-cover object-center">
+        <img src="{{url('/image/schedule/marvell/Artboard4.png')}}" alt="Clas Urban" class="card object-cover object-center">
+        <img src="{{url('/image/schedule/marvell/Artboard5.png')}}" alt="Clas Urban" class="card object-cover object-center">
+        <img src="{{url('/image/schedule/marvell/Artboard6.png')}}" alt="Clas Urban" class="card object-cover object-center">
+        <img src="{{url('/image/schedule/marvell/Artboard7.png')}}" alt="Clas Urban" class="card object-cover object-center">
+        <img src="{{url('/image/schedule/marvell/Artboard8.png')}}" alt="Clas Urban" class="card object-cover object-center">
+        {{-- Tidar --}}
+        <img src="{{url('/image/schedule/tidar/Artboard 1.jpeg')}}" alt="Clas Urban" class="card object-cover object-center">
+        <img src="{{url('/image/schedule/tidar/Artboard 2.jpeg')}}" alt="Clas Urban" class="card object-cover object-center">
+        <img src="{{url('/image/schedule/tidar/Artboard 3.jpeg')}}" alt="Clas Urban" class="card object-cover object-center">
+        <img src="{{url('/image/schedule/tidar/Artboard 4.jpeg')}}" alt="Clas Urban" class="card object-cover object-center">
+        <img src="{{url('/image/schedule/tidar/Artboard 5.jpeg')}}" alt="Clas Urban" class="card object-cover object-center">
+        <img src="{{url('/image/schedule/tidar/Artboard 6.jpeg')}}" alt="Clas Urban" class="card object-cover object-center">
+        <img src="{{url('/image/schedule/tidar/Artboard 7.jpeg')}}" alt="Clas Urban" class="card object-cover object-center">
+        {{-- lenmarc --}}
+        <img src="{{url('/image/schedule/lenmarc/Artboard 1.jpeg')}}" alt="Clas Urban" class="card object-cover object-center">
+        <img src="{{url('/image/schedule/lenmarc/Artboard 2.jpeg')}}" alt="Clas Urban" class="card object-cover object-center">
+        <img src="{{url('/image/schedule/lenmarc/Artboard 3.jpeg')}}" alt="Clas Urban" class="card object-cover object-center">
+        <img src="{{url('/image/schedule/lenmarc/Artboard 4.jpeg')}}" alt="Clas Urban" class="card object-cover object-center">
+        <img src="{{url('/image/schedule/lenmarc/Artboard 5.jpeg')}}" alt="Clas Urban" class="card object-cover object-center">
+        <img src="{{url('/image/schedule/lenmarc/Artboard 6.jpeg')}}" alt="Clas Urban" class="card object-cover object-center">
+        <img src="{{url('/image/schedule/lenmarc/Artboard 7.jpeg')}}" alt="Clas Urban" class="card object-cover object-center">
       </x-card_slider>
     </div>
       
