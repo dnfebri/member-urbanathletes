@@ -1061,8 +1061,19 @@ select {
 .bg-\[url\(\'\/image\/content\/footer_bg\.png\'\)\] {
   background-image: url('/image/content/footer_bg.png');
 }
+.bg-\[url\(\'\/image\/schedule\/Artboard1\.png\'\)\] {
+  background-image: url('/image/schedule/Artboard1.png');
+}
 .bg-cover {
   background-size: cover;
+}
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.object-center {
+  -o-object-position: center;
+     object-position: center;
 }
 .p-6 {
   padding: 1.5rem;
@@ -1792,6 +1803,11 @@ select {
   .lg\:px-16 {
     padding-left: 4rem;
     padding-right: 4rem;
+  }
+
+  .lg\:px-14 {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
   }
 
   .lg\:pl-32 {
