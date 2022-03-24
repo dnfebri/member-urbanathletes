@@ -92,21 +92,21 @@
       <div class="grid grid-cols-2 md:grid-cols-2 gap-4 md:gap-8 my-4 md:mx-4 overflow-hidden">
         {{-- SwiperJS --}}
         <div class="swiper mySwiper w-full">
-          <div class="swiper-wrapper">
+          <div class="swiper-wrapper aspect-[4/2.5]">
             <div class="swiper-slide">
-              <img class="w-full" src="{{ url('/image/content/slide/slide1.jpg') }}" alt="Urban Athletes Benner">
+              <img class="w-full" src="{{ url('/image/content/slide/merr/slider1.JPG') }}" alt="Urban Athletes Benner">
             </div>
             <div class="swiper-slide">
-              <img class="w-full" src="{{ url('/image/content/slide/slide2.jpg') }}" alt="Urban Athletes Benner 1">
+              <img class="w-full" src="{{ url('/image/content/slide/merr/slider2.JPG') }}" alt="Urban Athletes Benner 1">
             </div>
             <div class="swiper-slide">
-              <img class="w-full" src="{{ url('/image/content/slide/slide3.jpg') }}" alt="Urban Athletes Benner 2">
+              <img class="w-full" src="{{ url('/image/content/slide/merr/slider3.JPG') }}" alt="Urban Athletes Benner 2">
             </div>
             <div class="swiper-slide">
-              <img class="w-full" src="{{ url('/image/content/slide/slide4.jpg') }}" alt="Urban Athletes Benner 3">
+              <img class="w-full" src="{{ url('/image/content/slide/merr/slider4.JPG') }}" alt="Urban Athletes Benner 3">
             </div>
             <div class="swiper-slide">
-              <img class="w-full" src="{{ url('/image/content/slide/slide5.jpg') }}" alt="Urban Athletes Benner 4">
+              <img class="w-full" src="{{ url('/image/content/slide/merr/slider5.JPG') }}" alt="Urban Athletes Benner 4">
             </div>
           </div>
           <div class="swiper-button-next"></div>
@@ -129,21 +129,21 @@
       <div class="grid grid-cols-2 md:grid-cols-2 gap-4 md:gap-8 my-4 md:mx-4 overflow-hidden">
         {{-- SwiperJS --}}
         <div class="swiper mySwiper w-full">
-          <div class="swiper-wrapper">
+          <div class="swiper-wrapper aspect-[4/2.5]">
             <div class="swiper-slide">
-              <img class="w-full" src="{{ url('/image/content/slide/slide1.jpg') }}" alt="Urban Athletes Benner">
+              <img class="w-full" src="{{ url('/image/content/slide/marvell/slider1.jpg') }}" alt="Urban Athletes Benner">
             </div>
             <div class="swiper-slide">
-              <img class="w-full" src="{{ url('/image/content/slide/slide2.jpg') }}" alt="Urban Athletes Benner 1">
+              <img class="w-full" src="{{ url('/image/content/slide/marvell/slider2.jpg') }}" alt="Urban Athletes Benner 1">
             </div>
             <div class="swiper-slide">
-              <img class="w-full" src="{{ url('/image/content/slide/slide3.jpg') }}" alt="Urban Athletes Benner 2">
+              <img class="w-full" src="{{ url('/image/content/slide/marvell/slider3.jpg') }}" alt="Urban Athletes Benner 2">
             </div>
             <div class="swiper-slide">
-              <img class="w-full" src="{{ url('/image/content/slide/slide4.jpg') }}" alt="Urban Athletes Benner 3">
+              <img class="w-full" src="{{ url('/image/content/slide/marvell/slider4.jpg') }}" alt="Urban Athletes Benner 3">
             </div>
             <div class="swiper-slide">
-              <img class="w-full" src="{{ url('/image/content/slide/slide5.jpg') }}" alt="Urban Athletes Benner 4">
+              <img class="w-full" src="{{ url('/image/content/slide/marvell/slider5.jpg') }}" alt="Urban Athletes Benner 4">
             </div>
           </div>
           <div class="swiper-button-next"></div>
@@ -166,21 +166,21 @@
       <div class="grid grid-cols-2 md:grid-cols-2 gap-4 md:gap-8 my-4 md:mx-4 overflow-hidden">
         {{-- SwiperJS --}}
         <div class="swiper mySwiper w-full">
-          <div class="swiper-wrapper">
+          <div class="swiper-wrapper aspect-[4/2.5]">
             <div class="swiper-slide">
-              <img class="w-full" src="{{ url('/image/content/slide/slide1.jpg') }}" alt="Urban Athletes Benner">
+              <img class="w-full" src="{{ url('/image/content/slide/tidar/slider1.JPG') }}" alt="Urban Athletes Benner">
             </div>
             <div class="swiper-slide">
-              <img class="w-full" src="{{ url('/image/content/slide/slide2.jpg') }}" alt="Urban Athletes Benner 1">
+              <img class="w-full" src="{{ url('/image/content/slide/tidar/slider2.JPG') }}" alt="Urban Athletes Benner 1">
             </div>
             <div class="swiper-slide">
-              <img class="w-full" src="{{ url('/image/content/slide/slide3.jpg') }}" alt="Urban Athletes Benner 2">
+              <img class="w-full" src="{{ url('/image/content/slide/tidar/slider3.JPG') }}" alt="Urban Athletes Benner 2">
             </div>
             <div class="swiper-slide">
-              <img class="w-full" src="{{ url('/image/content/slide/slide4.jpg') }}" alt="Urban Athletes Benner 3">
+              <img class="w-full" src="{{ url('/image/content/slide/tidar/slider4.JPG') }}" alt="Urban Athletes Benner 3">
             </div>
             <div class="swiper-slide">
-              <img class="w-full" src="{{ url('/image/content/slide/slide5.jpg') }}" alt="Urban Athletes Benner 4">
+              <img class="w-full" src="{{ url('/image/content/slide/tidar/slider5.JPG') }}" alt="Urban Athletes Benner 4">
             </div>
           </div>
           <div class="swiper-button-next"></div>
@@ -203,21 +203,21 @@
       <div class="grid grid-cols-2 md:grid-cols-2 gap-4 md:gap-8 my-4 md:mx-4 overflow-hidden">
         {{-- SwiperJS --}}
         <div class="swiper mySwiper w-full">
-          <div class="swiper-wrapper">
+          <div class="swiper-wrapper aspect-[4/2.5]">
             <div class="swiper-slide">
-              <img class="w-full" src="{{ url('/image/content/slide/slide1.jpg') }}" alt="Urban Athletes Benner">
+              <img class="w-full" src="{{ url('/image/content/slide/lenmarc/slider1.JPG') }}" alt="Urban Athletes Benner">
             </div>
             <div class="swiper-slide">
-              <img class="w-full" src="{{ url('/image/content/slide/slide2.jpg') }}" alt="Urban Athletes Benner 1">
+              <img class="w-full" src="{{ url('/image/content/slide/lenmarc/slider2.JPG') }}" alt="Urban Athletes Benner 1">
             </div>
             <div class="swiper-slide">
-              <img class="w-full" src="{{ url('/image/content/slide/slide3.jpg') }}" alt="Urban Athletes Benner 2">
+              <img class="w-full" src="{{ url('/image/content/slide/lenmarc/slider3.JPG') }}" alt="Urban Athletes Benner 2">
             </div>
             <div class="swiper-slide">
-              <img class="w-full" src="{{ url('/image/content/slide/slide4.jpg') }}" alt="Urban Athletes Benner 3">
+              <img class="w-full" src="{{ url('/image/content/slide/lenmarc/slider4.JPG') }}" alt="Urban Athletes Benner 3">
             </div>
             <div class="swiper-slide">
-              <img class="w-full" src="{{ url('/image/content/slide/slide5.jpg') }}" alt="Urban Athletes Benner 4">
+              <img class="w-full" src="{{ url('/image/content/slide/lenmarc/slider5.JPG') }}" alt="Urban Athletes Benner 4">
             </div>
           </div>
           <div class="swiper-button-next"></div>
