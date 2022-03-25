@@ -79,7 +79,7 @@
 <div style="margin: auto; width: 80%; border: 3px dashed #000; padding: 10px">
   <div>
     <h2>Hallo {{$dataEmail->nama}}</h2>
-    <p>Pesanan Anda telah kami terima dan dalam beberap saat lagi akan segera kami proses.</p>
+    <p>Pesanan Anda telah kami terima dan dalam beberapa saat lagi akan segera kami proses.</p>
     <p>Berikut rincian pesanan Anda :</p>
     <table style="width: 100%; line-height: 2">
       <tr>
@@ -134,11 +134,11 @@
         style="
           text-decoration: none; font-weight: bold;
           display:inline-block;border-radius:20px;background-color:#33ff00;color:#fff;
-          font-family:San,'Open Sans',Helvetica,Arial,sans-serif;font-weight:500;margin:16px 0 0;box-sizing:border-box;padding-left: 3rem;padding-right: 3rem;
+          font-family:San,'Open Sans',Helvetica,Arial,sans-serif;font-size: 1rem;font-weight:500;margin:16px 0 0;box-sizing:border-box;padding: 0.3rem 2.5rem;
         ">
-        konfirm Pembayaran
+        konfirmasi pembayaran
       </a>
-      <p>Alternatif Link :</p>
+      <p>Alternative Link :</p>
       <a target="_blank"
         href="{{ url('daftar/confirm') . '/' . $dataEmail->kode }}">
         {{ url('daftar/confirm') . '/' . $dataEmail->kode }}
