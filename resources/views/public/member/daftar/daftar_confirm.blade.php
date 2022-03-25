@@ -102,7 +102,7 @@
         </label>
       </div>
       <div class="flex justify-end my-4">
-        <button id="btn-submit" class="bg-green-500 py-2 px-6 rounded-lg mx-4 text-white text-lg" type="submit">Simpan</button>
+        <button id="btn-submit" class="bg-green-500 py-2 px-6 rounded-lg mx-4 text-white text-lg" type="submit">Submit</button>
         <span id="btn-disabled" class="hidden">
           <button class="flex items-center bg-green-500 opacity-80 py-2 px-2 mx-4 rounded-lg text-white text-lg" disabled>
             <img class="w-7 h-7" src="{{ url('/image/icon/Loading-white.svg') }}" alt="Urban Athletes"/> 
@@ -138,8 +138,10 @@
     /></noscript>
     <script type="text/javascript">
       document.getElementById('btn-submit').addEventListener('click', function() {
-      insert_event_code_here;
-      fbq('track', 'AddToCart');
+        fbq('track', 'Purchase', {
+          value: 99.000,
+          currency: 'Rp',
+        });
       }, false);
     </script>
     <!-- End Meta Pixel Code -->

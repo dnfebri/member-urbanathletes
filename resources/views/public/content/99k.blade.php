@@ -362,7 +362,6 @@
     /></noscript>
     <script type="text/javascript">
       document.getElementById('addToCartButton').addEventListener('click', function() {
-      insert_event_code_here;
       fbq('track', 'AddToCart');
       }, false);
     </script>
