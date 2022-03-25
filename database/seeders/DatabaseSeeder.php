@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
         $clubData = [
             [   // Merr
                 'club_id' => '2',
-                'email' => 'cs.urbanfitgwmerr@gmail.com',
+                'club_email' => 'cs.urbanfitgwmerr@gmail.com',
                 'nowa' => '628113343168',
                 'an_rek' => 'Mitra Sentral Indonesia',
                 'bca' => '885-806-061',
@@ -28,7 +28,7 @@ class DatabaseSeeder extends Seeder
             ],
             [   // Marvell
                 'club_id' => '3',
-                'email' => 'cs.urbancrossfitmarvell@gmail.com',
+                'club_email' => 'cs.urbancrossfitmarvell@gmail.com',
                 'nowa' => '628113443168',
                 'an_rek' => 'Urbanfit Valdixon Indonesi',
                 'bca' => '889-901-979',
@@ -37,7 +37,7 @@ class DatabaseSeeder extends Seeder
             ],
             [   // Tidat
                 'club_id' => '4',
-                'email' => 'cs.urbanathletestidar@gmail.com',
+                'club_email' => 'cs.urbanathletestidar@gmail.com',
                 'nowa' => '628113432168',
                 'an_rek' => 'Mitra Sentral Indonesiai',
                 'bca' => '885-856-808',
@@ -46,7 +46,7 @@ class DatabaseSeeder extends Seeder
             ],
             [   // Lenmarc
                 'club_id' => '5', 
-                'email' => 'cs.urbanathleteslenmarc@gmail.com',
+                'club_email' => 'cs.urbanathleteslenmarc@gmail.com',
                 'nowa' => '628113302168',
                 'an_rek' => 'VALDIXON SUKSES BERSAMA',
                 'bca' => '258-88319-79',
