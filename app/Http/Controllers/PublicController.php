@@ -26,9 +26,9 @@ class PublicController extends Controller
 
     public function daftar()
     {
-        $clubs = $this->apiClubs;
-        // return view("public/member/daftar/daftar", ['clubs' => $clubs]);
-        return view("public/member/daftar/daftar", compact('clubs'));
+        // $clubs = $this->apiClubs;
+        return view("public/member/daftar/daftar", ['clubs' => $this->apiClubs]);
+        // return view("public/member/daftar/daftar", compact('clubs'));
     }
 
     public function daftarSave(Request $request)
