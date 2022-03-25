@@ -24,7 +24,7 @@
     {{-- {{ $invoice }}
     <br>
     {{ $dataInvoice }} --}}
-    <p>Silahkan lakukan transfer senilai {{ $dataInvoice->harga }}</p>
+    <p>Silahkan lakukan transfer senilai Rp {{number_format($dataInvoice->harga,2,',','.')}}</p>
     <p>ke rekening kami</p>
     <p>yang kami kirimkan formnya di email</p>
     <p>Silahkan cek email anda di pesan masuk atau spam email</p>
