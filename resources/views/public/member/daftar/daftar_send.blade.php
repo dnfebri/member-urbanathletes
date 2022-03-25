@@ -29,7 +29,8 @@
     <p>yang kami kirimkan formnya di email</p>
     <p>Silahkan cek email anda di pesan masuk atau spam email</p>
     <div class="my-4">
-      <a href="{{ route('content') }}" class="underline bg-yellow-400 rounded-md p-1"><i class="fa-solid fa-chevron-left"></i> Kembali</a>
+      {{-- <a href="{{ route('content') }}" class="underline bg-yellow-400 rounded-md p-1"><i class="fa-solid fa-chevron-left"></i> Kembali</a> --}}
+      <a href="https://mail.google.com/mail/" class="underline bg-yellow-400 rounded-md p-1"><i class="fa-solid fa-chevron-left"></i> Cek Email</a>
     </div>
   </x-layout_card_form>
 </x-main>

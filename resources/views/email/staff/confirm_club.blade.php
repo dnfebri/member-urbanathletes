@@ -1,0 +1,75 @@
+<div style="margin: auto; width: 80%; border: 3px dashed #000; padding: 10px">
+  <div>
+    <h2>Hallo {{$dataEmail->nama}}</h2>
+    <p><b>Pembayaran sebesar Rp {{number_format($dataEmail->harga,2,',','.')}} dari {{$dataEmail->nama}} telah dilakukan konfirmasi.</b></p>
+    <p>Berikut rincian konfirmasi pembayaran :</p>
+    <table style="width: 100%; line-height: 2">
+      <tr>
+        <td>Kode Pembayaran</td>
+        <td>: {{$dataEmail->kode}}</td>
+      </tr>
+      <tr>
+        <td>Nama Pembeli</td>
+        <td>: {{$dataEmail->nama}}</td>
+      </tr>
+      <tr>
+        <td>Total Bayar</td>
+        <td>: Rp {{number_format($dataEmail->harga,2,',','.')}}</td>
+      </tr>
+      <tr>
+        <td>Club Yang di Pilih</td>
+        @foreach ( $clubs as $club )
+          @if ($club['id'] == $dataEmail->club)
+            <td>: {{$club['name']}}</td>
+          @endif
+        @endforeach
+      </tr>
+    </table>
+    <p>Silahkan segera lakukan pembayaran ke salah satu rekening di bawah ini :</p>
+    <table>
+      <tr>
+        <td>Bank</td>
+        <td>: BCA</td>
+      </tr>
+      <tr>
+        <td>Nomer Rekening</td>
+        <td>: {{$clubData->bca}}</td>
+      </tr>
+      <tr>
+        <td>Atas Nama</td>
+        <td>: {{$clubData->an_rek}}</td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <td>Bank</td>
+        <td>: Mandiri</td>
+      </tr>
+      <tr>
+        <td>Nomer Rekening</td>
+        <td>: {{$clubData->mandiri}}</td>
+      </tr>
+      <tr>
+        <td>Atas Nama</td>
+        <td>: {{$clubData->an_rek}}</td>
+      </tr>
+    </table>
+
+    <div style="text-align: center">
+      <a href="{{ url('daftar/confirm') . '/' . $dataEmail->kode }}" target="_blank"
+        style="
+          text-decoration: none; font-weight: bold;
+          display:inline-block;border-radius:20px;background-color:#33ff00;color:#fff;
+          font-family:San,'Open Sans',Helvetica,Arial,sans-serif;font-weight:500;margin:16px 0 0;box-sizing:border-box;padding-left: 3rem;padding-right: 3rem;
+        ">
+        konfirmasi pembayaran
+      </a>
+      <p>Alternative Link :</p>
+      <a target="_blank"
+        href="{{ url('daftar/confirm') . '/' . $dataEmail->kode }}">
+        {{ url('daftar/confirm') . '/' . $dataEmail->kode }}
+      </a>
+    </div>
+    <p>Jangan menginformasikan bukti dan data pembayaran kepada pihak manapun kecuali Urban Athletes.</p>
+  </div>
+</div>

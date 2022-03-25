@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ConfirmStaffClub;
 use App\Mail\SendEmailConfirm;
 use App\Models\Invoice;
 use Illuminate\Http\Request;
@@ -106,8 +107,11 @@ class InvoiceController extends Controller
         $clubs = $this->apiClubs->json('data');
         $dataEmail = DB::table('invoices')
                     ->join('joins', 'invoices.join_id', '=', 'joins.id')
+                    ->join('club_data', 'invoices.club', '=', 'club_data.club_id')
                     ->where('kode', $request->kode)->first();
+        dd($dataEmail->email);
         Mail::to( $request->email )->send(new SendEmailConfirm($dataEmail, $clubs));
+        Mail::to( $request->email )->send(new ConfirmStaffClub($dataEmail, $clubs));
         return redirect()->route('daftar.confirmSuccess', ['kode'=>$request->kode]);
     }
 
