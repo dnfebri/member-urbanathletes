@@ -14,7 +14,7 @@ class InvoiceController extends Controller
 {
     public function __construct()
     {
-        $this->apiClubs = Http::get('https://api.urbanathletes.co.id/fitness/v1/branch');
+        $this->apiClubs = Http::get('https://api.urbanathletes.co.id/fitness/v1/branch')->json('data');
     }
     
     public function index()
@@ -104,7 +104,7 @@ class InvoiceController extends Controller
                         'image' => '/' . $namaImage,
                     ]);
         
-        $clubs = $this->apiClubs->json('data');
+        $clubs = $this->apiClubs['rows'];
         $dataEmail = DB::table('invoices')
                     ->join('joins', 'invoices.join_id', '=', 'joins.id')
                     ->join('club_data', 'invoices.club', '=', 'club_data.club_id')
