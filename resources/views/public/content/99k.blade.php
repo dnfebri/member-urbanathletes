@@ -34,7 +34,7 @@
             <span class="animate-ping py-2 px-4 absolute rounded-full bg-red-600 text-red-600 text-sm">
               Daftar Sekarang!
             </span>
-            <a class="relative py-2 px-4 rounded-full bg-red-600 text-white text-2xl hover:text-3xl transition-all duration-500" href="{{ route('daftar.index') }}">
+            <a id="addToCartButton" class="relative py-2 px-4 rounded-full bg-red-600 text-white text-2xl hover:text-3xl transition-all duration-500" href="{{ route('daftar.index') }}">
               Daftar Sekarang!
             </a>
           </div>
@@ -305,7 +305,7 @@
               <span class="animate-ping py-2 px-4 absolute rounded-full bg-red-600 text-red-600 text-sm">
                 Daftar Sekarang!
               </span>
-              <a class="relative py-2 px-4 rounded-full bg-red-600 text-white text-2xl hover:text-3xl transition-all duration-500" href="{{ route('daftar.index') }}">
+              <a id="addToCartButton" class="relative py-2 px-4 rounded-full bg-red-600 text-white text-2xl hover:text-3xl transition-all duration-500" href="{{ route('daftar.index') }}">
                 Daftar Sekarang!
               </a>
             </div>
@@ -345,22 +345,28 @@
     </script>
 
     <!-- Meta Pixel Code -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '544863203544959');
-    fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=544863203544959&ev=PageView&noscript=1"
-  /></noscript>
-  <!-- End Meta Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '544863203544959');
+      fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=544863203544959&ev=PageView&noscript=1"
+    /></noscript>
+    <script type="text/javascript">
+      document.getElementById('addToCartButton').addEventListener('click', function() {
+      insert_event_code_here;
+      fbq('track', 'AddToCart');
+      }, false);
+    </script>
+    <!-- End Meta Pixel Code -->
     
   @stack('script')
   @endpush

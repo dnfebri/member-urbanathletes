@@ -14,7 +14,23 @@
       </tr>
       <tr>
         <td>No WA Pembali</td>
-        <td>: {{$dataEmail->nama}}</td>
+        <td>: {{$dataEmail->nomor}}</td>
+      </tr>
+      <tr>
+        <td>Email Pembali</td>
+        <td>: {{$dataEmail->email}}</td>
+      </tr>
+      <tr>
+        <td>Alamat</td>
+        <td>: {{$dataEmail->alamat}}</td>
+      </tr>
+      <tr>
+        <td>Club</td>
+        @foreach ( $clubs as $club )
+          @if ($club['id'] == $dataEmail->club)
+            <td>: {{$club['name']}}</td>
+          @endif
+        @endforeach
       </tr>
       <tr>
         <td>Total Bayar</td>
