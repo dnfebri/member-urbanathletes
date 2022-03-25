@@ -31,8 +31,8 @@ class ConfirmStaffClub extends Mailable
     public function build()
     {
         $clubs = $this->clubs;
-        $clubData = ClubData::where('club_id', $this->dataEmail->club)->first();
+        $dataEmail = $this->dataEmail;
         return $this->subject('Konfirmasi Pembayaran dari'. $this->dataEmail->nama)
-                    ->view('email.confirm_club', compact('clubData', 'clubs'));
+                    ->view('email.staff.confirm_club', compact('clubs', 'dataEmail'));
     }
 }

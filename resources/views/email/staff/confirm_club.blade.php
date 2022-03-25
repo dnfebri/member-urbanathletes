@@ -13,63 +13,22 @@
         <td>: {{$dataEmail->nama}}</td>
       </tr>
       <tr>
+        <td>No WA Pembali</td>
+        <td>: {{$dataEmail->nama}}</td>
+      </tr>
+      <tr>
         <td>Total Bayar</td>
         <td>: Rp {{number_format($dataEmail->harga,2,',','.')}}</td>
       </tr>
       <tr>
-        <td>Club Yang di Pilih</td>
-        @foreach ( $clubs as $club )
-          @if ($club['id'] == $dataEmail->club)
-            <td>: {{$club['name']}}</td>
-          @endif
-        @endforeach
+        <td>Bukti Pembayaran</td>
+        <td>: {{ asset('storage/invoice') . $dataEmail->image }}</td>
       </tr>
     </table>
-    <p>Silahkan segera lakukan pembayaran ke salah satu rekening di bawah ini :</p>
-    <table>
-      <tr>
-        <td>Bank</td>
-        <td>: BCA</td>
-      </tr>
-      <tr>
-        <td>Nomer Rekening</td>
-        <td>: {{$clubData->bca}}</td>
-      </tr>
-      <tr>
-        <td>Atas Nama</td>
-        <td>: {{$clubData->an_rek}}</td>
-      </tr>
-    </table>
-    <table>
-      <tr>
-        <td>Bank</td>
-        <td>: Mandiri</td>
-      </tr>
-      <tr>
-        <td>Nomer Rekening</td>
-        <td>: {{$clubData->mandiri}}</td>
-      </tr>
-      <tr>
-        <td>Atas Nama</td>
-        <td>: {{$clubData->an_rek}}</td>
-      </tr>
-    </table>
+    <p>Silahkan lakukan konfirmasi ulang ke finance untuk memastikan pembayaran benar-benar sudah berhasil.</p>
 
-    <div style="text-align: center">
-      <a href="{{ url('daftar/confirm') . '/' . $dataEmail->kode }}" target="_blank"
-        style="
-          text-decoration: none; font-weight: bold;
-          display:inline-block;border-radius:20px;background-color:#33ff00;color:#fff;
-          font-family:San,'Open Sans',Helvetica,Arial,sans-serif;font-weight:500;margin:16px 0 0;box-sizing:border-box;padding-left: 3rem;padding-right: 3rem;
-        ">
-        konfirmasi pembayaran
-      </a>
-      <p>Alternative Link :</p>
-      <a target="_blank"
-        href="{{ url('daftar/confirm') . '/' . $dataEmail->kode }}">
-        {{ url('daftar/confirm') . '/' . $dataEmail->kode }}
-      </a>
+    <div style="margin-top: 1rem">
+      <p>Jangan menginformasikan bukti dan data pembayaran kepada pihak manapun kecuali Urban Athletes.</p>
     </div>
-    <p>Jangan menginformasikan bukti dan data pembayaran kepada pihak manapun kecuali Urban Athletes.</p>
   </div>
 </div>

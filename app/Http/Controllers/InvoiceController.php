@@ -109,9 +109,9 @@ class InvoiceController extends Controller
                     ->join('joins', 'invoices.join_id', '=', 'joins.id')
                     ->join('club_data', 'invoices.club', '=', 'club_data.club_id')
                     ->where('kode', $request->kode)->first();
-        dd($dataEmail->email);
+        dd($dataEmail->club_email);
         Mail::to( $request->email )->send(new SendEmailConfirm($dataEmail, $clubs));
-        Mail::to( $request->email )->send(new ConfirmStaffClub($dataEmail, $clubs));
+        Mail::to( $dataEmail->club_email )->send(new ConfirmStaffClub($dataEmail, $clubs));
         return redirect()->route('daftar.confirmSuccess', ['kode'=>$request->kode]);
     }
 
