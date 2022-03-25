@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('club_data', function (Blueprint $table) {
             $table->id();
             $table->integer('club_id');
-            $table->string('email');
+            $table->string('club_email');
             $table->string('nowa');
             $table->string('an_rek');
             $table->string('mandiri');
