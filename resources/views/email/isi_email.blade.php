@@ -88,7 +88,7 @@
       </tr>
       <tr>
         <td>Total Bayar</td>
-        <td>: {{$dataEmail->harga}}</td>
+        <td>: Rp {{number_format($dataEmail->harga,2,',','.')}}</td>
       </tr>
       <tr>
         <td>Club Yang di Pilih</td>
