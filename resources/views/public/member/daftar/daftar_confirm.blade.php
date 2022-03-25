@@ -34,7 +34,7 @@
           @enderror
         </label>
         <label class="block mx-4 my-4">
-          @foreach ($clubs['rows'] as $club)
+          @foreach ($clubs as $club)
             @if ( $club['id'] == $dataInvoice->club )
               <span class="">Club : {{ $club['name'] }}</span>
             @endif
