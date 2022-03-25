@@ -122,8 +122,7 @@
     /></noscript>
     <script type="text/javascript">
       document.getElementById('btn-submit').addEventListener('click', function() {
-      insert_event_code_here;
-      fbq('track', 'AddToCart');
+      fbq('track', 'CompleteRegistration');
       }, false);
     </script>
     <!-- End Meta Pixel Code -->
