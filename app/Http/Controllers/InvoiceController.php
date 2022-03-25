@@ -62,8 +62,7 @@ class InvoiceController extends Controller
      */
     public function edit($kode)
     {
-        // dd($this->apiClubs->json('data'));
-        $clubs = $this->apiClubs->json('data');
+        $clubs = $this->apiClubs['rows'];
         $dataInvoice = DB::table('invoices')
                         ->join('joins', 'invoices.join_id', '=', 'joins.id')
                         ->where('kode', $kode)->first();
