@@ -22,7 +22,7 @@ class DatabaseSeeder extends Seeder
                 'club_email' => 'cs.urbanfitgwmerr@gmail.com',
                 'nowa' => '628113343168',
                 'an_rek' => 'Mitra Sentral Indonesia',
-                'bca' => '885-806-061',
+                'bca' => '0885-806-061',
                 'mandiri' => '140-00-789987-89',
                 
             ],
@@ -40,7 +40,7 @@ class DatabaseSeeder extends Seeder
                 'club_email' => 'cs.urbanathletestidar@gmail.com',
                 'nowa' => '628113432168',
                 'an_rek' => 'Mitra Sentral Indonesia',
-                'bca' => '885-856-808',
+                'bca' => '0885-856-808',
                 'mandiri' => '140-00-555988-83',
                 
             ],
