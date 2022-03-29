@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Mail\SendEmail;
 use App\Mail\SendEmailConfirm;
+use App\Models\ApiModels;
 use App\Models\Invoice;
 use App\Models\Join;
 use Illuminate\Http\Request;
@@ -15,7 +16,7 @@ class PublicController extends Controller
 {
     public function __construct()
     {
-        $this->apiClubs = Http::get('https://api.urbanathletes.co.id/fitness/v1/branch')->json('data');
+        $this->apiModels = new ApiModels();
     }
 
     public function home()
@@ -26,8 +27,8 @@ class PublicController extends Controller
 
     public function daftar()
     {
-        // $clubs = $this->apiClubs;
-        return view("public/member/daftar/daftar", ['clubs' => $this->apiClubs]);
+        // $clubs = $this->apiModels->allClubs();
+        return view("public/member/daftar/daftar", ['clubs' => $this->apiModels->allClubs()]);
         // return view("public/member/daftar/daftar", compact('clubs'));
     }
 
@@ -67,7 +68,7 @@ class PublicController extends Controller
                         ->join('joins', 'invoices.join_id', '=', 'joins.id')
                         ->where('kode', $kode)->first();
 
-        $clubs = $this->apiClubs['rows'];
+        $clubs = $this->apiModels->allClubs()['rows'];
         Mail::to( $join->email )->send(new SendEmail($dataEmail, $clubs));
         // return redirect('/')->with('massage', 'Join ' . $request->nama . ' berhasi ditambahkan');
         return redirect()->route('daftar.send', ['kode' => $kode]);

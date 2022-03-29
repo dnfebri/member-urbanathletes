@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Mail\ConfirmStaffClub;
 use App\Mail\SendEmailConfirm;
+use App\Models\ApiModels;
 use App\Models\Invoice;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -14,7 +15,7 @@ class InvoiceController extends Controller
 {
     public function __construct()
     {
-        $this->apiClubs = Http::get('https://api.urbanathletes.co.id/fitness/v1/branch')->json('data');
+        $this->apiModels = new ApiModels();
     }
     
     public function index()
@@ -62,7 +63,7 @@ class InvoiceController extends Controller
      */
     public function edit($kode)
     {
-        $clubs = $this->apiClubs['rows'];
+        $clubs = $this->apiModels->allClubs()['rows'];
         $dataInvoice = DB::table('invoices')
                         ->join('joins', 'invoices.join_id', '=', 'joins.id')
                         ->where('kode', $kode)->first();
@@ -103,7 +104,7 @@ class InvoiceController extends Controller
                         'image' => '/' . $namaImage,
                     ]);
         
-        $clubs = $this->apiClubs['rows'];
+        $clubs = $this->apiModels->allClubs()['rows'];
         $dataEmail = DB::table('invoices')
                     ->join('joins', 'invoices.join_id', '=', 'joins.id')
                     ->join('club_data', 'invoices.club', '=', 'club_data.club_id')
