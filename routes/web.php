@@ -6,11 +6,14 @@ use App\Http\Controllers\PublicController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
+Route::get('/welcome_to_ua', function () { return view('crm.welcome_to_ua');});
+Route::get('/success_buy_pt', function () { return view('crm.success_buy_pt');});
 
 Route::get('/dev', [PublicController::class, 'home']);
 
 Route::get('/', [ContentController::class, 'index'])->name('content');
 Route::get('/99k', [ContentController::class, 'index99k'])->name('99k');
+
 
 Route::prefix('daftar')->name('daftar.')->group(function () {
   // Route::get('', [PublicController::class, 'daftar'])->name('gym');
@@ -28,6 +31,8 @@ Route::get('/isiemail', function () { return view('email.isi_email_confirm');});
 // Route::get('/member', function () {
 //   return view('public/member/join');
 // });
-Auth::routes();
+Auth::routes([
+  'register' => false,
+]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
