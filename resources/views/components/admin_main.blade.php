@@ -17,7 +17,7 @@
   {{-- @dd($specialPage) --}}
   @empty($specialPage)
   <nav class="bg-green-ua">
-    @include('components.navbar')
+    @include('components.admin_navbar')
   </nav>
   @endempty
   
@@ -28,7 +28,7 @@
 
   @empty($specialPage)
   <footer>
-    @include('components.footer')
+    @include('components.admin_footer')
   </footer>
   @endempty
 

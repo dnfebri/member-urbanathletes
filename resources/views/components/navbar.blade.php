@@ -5,7 +5,7 @@
     </div>
     <div class="font-bold">
       <ul class="hidden lg:flex flex-row text-white text-sm text-shadow-xl">
-        <li class="px-5 hover:text-yellow-500 text-shadow-xl"><a href="#">Home</a></li>
+        <li class="px-5 hover:text-yellow-500"><a href="#">Home</a></li>
         <li class="px-5 hover:text-yellow-500"><a href="#">Abaut</a></li>
         <li class="px-5 hover:text-yellow-500"><a href="#">Programs</a></li>
         <li class="px-5 hover:text-yellow-500"><a href="#">What's on</a></li>
@@ -23,7 +23,7 @@
         {{-- Menu Mobile --}}
         <div class="hidden menu-mobile absolute top-0 -right-full w-8/12 bg-white border group-focus:opacity-100 transition-all duration-500">
           <div class="flex justify-end border-b-2 btn-close-menu mr-4">
-            <svg class="w-12 h-12 my-3 mx-4 text-gray-500 hover:h-14 hover:w-14" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg class="w-12 h-12 my-3 mx-4 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </div>

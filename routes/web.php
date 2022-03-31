@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin;
 use App\Http\Controllers\ContentController;
 use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\PublicController;
@@ -32,7 +33,7 @@ Route::get('/isiemail', function () { return view('email.isi_email_confirm');});
 //   return view('public/member/join');
 // });
 Auth::routes([
-  'register' => false,
+  // 'register' => false,
 ]);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [Admin\InvoiceController::class, 'index'])->name('home');
