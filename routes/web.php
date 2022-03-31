@@ -33,7 +33,7 @@ Route::get('/isiemail', function () { return view('email.isi_email_confirm');});
 //   return view('public/member/join');
 // });
 Auth::routes([
-  // 'register' => false,
+  'register' => false,
 ]);
 
 Route::get('/home', [Admin\InvoiceController::class, 'index'])->name('home');
