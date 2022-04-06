@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin;
 use App\Http\Controllers\ContentController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\PublicController;
 use Illuminate\Support\Facades\Auth;
@@ -36,4 +37,11 @@ Auth::routes([
   'register' => false,
 ]);
 
-Route::get('/home', [Admin\InvoiceController::class, 'index'])->name('home');
+Route::middleware(['auth', 'verified'])->group(function () {
+  Route::get('/home', [Admin\InvoiceController::class, 'index'])->name('home');
+  Route::prefix('admin')->name('admin')->group(function () {
+  });
+});
+
+// nonAktive
+Route::get('/homenotaktive', [HomeController::class, 'index'])->name('homeNotAktive');

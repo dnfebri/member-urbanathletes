@@ -20,7 +20,7 @@ class InvoiceController extends Controller
     {
         $invoices = $this->dataInvoice->getIndex()->sortByDesc('id');
         $clubs = $this->apiModels->allClubs()['rows'];
-        // dd($clubs);
+        // dd($invoices);
         return view('admin.joins.index', compact('invoices', 'clubs'));
     }
 
