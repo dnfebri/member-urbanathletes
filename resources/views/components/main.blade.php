@@ -16,9 +16,8 @@
 <body class="font-AmpleSoft">
   {{-- @dd($specialPage) --}}
   @empty($specialPage)
-  <nav class="bg-green-ua">
     @include('components.navbar')
-  </nav>
+    <div class="py-8"></div>
   @endempty
   
   {{-- <header>Header</header> --}}
@@ -30,6 +29,7 @@
   <footer>
     @include('components.footer')
   </footer>
+  <script src="{{ url('/js/script_nav.js') }}"></script>
   @endempty
 
   @stack('script')
