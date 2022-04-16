@@ -12,6 +12,7 @@ Route::get('/welcome_to_ua', function () { return view('crm.welcome_to_ua');});
 Route::get('/success_buy_pt', function () { return view('crm.success_buy_pt');});
 
 Route::get('/dev', [PublicController::class, 'home']);
+Route::get('/aboutus', [PublicController::class, 'aboutus'])->name('aboutus');
 
 Route::get('/', [ContentController::class, 'index'])->name('content');
 Route::get('/99k', [ContentController::class, 'index99k'])->name('99k');

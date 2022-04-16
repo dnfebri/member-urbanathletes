@@ -6,7 +6,7 @@
     <div class="font-bold">
       <ul class="hidden lg:flex flex-row text-white text-sm text-shadow-xl">
         <li class="px-5 hover:text-yellow-500"><a href="#">Home</a></li>
-        <li class="px-5 hover:text-yellow-500"><a href="#">Abaut</a></li>
+        <li class="px-5 hover:text-yellow-500"><a href="{{ route('aboutus') }}">Abaut</a></li>
         <li class="px-5 hover:text-yellow-500"><a href="#">Programs</a></li>
         <li class="px-5 hover:text-yellow-500"><a href="#">What's on</a></li>
         <li class="px-5 hover:text-yellow-500"><a href="#">Success Story</a></li>
@@ -29,7 +29,7 @@
           </div>
           <ul class="flex flex-col items-center w-full text-base text-shadow-xl cursor-pointer">
             <li class="hover:bg-gray-200 py-4 px-6 w-full"><a href="#">Home</a></li>
-            <li class="hover:bg-gray-200 py-4 px-6 w-full"><a href="#">Abaut</a></li>
+            <li class="hover:bg-gray-200 py-4 px-6 w-full"><a href="{{ route('aboutus') }}">Abaut</a></li>
             <li class="hover:bg-gray-200 py-4 px-6 w-full"><a href="#">Programs</a></li>
             <li class="hover:bg-gray-200 py-4 px-6 w-full"><a href="#">What's on</a></li>
             <li class="hover:bg-gray-200 py-4 px-6 w-full"><a href="#">Success Story</a></li>
