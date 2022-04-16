@@ -25,6 +25,12 @@ class PublicController extends Controller
         return view("public/index");
     }
 
+    public function aboutus()
+    {
+        // echo "hello word";
+        return view("public/about/aboutus");
+    }
+
     public function daftar()
     {
         // $clubs = $this->apiModels->allClubs();
