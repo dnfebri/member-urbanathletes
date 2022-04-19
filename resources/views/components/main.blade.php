@@ -17,7 +17,7 @@
   {{-- @dd($specialPage) --}}
   @empty($specialPage)
     @include('components.navbar')
-    <div class="py-8"></div>
+    <div class="py-7"></div>
   @endempty
   
   {{-- <header>Header</header> --}}
