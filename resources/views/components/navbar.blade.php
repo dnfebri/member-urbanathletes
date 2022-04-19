@@ -15,18 +15,22 @@
           </button>
           <div id="nav-menu" class="text-[#598700] hidden absolute py-2 bg-white lg:text-white text-shadow-xl bg-opacity-80 lg:gb-opacity-100 shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
             <ul class="block lg:flex ">
-              <li class="group"><a href="#" class="text-base py-2 mx-8 lg:mx-4 flex group-hover:text-yellow-500">Home</a></li>
+              <li class="group"><a href="{{ url('/dev') }}" class="text-base py-2 mx-8 lg:mx-4 flex group-hover:text-yellow-500">Home</a></li>
               <li class="group">
                 <button class="relative py-2 mx-4 lg:mx-4 flex jutify-center items-center focus:outline-none hover:text-yellow-500 group z-20">
                   <p class="px-4 lg:px-0">About</p>
                   <div class="absolute top-full hidden group-hover:block min-w-full w-max bg-white shadow-md rounded">
                     <ul class="text-black">
-                      <li class="px-4 py-1 hover:bg-gray-100 hover:text-yellow-500 border-b">
-                        <a href="#" class="">About us</a>
-                      </li>
-                      <li class="px-4 py-1 hover:bg-gray-100 hover:text-yellow-500">
-                        <a href="#" class="">Terms & Conditions</a>
-                      </li>
+                      <a href="{{ route('aboutus') }}" class="">
+                        <li class="px-4 py-1 hover:bg-gray-100 hover:text-yellow-500 border-b">
+                          About us
+                        </li>
+                      </a>
+                      <a href="{{ route('termsConditions') }}" class="">
+                        <li class="px-4 py-1 hover:bg-gray-100 hover:text-yellow-500">
+                          Terms & Conditions
+                        </li>
+                      </a>
                     </ul>
                   </div>
                 </button>
@@ -51,12 +55,16 @@
                   </span> --}}
                   <div class="absolute top-full hidden group-hover:block min-w-full w-max bg-white shadow-md rounded z-20">
                     <ul class="text-black">
-                      <li class="px-4 py-1 hover:bg-gray-100 hover:text-yellow-500 border-b">
-                        <a href="#" class="">The Valor</a>
-                      </li>
-                      <li class="px-4 py-1 hover:bg-gray-100 hover:text-yellow-500 border-b">
-                        <a href="#" class="">Personal Training</a>
-                      </li>
+                      <a href="{{ route('theValor') }}" class="">
+                        <li class="px-4 py-1 hover:bg-gray-100 hover:text-yellow-500 border-b">
+                          The Valor
+                        </li>
+                      </a>
+                      <a href="{{ route('personalTraining') }}" class="">
+                        <li class="px-4 py-1 hover:bg-gray-100 hover:text-yellow-500 border-b">
+                          Personal Training
+                        </li>
+                      </a>
                       <li class="px-4 py-1 hover:bg-gray-100 hover:text-yellow-500 border-b">
                         <a href="#" class="">Group Exercise</a>
                       </li>
