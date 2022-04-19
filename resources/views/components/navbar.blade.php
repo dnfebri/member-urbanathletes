@@ -65,12 +65,16 @@
                           Personal Training
                         </li>
                       </a>
-                      <li class="px-4 py-1 hover:bg-gray-100 hover:text-yellow-500 border-b">
-                        <a href="#" class="">Group Exercise</a>
-                      </li>
-                      <li class="px-4 py-1 hover:bg-gray-100 hover:text-yellow-500">
-                        <a href="#" class="">Online Schedule</a>
-                      </li>
+                      <a href="#" class="">
+                        <li class="px-4 py-1 hover:bg-gray-100 hover:text-yellow-500 border-b">
+                          Group Exercise
+                        </li>
+                      </a>
+                      <a href="#" class="">
+                        <li class="px-4 py-1 hover:bg-gray-100 hover:text-yellow-500">
+                          Online Schedule
+                        </li>
+                      </a>
                     </ul>
                   </div>
                 </button>
@@ -127,12 +131,16 @@
                   </span> --}}
                   <div class="absolute top-full hidden group-hover:block min-w-full w-max bg-white shadow-md rounded z-20">
                     <ul class="text-black">
-                      <li class="px-4 py-1 hover:bg-gray-100 hover:text-yellow-500 border-b">
-                        <a href="#" class="">Media</a>
-                      </li>
-                      <li class="px-4 py-1 hover:bg-gray-100 hover:text-yellow-500">
-                        <a href="#" class="">Blog</a>
-                      </li>
+                      <a href="#" class="">
+                        <li class="px-4 py-1 hover:bg-gray-100 hover:text-yellow-500 border-b">
+                          Media
+                        </li>
+                      </a>
+                      <a href="#" class="">
+                        <li class="px-4 py-1 hover:bg-gray-100 hover:text-yellow-500">
+                          Blog
+                        </li>
+                      </a>
                     </ul>
                   </div>
                 </button>
