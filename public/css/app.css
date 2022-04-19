@@ -677,6 +677,9 @@ select {
 .m-0 {
   margin: 0px;
 }
+.m-2 {
+  margin: 0.5rem;
+}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -704,6 +707,14 @@ select {
 .my-2 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+}
+.my-14 {
+  margin-top: 3.5rem;
+  margin-bottom: 3.5rem;
+}
+.my-18 {
+  margin-top: 70px;
+  margin-bottom: 70px;
 }
 .ml-1 {
   margin-left: 0.25rem;
@@ -750,11 +761,14 @@ select {
 .-ml-4 {
   margin-left: -1rem;
 }
-.mb-12 {
-  margin-bottom: 3rem;
-}
 .mb-8 {
   margin-bottom: 2rem;
+}
+.mb-18 {
+  margin-bottom: 70px;
+}
+.mb-12 {
+  margin-bottom: 3rem;
 }
 .mb-2 {
   margin-bottom: 0.5rem;
@@ -866,11 +880,6 @@ select {
 }
 .w-12 {
   width: 3rem;
-}
-.w-max {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
 }
 .w-10 {
   width: 2.5rem;
@@ -1032,9 +1041,6 @@ select {
 .border-b-2 {
   border-bottom-width: 2px;
 }
-.border-b {
-  border-bottom-width: 1px;
-}
 .border-l-0 {
   border-left-width: 0px;
 }
@@ -1046,6 +1052,9 @@ select {
 }
 .border-t-2 {
   border-top-width: 2px;
+}
+.border-b {
+  border-bottom-width: 1px;
 }
 .border-solid {
   border-style: solid;
@@ -1112,6 +1121,10 @@ select {
 .bg-red-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(239 68 68 / var(--tw-bg-opacity));
+}
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 .bg-content-bg {
   --tw-bg-opacity: 1;
@@ -1210,6 +1223,10 @@ select {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
 }
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
@@ -1258,6 +1275,12 @@ select {
 }
 .text-right {
   text-align: right;
+}
+.text-justify {
+  text-align: justify;
+}
+.indent-16 {
+  text-indent: 4rem;
 }
 .indent-4 {
   text-indent: 1rem;
@@ -1692,12 +1715,6 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(234 179 8 / var(--tw-bg-opacity));
 }
-
-.hover\:bg-gray-100:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
-}
-
 .hover\:text-3xl:hover {
   font-size: 1.875rem;
   line-height: 2.25rem;

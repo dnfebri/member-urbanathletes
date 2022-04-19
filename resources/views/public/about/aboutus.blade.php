@@ -17,7 +17,7 @@
 
         <div class="my-8"><img src="{{ url('/image/aboutus/bannerAboutus2.jpg') }}" alt="ua2"></div>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-2">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-3">
             <div><img src="{{ url('/image/aboutus/fotoAboutus1.jpg') }}"></div>
             <div><img src="{{ url('/image/aboutus/fotoAboutus2.jpg') }}"></div>
             <div><img src="{{ url('/image/aboutus/fotoAboutus3.jpg') }}"></div>
@@ -25,7 +25,7 @@
         </div>
 
         <div>
-            <h4 class="text-5xl text-center my-4">Kenapa Urban Athletes?</h4>
+            <h4 class="text-5xl text-center my-8">Kenapa Urban Athletes?</h4>
         </div>
 
         <div>
@@ -61,8 +61,29 @@
                 </a></div>
               </div>
 
-              <div>
-                <h3 class="text-5xl text-center my-8 text-lime-500">MEET OUR SUPER HEROES!</h3>
+            <div>
+                <h3 class="text-5xl text-center my-8 mb-8 text-lime-500">MEET OUR SUPER HEROES!</h3>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <img src="{{ url('/image/aboutus/fotoPelatih1.jpg') }}">
+                    <p class="text-2xl font-bold my-8">PRASETYO DAJAN R.</p>
+                    <p class="font-bold mb-8">Sertifikasi: TRX, BATTLE ROPE LEVEL 1, KETTLEBELL LEVEL 1, MUAYTHAI BORAN, RAI INSTITUTE.</p>
+                </div>
+                <div>
+                    <img src="{{ url('/image/aboutus/fotoPelatih2.jpg') }}">
+                    <p class="text-2xl font-bold my-8">DYMAS PRADANATA</p>
+                    <p class="font-bold mb-8">SERTIFIKASI : IKSFA LEVEL 1 KETTEBELL SPORT COACH, RAI INSTITUTE CPT, APKI SUSPENSION TRAINING SPECIALIST.</p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <img src="{{ url('/image/aboutus/fotoPelatih3.jpg') }}">
+                    <p class="text-2xl font-bold my-8">NAUNG PUDI MEI RIVO BARUMALANG (RIVO)</p>
+                    <p class="font-bold">Sertifikasi: TRX, VIPR, RUMBLE ROLLER, BOSU PILATES, THUMB BOXING, PETER TWIST, DYNAMAX, BASIC LIFE SUPPORT, KETTLEBELL.</p>
+                </div>
             </div>
         </div>
     </div>

@@ -31,6 +31,21 @@ class PublicController extends Controller
         return view("public/about/aboutus");
     }
 
+    public function termsConditions()
+    {
+        return view("public/about/terms-conditions");
+    }
+
+    public function theValor()
+    {
+        return view("public/program/the-valor");
+    }
+
+    public function personalTraining()
+    {
+        return view("public/program/personal-training");
+    }
+
     public function daftar()
     {
         // $clubs = $this->apiModels->allClubs();
