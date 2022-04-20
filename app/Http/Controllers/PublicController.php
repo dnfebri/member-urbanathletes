@@ -46,6 +46,21 @@ class PublicController extends Controller
         return view("public/program/personal-training");
     }
 
+    public function onlineSchedule()
+    {
+        return view("public/program/online-schedule");
+    }
+
+    public function successStory()
+    {
+        return view("public/success-story");
+    }
+
+    public function media()
+    {
+        return view("public/articles/media");
+    }
+
     public function daftar()
     {
         // $clubs = $this->apiModels->allClubs();
