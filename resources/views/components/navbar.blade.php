@@ -70,7 +70,7 @@
                           Group Exercise
                         </li>
                       </a>
-                      <a href="#" class="">
+                      <a href="{{ route('onlineSchedule') }}" class="">
                         <li class="px-4 py-1 hover:bg-gray-100 hover:text-yellow-500">
                           Online Schedule
                         </li>
@@ -80,7 +80,7 @@
                 </button>
               </li>
               <li class="group"><a href="#" class="text-base py-2 mx-8 lg:mx-4 flex group-hover:text-yellow-500">What's on</a></li>
-              <li class="group"><a href="#" class="text-base py-2 mx-8 lg:mx-4 flex group-hover:text-yellow-500">Success Story</a></li>
+              <li class="group"><a href="{{ route('successStory') }}" class="text-base py-2 mx-8 lg:mx-4 flex group-hover:text-yellow-500">Success Story</a></li>
               {{-- <li class="group">
                 <button class="relative py-2 mx-4 flex jutify-center items-center focus:outline-none hover:text-yellow-500 group">
                   <p class="px-4 lg:px-0">Articles</p>
@@ -131,7 +131,7 @@
                   </span> --}}
                   <div class="absolute top-full hidden group-hover:block min-w-full w-max bg-white shadow-md rounded z-20">
                     <ul class="text-black">
-                      <a href="#" class="">
+                      <a href="{{ route('media') }}" class="">
                         <li class="px-4 py-1 hover:bg-gray-100 hover:text-yellow-500 border-b">
                           Media
                         </li>
