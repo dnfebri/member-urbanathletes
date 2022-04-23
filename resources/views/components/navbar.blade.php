@@ -56,7 +56,8 @@
                   <div class="absolute top-full hidden group-hover:block min-w-full w-max bg-white shadow-md rounded z-20">
                     <ul class="text-black">
                       <a href="{{ route('theValor') }}" class="">
-                        <li class="px-4 py-1 hover:bg-gray-100 hover:text-yellow-500 border-b">
+                        <li class="flex items-center px-4 py-1 hover:bg-gray-100 hover:text-yellow-500 border-b">
+                          <img class="w-6 mx-2" src="{{ url('/image/logo-valor.png') }}" alt="">
                           The Valor
                         </li>
                       </a>
@@ -131,12 +132,12 @@
                   </span> --}}
                   <div class="absolute top-full hidden group-hover:block min-w-full w-max bg-white shadow-md rounded z-20">
                     <ul class="text-black">
-                      <a href="{{ route('media') }}" class="">
+                      <a href="{{ url('media') }}" class="">
                         <li class="px-4 py-1 hover:bg-gray-100 hover:text-yellow-500 border-b">
                           Media
                         </li>
                       </a>
-                      <a href="#" class="">
+                      <a href="{{ route('blog') }}" class="">
                         <li class="px-4 py-1 hover:bg-gray-100 hover:text-yellow-500">
                           Blog
                         </li>
