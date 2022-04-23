@@ -17,7 +17,7 @@
             <ul class="block lg:flex ">
               <li class="group"><a href="{{ url('/dev') }}" class="text-base py-2 mx-8 lg:mx-4 flex group-hover:text-yellow-500">Home</a></li>
               <li class="group">
-                <button class="relative py-2 mx-4 lg:mx-4 flex jutify-center items-center focus:outline-none hover:text-yellow-500 group z-20">
+                <button class="relative text-shadow-xl py-2 mx-4 lg:mx-4 flex jutify-center items-center focus:outline-none hover:text-yellow-500 group z-20">
                   <p class="px-4 lg:px-0">About</p>
                   <div class="absolute top-full hidden group-hover:block min-w-full w-max bg-white shadow-md rounded">
                     <ul class="text-black">
@@ -36,7 +36,7 @@
                 </button>
               </li>
               <li class="group">
-                <button class="relative py-2 mx-4 lg:mx-4 flex jutify-center items-center focus:outline-none hover:text-yellow-500 group">
+                <button class="relative text-shadow-xl py-2 mx-4 lg:mx-4 flex jutify-center items-center focus:outline-none hover:text-yellow-500 group">
                   <p class="px-4 lg:px-0">Programs</p>
                   {{-- <span class="hover:bg-gray-100">
                     <svg
@@ -65,7 +65,7 @@
                           Personal Training
                         </li>
                       </a>
-                      <a href="#" class="">
+                      <a href="{{ url('group-exercise') }}" class="">
                         <li class="px-4 py-1 hover:bg-gray-100 hover:text-yellow-500 border-b">
                           Group Exercise
                         </li>
@@ -82,7 +82,7 @@
               <li class="group"><a href="#" class="text-base py-2 mx-8 lg:mx-4 flex group-hover:text-yellow-500">What's on</a></li>
               <li class="group"><a href="{{ route('successStory') }}" class="text-base py-2 mx-8 lg:mx-4 flex group-hover:text-yellow-500">Success Story</a></li>
               {{-- <li class="group">
-                <button class="relative py-2 mx-4 flex jutify-center items-center focus:outline-none hover:text-yellow-500 group">
+                <button class="relative text-shadow-xl py-2 mx-4 flex jutify-center items-center focus:outline-none hover:text-yellow-500 group">
                   <p class="px-4 lg:px-0">Articles</p>
                   <span class="hover:bg-gray-100">
                     <svg
@@ -112,7 +112,7 @@
                 </button>
               </li> --}}
               <li class="group">
-                <button class="relative py-2 mx-4 lg:mx-4 flex jutify-center items-center focus:outline-none hover:text-yellow-500 group">
+                <button class="relative text-shadow-xl py-2 mx-4 lg:mx-4 flex jutify-center items-center focus:outline-none hover:text-yellow-500 group">
                   <p class="px-4 lg:px-0">Articles</p>
                   {{-- <span class="hover:bg-gray-100">
                     <svg

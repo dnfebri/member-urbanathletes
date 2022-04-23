@@ -23,3 +23,15 @@
 .hamburger-active > span:nth-child(3) {
   @apply -rotate-45;
 }
+
+.detail-aktive {
+  @apply translate-y-0;
+}
+
+.space-detail{
+  @apply min-h-[80vh];
+}
+
+.opacity-hidden{
+  @apply opacity-0;
+}
