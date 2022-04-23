@@ -61,6 +61,16 @@ class PublicController extends Controller
         return view("public/articles/media");
     }
 
+    public function blog()
+    {
+        return view("public/articles/blog");
+    }
+
+    public function mobileAppMember()
+    {
+        return view("public/member/mobile-app-member");
+    }
+
     public function daftar()
     {
         // $clubs = $this->apiModels->allClubs();
