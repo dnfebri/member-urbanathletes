@@ -1,3 +1,6 @@
+{{-- @extends('layouts.main') --}}
+
+{{-- @section('content') --}}
 <x-main>
     <div class="container">
         <h3 class="text-4xl ml-10 mt-14 mb-8">Pertama di Jatim, Urban Athletes Kenalkan Virtual Fitness Studio</h3>
@@ -32,14 +35,20 @@
             </div>
     
             <div class="mb-10 ml-5">
-                <a href="#" class="btn btn-primary">Read more</a>
-                {{-- <a class="bg-green-300 px-1 py-1 rounded-md" href="#" >Read more</a> --}}
+                {{-- <a href="#" class="btn btn-primary">Read more</a> --}}
+                <a class="bg-green-300 px-1 py-1 rounded-md" href="#" >Read more</a>
             </div>
+
+            {{-- <div class="card">
+            <div class="card-header">
+                Featured
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+            </div> --}}
     </div>
 </x-main>
-
-{{-- @extends('layouts.main')
-
-@section('content')
-
-@endsection --}}
+{{-- @endsection --}}

@@ -15,6 +15,8 @@ Route::get('/media', function () { return view("public/articles/media");});
 Route::get('/resmi-dibuka-urban-athletes-marvell-city-hadirkan-the-valor', function () { return view("public/articles/media/resmi-dibuka-urban-athletes-marvell-city-hadirkan-the-valor");});
 Route::get('/menjaga-kebugaran-tanpa-terikat-jadwal-dan-waktu', function () { return view("public/articles/media/menjaga-kebugaran-tanpa-terikat-jadwal-dan-waktu");});
 Route::get('/pertama-di-jatim-urban-athletes-kenalkan-virtual-fitness-studio', function () { return view("public/articles/media/pertama-di-jatim-urban-athletes-kenalkan-virtual-fitness-studio");});
+Route::get('/verawaty-budiyanto-pendiri-urban-athletes-membuat-orang-ketagihan-hidup-sehat', function () { return view("public/articles/media/verawaty-budiyanto-pendiri-urban-athletes-membuat-orang-ketagihan-hidup-sehat");});
+Route::get('/berganti-nama-urban-athletes-targetkan-buka-lima-cabang-di-surabaya', function () { return view("public/articles/media/berganti-nama-urban-athletes-targetkan-buka-lima-cabang-di-surabaya");});
 
 Route::get('/blog', [PublicController::class, 'blog'])->name('blog');
 Route::get('/mobile-app-member', [PublicController::class, 'mobileAppMember'])->name('mobileAppMember');
