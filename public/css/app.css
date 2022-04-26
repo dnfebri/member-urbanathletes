@@ -890,6 +890,9 @@ select {
 .h-32 {
   height: 8rem;
 }
+.h-56 {
+  height: 14rem;
+}
 .max-h-60 {
   max-height: 15rem;
 }
@@ -1448,6 +1451,12 @@ select {
 }
 .tracking-tighter {
   letter-spacing: -0.05em;
+}
+.-tracking-normal {
+  letter-spacing: -0em;
+}
+.-tracking-wide {
+  letter-spacing: -0.025em;
 }
 .text-gray-200 {
   --tw-text-opacity: 1;
