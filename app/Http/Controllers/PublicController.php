@@ -25,6 +25,52 @@ class PublicController extends Controller
         return view("public/index");
     }
 
+    public function aboutus()
+    {
+        // echo "hello word";
+        return view("public/about/aboutus");
+    }
+
+    public function termsConditions()
+    {
+        return view("public/about/terms-conditions");
+    }
+
+    public function theValor()
+    {
+        return view("public/program/the-valor");
+    }
+
+    public function personalTraining()
+    {
+        return view("public/program/personal-training");
+    }
+
+    public function onlineSchedule()
+    {
+        return view("public/program/online-schedule");
+    }
+
+    public function successStory()
+    {
+        return view("public/success-story");
+    }
+
+    public function media()
+    {
+        return view("public/articles/media");
+    }
+
+    public function blog()
+    {
+        return view("public/articles/blog");
+    }
+
+    public function mobileAppMember()
+    {
+        return view("public/member/mobile-app-member");
+    }
+
     public function daftar()
     {
         // $clubs = $this->apiModels->allClubs();
