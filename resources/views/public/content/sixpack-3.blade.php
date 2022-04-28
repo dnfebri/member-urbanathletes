@@ -22,7 +22,7 @@
       
       <div class="pb-4 w-full flex aspect-auto bg-[url('/image/benner/bg_content.png')] bg-cover">
         <div class="absolute bottom-0 right-0 lg:mr-32">
-          <img class="h-56 lg:w-52" src="{{ url('/image/content/sixpack/Header_pict.png')}}" alt="Mis UN">
+          <img class="h-56 md:h-72 lg:h-80" src="{{ url('/image/content/sixpack/Header_pict.png')}}" alt="Mis UN">
         </div>
         <div class="mx-8 mb-12 lg:pl-32 z-10">
           <h3 class="text-white text-2xl md:text-4xl font-[1000] font-Futura -tracking-normal lg:tracking-widest my-4 lg:text-5xl italic">
@@ -44,249 +44,66 @@
     </div>
     <div class="container px-4 md:px-16">
       <div class="flex justify-center items-center my-4">
-        <h2 class="text-white text-lg md:text-3xl text-center font-bold font-Futura tracking-wider italic">HAJAR LEMAKMU ! BUKAN DOMPETMU !</h2>
+        <h2 class="text-white text-lg md:text-3xl text-center font-bold font-Futura tracking-wider italic">MERASA SUSAH BAKAR LEMAK PERUT?</h2>
       </div>
       {{-- <div class="flex justify-center items-center mb-8 px-16"> --}}
       <div class="flex justify-center items-center">
         <p class="text-white text-sm md:text-base text-center font-extralight">
-          Membership terjangkau khusus bagi kamu yang mau cobain ngegym ditempat bonafit, tapi dana lagi pas-pasan. Dapatkan membership 14 hari dengan harga terjangkau. rasakan pengalaman ngegym yang berbeda dengan standar Gym Internasional.
+          Lemak perut anda sudah tebal dan mulai meresahkan? pingin bakar lemaknya tapi gak tau caranya? sudah ngegym tapi gak kurus-kurus? mungkin masalah anda adalah tidak punya program latihan dan diet yang tepat. Dapatkan modul latihan untuk enam minggu ! program latihan dan diet langsung dari profesional Urban Athletes!
         </p>
       </div>
       <div class="bg-white border-t-2 border-white mt-4"></div>
       <div class="my-8">
-        <h2 class="text-white text-lg lg:text-2xl text-center font-bold font-Futura italic uppercase">International standard GYM local price !</h2>
-        
+        <h2 class="text-white text-lg lg:text-2xl text-center font-bold font-Futura italic uppercase">MEREKA SUDAH BUKTIKAN !</h2>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-        <div class="border-[3px] border-gray-200 p-2 flex items-center">
-          <img class="w-16 mx-4" src="{{ url('/image/icon/money_icon.png') }}" alt="">
-          <p class="text-white">Murah tapi jauh dari murahan</p>
-        </div>
-        <div class="border-[3px] border-gray-200 p-2 flex items-center">
-          <img class="w-16 mx-4" src="{{ url('/image/icon/contract_icon.png') }}" alt="">
-          <p class="text-white">Fasilitas standar Internasional</p>
-        </div>
-        <div class="border-[3px] border-gray-200 p-2 flex items-center">
-          <img class="w-16 mx-4" src="{{ url('/image/icon/card_icon.png') }}" alt="">
-          <p class="text-white">Pembayaran mudah</p>
-        </div>
-        <div class="border-[3px] border-gray-200 p-2 flex items-center">
-          <img class="w-10 mx-4" src="{{ url('/image/icon/PeduliLindungi.png') }}" alt="">
-          <p class="text-white">Gym aman dengan Protokol kesehatan yang ketat</p>
-        </div>
+      <div class="container content-center items-center lg:px-16 py-4">
+        {{-- <iframe class="aspect-video w-full" src="https://www.youtube.com/embed/HvK6iCGFKP0?playlist=HvK6iCGFKP0&loop=1">
+        </iframe> --}}
+        <iframe class="aspect-video w-full" src="https://www.youtube.com/embed/HvK6iCGFKP0?autoplay=1&mute=1&playlist=HvK6iCGFKP0&loop=1">
+        </iframe>
       </div>
     </div>
     <div class="my-8 w-full aspect-auto bg-[url('/image/content/heading_bg.png')] bg-cover">
       <h2 class="text-black text-lg sm:text-xl md:text-3xl text-center font-black py-4 font-Futura italic tracking-tighter">
-        TERBATAS ! 50 ORANG PENDAFTAR <br>
-        PERTAMA HARI INI !
+        TBUKTIKAN SENDIRI ! <br>
+        TERBATAS ! HANYA 50 ORANG PERTAMA !
       </h2>
+    </div>
+    <div class="flex items-center justify-center">
+      <a id="addToCartButton" class="relative py-1 px-4 rounded-full bg-red-600 text-white text-xl hover:text-2xl transition-all duration-500" href="{{ route('daftar.index') }}">
+        Hubingi Kami
+      </a>
     </div>
     <div class="flex justify-center px-4 my-8">
-      <img class="px-14" src="{{ url('/image/content/alamat.png') }}" alt="alamat urban">
+      <img class="px-14" src="{{ url('/image/content/sixpack/yg_didapat.png') }}" alt="alamat urban">
     </div>
-    <div class="text-white px-4 my-8 md:px-20">
-      {{-- <p class="text-center">
-        Program latihan dengan sistem yang lebih mudah dan hemat biaya. Mengajak Anda untuk lebih bugar dengan cara yang simple, efisien dan hemat Di klub Urban Athletes yang memiliki standar protokol kesehatan yang sesuai dengan ketentuan dari pemerintah, sehingga aman dan nyaman untuk Anda berolaraga.
-      </p> --}}
-      {{-- UA Merr --}}
-      <div class="grid grid-cols-2 md:grid-cols-2 gap-4 md:gap-8 my-4 md:mx-4 overflow-hidden">
-        {{-- SwiperJS --}}
-        <div class="swiper mySwiper w-full">
-          <div class="swiper-wrapper aspect-[4/2.5]">
-            <div class="swiper-slide">
-              <img class="w-full" src="{{ url('/image/content/slide/merr/slider1.JPG') }}" alt="Urban Athletes Benner">
-            </div>
-            <div class="swiper-slide">
-              <img class="w-full" src="{{ url('/image/content/slide/merr/slider2.JPG') }}" alt="Urban Athletes Benner 1">
-            </div>
-            <div class="swiper-slide">
-              <img class="w-full" src="{{ url('/image/content/slide/merr/slider3.JPG') }}" alt="Urban Athletes Benner 2">
-            </div>
-            <div class="swiper-slide">
-              <img class="w-full" src="{{ url('/image/content/slide/merr/slider4.JPG') }}" alt="Urban Athletes Benner 3">
-            </div>
-            <div class="swiper-slide">
-              <img class="w-full" src="{{ url('/image/content/slide/merr/slider5.JPG') }}" alt="Urban Athletes Benner 4">
-            </div>
-          </div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-pagination"></div>
-        </div>
-        <div class="text-xs md:text-sm lg:text-base leading-4 md:leading-5">
-          <h3 class="text-base lg:text-xl font-Futura">Gunawangsa Merr Appartemen</h3>
-          <a href="https://goo.gl/maps/ATpNBqy4UqQvxnPv5" target="_blank"><p class="mb-2 font-light underline">Alamat UA Merr</p></a>
-          <div class="lg:text-lg">
-            <p class=""><i class="fa-solid fa-circle-check text-yellow-500"></i><span class="ml-3">Ruangan Gym dengan alat yang berstandar</span></p>
-            <p class=""><i class="fa-solid fa-circle-check text-yellow-500"></i><span class="ml-3">Ruangan kelas multi fungsi</span></p>
-            <p class=""><i class="fa-solid fa-circle-check text-yellow-500"></i><span class="ml-3">kelas Yoga, Zumba, LessMills, dll</span></p>
-            <p class=""><i class="fa-solid fa-circle-check text-yellow-500"></i><span class="ml-3">Kolam renang</span></p>
-            <p class=""><i class="fa-solid fa-circle-check text-yellow-500"></i><span class="ml-3">The Valor</span></p>
-          </div>
-        </div>
-      </div>
-      {{-- UA Marvell --}}
-      <div class="grid grid-cols-2 md:grid-cols-2 gap-4 md:gap-8 my-4 md:mx-4 overflow-hidden">
-        {{-- SwiperJS --}}
-        <div class="swiper mySwiper w-full">
-          <div class="swiper-wrapper aspect-[4/2.5]">
-            <div class="swiper-slide">
-              <img class="w-full" src="{{ url('/image/content/slide/marvell/slider1.jpg') }}" alt="Urban Athletes Benner">
-            </div>
-            <div class="swiper-slide">
-              <img class="w-full" src="{{ url('/image/content/slide/marvell/slider2.jpg') }}" alt="Urban Athletes Benner 1">
-            </div>
-            <div class="swiper-slide">
-              <img class="w-full" src="{{ url('/image/content/slide/marvell/slider3.jpg') }}" alt="Urban Athletes Benner 2">
-            </div>
-            <div class="swiper-slide">
-              <img class="w-full" src="{{ url('/image/content/slide/marvell/slider4.jpg') }}" alt="Urban Athletes Benner 3">
-            </div>
-            <div class="swiper-slide">
-              <img class="w-full" src="{{ url('/image/content/slide/marvell/slider5.jpg') }}" alt="Urban Athletes Benner 4">
-            </div>
-          </div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-pagination"></div>
-        </div>
-        <div class="text-xs md:text-sm lg:text-base leading-4 md:leading-5">
-          <h3 class="text-base lg:text-xl font-Futura">Marvell City</h3>
-          <a href="https://goo.gl/maps/kQoWqnsq7Vutba1Q6" target="_blank"><p class="mb-2 font-light underline">Alamat UA Marvel</p></a>
-          <div class="lg:text-lg">
-            <p class=""><i class="fa-solid fa-circle-check text-yellow-500"></i><span class="ml-3">Ruangan Fungsional Training</span></p>
-            <p class=""><i class="fa-solid fa-circle-check text-yellow-500"></i><span class="ml-3">Ruangan kelas multi fungsi</span></p>
-            <p class=""><i class="fa-solid fa-circle-check text-yellow-500"></i><span class="ml-3">kelas Yoga, Zumba, dll</span></p>
-            <p class=""><i class="fa-solid fa-circle-check text-yellow-500"></i><span class="ml-3">Fungsional training Private & Group</span></p>
-            <p class=""><i class="fa-solid fa-circle-check text-yellow-500"></i><span class="ml-3">The Valor</span></p>
-          </div>
-        </div>
-      </div>
-      {{-- UA Tidar --}}
-      <div class="grid grid-cols-2 md:grid-cols-2 gap-4 md:gap-8 my-4 md:mx-4 overflow-hidden">
-        {{-- SwiperJS --}}
-        <div class="swiper mySwiper w-full">
-          <div class="swiper-wrapper aspect-[4/2.5]">
-            <div class="swiper-slide">
-              <img class="w-full" src="{{ url('/image/content/slide/tidar/slider1.JPG') }}" alt="Urban Athletes Benner">
-            </div>
-            <div class="swiper-slide">
-              <img class="w-full" src="{{ url('/image/content/slide/tidar/slider2.JPG') }}" alt="Urban Athletes Benner 1">
-            </div>
-            <div class="swiper-slide">
-              <img class="w-full" src="{{ url('/image/content/slide/tidar/slider3.JPG') }}" alt="Urban Athletes Benner 2">
-            </div>
-            <div class="swiper-slide">
-              <img class="w-full" src="{{ url('/image/content/slide/tidar/slider4.JPG') }}" alt="Urban Athletes Benner 3">
-            </div>
-            <div class="swiper-slide">
-              <img class="w-full" src="{{ url('/image/content/slide/tidar/slider5.JPG') }}" alt="Urban Athletes Benner 4">
-            </div>
-          </div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-pagination"></div>
-        </div>
-        <div class="text-xs md:text-sm lg:text-base leading-4 md:leading-5">
-          <h3 class="text-base lg:text-xl font-Futura">Gunawangsa Tidar / The Central Mall</h3>
-          <a href="https://goo.gl/maps/TgZg3oKhvwGRf4pC8" target="_blank"><p class="mb-2 font-light underline">Alamat UA Tidar</p></a>
-          <div class="lg:text-lg">
-            <p class=""><i class="fa-solid fa-circle-check text-yellow-500"></i><span class="ml-3">Ruangan Gym dengan alat yang berstandar</span></p>
-            <p class=""><i class="fa-solid fa-circle-check text-yellow-500"></i><span class="ml-3">Ruangan kelas multi fungsi</span></p>
-            <p class=""><i class="fa-solid fa-circle-check text-yellow-500"></i><span class="ml-3">kelas Yoga, Zumba, LessMills, dll</span></p>
-            <p class=""><i class="fa-solid fa-circle-check text-yellow-500"></i><span class="ml-3">Kolam renang</span></p>
-            <p class=""><i class="fa-solid fa-circle-check text-yellow-500"></i><span class="ml-3">The Valor</span></p>
-          </div>
-        </div>
-      </div>
-      {{-- UA Lenmarc --}}
-      <div class="grid grid-cols-2 md:grid-cols-2 gap-4 md:gap-8 my-4 md:mx-4 overflow-hidden">
-        {{-- SwiperJS --}}
-        <div class="swiper mySwiper w-full">
-          <div class="swiper-wrapper aspect-[4/2.5]">
-            <div class="swiper-slide">
-              <img class="w-full" src="{{ url('/image/content/slide/lenmarc/slider1.JPG') }}" alt="Urban Athletes Benner">
-            </div>
-            <div class="swiper-slide">
-              <img class="w-full" src="{{ url('/image/content/slide/lenmarc/slider2.JPG') }}" alt="Urban Athletes Benner 1">
-            </div>
-            <div class="swiper-slide">
-              <img class="w-full" src="{{ url('/image/content/slide/lenmarc/slider3.JPG') }}" alt="Urban Athletes Benner 2">
-            </div>
-            <div class="swiper-slide">
-              <img class="w-full" src="{{ url('/image/content/slide/lenmarc/slider4.JPG') }}" alt="Urban Athletes Benner 3">
-            </div>
-            <div class="swiper-slide">
-              <img class="w-full" src="{{ url('/image/content/slide/lenmarc/slider5.JPG') }}" alt="Urban Athletes Benner 4">
-            </div>
-          </div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-pagination"></div>
-        </div>
-        <div class="text-xs md:text-sm lg:text-base leading-4 md:leading-5">
-          <h3 class="text-base lg:text-xl font-Futura">Lenmarc Mall</h3>
-          <a href="https://goo.gl/maps/nx3vUhxxi9UXoKPn6" target="_blank"><p class="mb-2 font-light underline">Alamat UA Lenmarc</p></a>
-          <div class="lg:text-lg">
-            <p class=""><i class="fa-solid fa-circle-check text-yellow-500"></i><span class="ml-3">Ruangan Gym dengan alat yang berstandar</span></p>
-            <p class=""><i class="fa-solid fa-circle-check text-yellow-500"></i><span class="ml-3">Ruangan kelas multi fungsi</span></p>
-            <p class=""><i class="fa-solid fa-circle-check text-yellow-500"></i><span class="ml-3">kelas Yoga, Zumba, LessMills, dll</span></p>
-            <p class=""><i class="fa-solid fa-circle-check text-yellow-500"></i><span class="ml-3">Kids Class</span></p>
-            <p class=""><i class="fa-solid fa-circle-check text-yellow-500"></i><span class="ml-3">The Valor</span></p>
-          </div>
-        </div>
-      </div>
+    <div class="container content-center items-center lg:px-16 py-4">
+      <iframe class="aspect-video w-full" src="https://www.youtube.com/embed/5jrCadmBCr8?playlist=5jrCadmBCr8&loop=1">
+      </iframe>
     </div>
     <div class="my-8 w-full aspect-auto bg-[url('/image/content/heading_bg.png')] bg-cover">
-      <h2 class="text-black text-lg sm:text-xl md:text-3xl text-center font-black py-4 font-Futura italic tracking-tighter">
-        TERBATAS ! 50 ORANG PENDAFTAR <br>
-        PERTAMA HARI INI !
+      <h2 class="text-black text-3xl lg:text-5xl text-center font-black py-0 font-Futura italic tracking-tighter">
+        IDR 1.488K
       </h2>
     </div>
-    <div class="flex justify-center px-4 mt-8">
-      <img class="lg:px-14" src="{{ url('/image/content/jadwal-kelas.png') }}" alt="Jadwal urban">
+    <div class="text-white grid grid-cols-1 md:grid-cols-2 gap-4 mx-12 tracking-widest leading-loose">
+      <div class="lg:px-8">
+        <ul>
+          <li><i class="fa-solid fa-circle text-yellow-500"></i> Exclussive Training Modul</li>
+          <li><i class="fa-solid fa-circle text-yellow-500"></i> Exclussive Diet Guide</li>
+          <li><i class="fa-solid fa-circle text-yellow-500"></i> Exclussive Motivation Group</li>
+          <li><i class="fa-solid fa-circle text-yellow-500"></i> Exclussive Training Menu Video</li>
+        </ul>
+      </div>
+      <div class="lg:px-8">
+        <ul class="list-outside">
+          <li><i class="fa-solid fa-circle text-yellow-500"></i> Free consultation with our PT & diet coach on group</li>
+          <li><i class="fa-solid fa-circle text-yellow-500"></i> Membership 6 weeks</li>
+          <li><i class="fa-solid fa-circle text-yellow-500"></i> Specified merchandise</li>
+        </ul>
+      </div>
     </div>
-    <div>
-      <h3 class="text-center text-white text-lg md:text-2xl mb-4">GESER UNTUK MENGETAHUI JADWAL KELAS</h3>  
-      {{-- Slider Class --}}
-      <!-- Script Crad swiper -->
-      <x-card_slider>
-        {{-- Merr --}}
-        <img src="{{url('/image/schedule/merr/Artboard 1.png')}}" alt="Clas Urban" class="card object-cover object-center">
-        <img src="{{url('/image/schedule/merr/Artboard 2.png')}}" alt="Clas Urban" class="card object-cover object-center">
-        <img src="{{url('/image/schedule/merr/Artboard 3.png')}}" alt="Clas Urban" class="card object-cover object-center">
-        <img src="{{url('/image/schedule/merr/Artboard 4.png')}}" alt="Clas Urban" class="card object-cover object-center">
-        <img src="{{url('/image/schedule/merr/Artboard 5.png')}}" alt="Clas Urban" class="card object-cover object-center">
-        <img src="{{url('/image/schedule/merr/Artboard 6.png')}}" alt="Clas Urban" class="card object-cover object-center">
-        <img src="{{url('/image/schedule/merr/Artboard 7.png')}}" alt="Clas Urban" class="card object-cover object-center">
-        {{-- Marvell --}}
-        <img src="{{url('/image/schedule/marvell/Artboard1.png')}}" alt="Clas Urban" class="card object-cover object-center">
-        <img src="{{url('/image/schedule/marvell/Artboard2.png')}}" alt="Clas Urban" class="card object-cover object-center">
-        <img src="{{url('/image/schedule/marvell/Artboard3.png')}}" alt="Clas Urban" class="card object-cover object-center">
-        <img src="{{url('/image/schedule/marvell/Artboard4.png')}}" alt="Clas Urban" class="card object-cover object-center">
-        <img src="{{url('/image/schedule/marvell/Artboard5.png')}}" alt="Clas Urban" class="card object-cover object-center">
-        <img src="{{url('/image/schedule/marvell/Artboard6.png')}}" alt="Clas Urban" class="card object-cover object-center">
-        <img src="{{url('/image/schedule/marvell/Artboard7.png')}}" alt="Clas Urban" class="card object-cover object-center">
-        <img src="{{url('/image/schedule/marvell/Artboard8.png')}}" alt="Clas Urban" class="card object-cover object-center">
-        {{-- Tidar --}}
-        <img src="{{url('/image/schedule/tidar/Artboard 1.jpeg')}}" alt="Clas Urban" class="card object-cover object-center">
-        <img src="{{url('/image/schedule/tidar/Artboard 2.jpeg')}}" alt="Clas Urban" class="card object-cover object-center">
-        <img src="{{url('/image/schedule/tidar/Artboard 3.jpeg')}}" alt="Clas Urban" class="card object-cover object-center">
-        <img src="{{url('/image/schedule/tidar/Artboard 4.jpeg')}}" alt="Clas Urban" class="card object-cover object-center">
-        <img src="{{url('/image/schedule/tidar/Artboard 5.jpeg')}}" alt="Clas Urban" class="card object-cover object-center">
-        <img src="{{url('/image/schedule/tidar/Artboard 6.jpeg')}}" alt="Clas Urban" class="card object-cover object-center">
-        <img src="{{url('/image/schedule/tidar/Artboard 7.jpeg')}}" alt="Clas Urban" class="card object-cover object-center">
-        {{-- lenmarc --}}
-        <img src="{{url('/image/schedule/lenmarc/Artboard 1.jpeg')}}" alt="Clas Urban" class="card object-cover object-center">
-        <img src="{{url('/image/schedule/lenmarc/Artboard 2.jpeg')}}" alt="Clas Urban" class="card object-cover object-center">
-        <img src="{{url('/image/schedule/lenmarc/Artboard 3.jpeg')}}" alt="Clas Urban" class="card object-cover object-center">
-        <img src="{{url('/image/schedule/lenmarc/Artboard 4.jpeg')}}" alt="Clas Urban" class="card object-cover object-center">
-        <img src="{{url('/image/schedule/lenmarc/Artboard 5.jpeg')}}" alt="Clas Urban" class="card object-cover object-center">
-        <img src="{{url('/image/schedule/lenmarc/Artboard 6.jpeg')}}" alt="Clas Urban" class="card object-cover object-center">
-        <img src="{{url('/image/schedule/lenmarc/Artboard 7.jpeg')}}" alt="Clas Urban" class="card object-cover object-center">
-      </x-card_slider>
-    </div>
+    
       
     <div class="max-h-60 w-full aspect-auto bg-[url('/image/content/footer_bg.png')] bg-cover mt-20">
       <div class="flex flex-row">

@@ -12,7 +12,7 @@ include __DIR__.'/web/crm.php';
 
 // Untuk Testing View
 Route::get('/isiemail', function () { return view('email.isi_email_confirm');});
-Route::get('/ini', function () { return view('public.inites');});
+Route::get('/ini', function () { return view('public/content/index');});
 // Route::get('/member', function () {
 //   return view('public/member/join');
 // });
