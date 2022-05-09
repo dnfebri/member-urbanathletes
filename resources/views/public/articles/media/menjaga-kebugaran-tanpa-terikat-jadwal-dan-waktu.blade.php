@@ -19,13 +19,15 @@
 
             <div>
                 <h3 class="text-2xl mt-14 mb-8">Related posts</h3>
-                <img class="w-96 mb-8 ml-5" src="{{ url('/image/articles/media/foto-media1.jpg') }}" alt="">
-                <h3 class="text-2xl mb-8">Menjaga Kebugaran Tanpa Terikat Jadwal dan Waktu</h3>
+                <a href="/resmi-dibuka-urban-athletes-marvell-city-hadirkan-the-valor">
+                    <img class="w-96 mb-8 ml-5" src="{{ url('/image/articles/media/foto-media1.jpg') }}" alt="">
+                    <h3 class="text-2xl mb-8">Resmi Dibuka, Urban Athletes Marvell City Hadirkan The Valor</h3>
+                </a>
             </div>
     
             <div class="mb-10 ml-5">
-                <a href="#" class="btn btn-primary">Read more</a>
-                {{-- <a class="bg-green-300 px-1 py-1 rounded-md" href="#" >Read more</a> --}}
+                {{-- <a href="#" class="btn btn-primary">Read more</a> --}}
+                <a class="bg-green-300 px-1 py-1 rounded-md" href="/resmi-dibuka-urban-athletes-marvell-city-hadirkan-the-valor" >Read more</a>
             </div>
     </div>
 </x-main>
