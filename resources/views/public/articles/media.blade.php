@@ -2,7 +2,10 @@
     <div class="container">
         <div class="grid md:grid-cols-3 lg:grid-cols-3 gap-7 my-12">
             <div>
-                <img class="mb-5" src="{{ url('/image/articles/media/foto-media1.jpg') }}" alt="media1">
+                <a href="{{ url('/public/articles/media.blade.php') }}">
+                    <img class="mb-5" src="{{ url('/image/articles/media/foto-media1.jpg') }}" alt="media1">
+                </a>
+                
                 <p class="text-3xl mb-5">Resmi Dibuka, Urban Athletes Marvell City Hadirkan The Valor</p>
                 <p>Centroone.com – Setelah sempat menggelar soft opening pada bulan November 2017 kemarin, Urban Athletes akhirnya secara resmi membuka club kedua mereka yang terletak di Marvell City, […]</p>
             </div>

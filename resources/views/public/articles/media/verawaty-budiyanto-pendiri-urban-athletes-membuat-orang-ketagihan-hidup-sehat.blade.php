@@ -56,7 +56,7 @@
             <div>
                 <h3 class="text-2xl mt-14 mb-8">Related posts</h3>
                 <img class="w-96 mb-8 ml-5" src="{{ url('/image/articles/media/foto-media1.jpg') }}" alt="">
-                <h3 class="text-2xl mb-8">Menjaga Kebugaran Tanpa Terikat Jadwal dan Waktu</h3>
+                <h3 class="text-2xl mb-8">Resmi Dibuka, Urban Athletes Marvell City Hadirkan The Valor</h3>
             </div>
     
             <div class="mb-10 ml-5">

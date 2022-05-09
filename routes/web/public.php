@@ -17,6 +17,10 @@ Route::get('/menjaga-kebugaran-tanpa-terikat-jadwal-dan-waktu', function () { re
 Route::get('/pertama-di-jatim-urban-athletes-kenalkan-virtual-fitness-studio', function () { return view("public/articles/media/pertama-di-jatim-urban-athletes-kenalkan-virtual-fitness-studio");});
 Route::get('/verawaty-budiyanto-pendiri-urban-athletes-membuat-orang-ketagihan-hidup-sehat', function () { return view("public/articles/media/verawaty-budiyanto-pendiri-urban-athletes-membuat-orang-ketagihan-hidup-sehat");});
 Route::get('/berganti-nama-urban-athletes-targetkan-buka-lima-cabang-di-surabaya', function () { return view("public/articles/media/berganti-nama-urban-athletes-targetkan-buka-lima-cabang-di-surabaya");});
+Route::get('/urban-athletes-akan-buka-5-cabang-lagi-tahun-depan', function () { return view("public/articles/media/urban-athletes-akan-buka-5-cabang-lagi-tahun-depan");});
+Route::get('/verawaty-budiyanto-banyak-orang-menemukan-hidup-berkat-gym', function () { return view("public/articles/media/verawaty-budiyanto-banyak-orang-menemukan-hidup-berkat-gym");});
+Route::get('/rayakan-ulang-tahun-pertama-urban-fitness-hadir-dengan-logo-dan-nama-baru', function () { return view("public/articles/media/rayakan-ulang-tahun-pertama-urban-fitness-hadir-dengan-logo-dan-nama-baru");});
+Route::get('/rayakan-ultah-pertama-urban-fitness-bertransformasi-jadi-urban-athletes', function () { return view("public/articles/media/rayakan-ultah-pertama-urban-fitness-bertransformasi-jadi-urban-athletes");});
 
 Route::get('/blog', [PublicController::class, 'blog'])->name('blog');
 Route::get('/mobile-app-member', [PublicController::class, 'mobileAppMember'])->name('mobileAppMember');
