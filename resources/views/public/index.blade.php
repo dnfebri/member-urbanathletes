@@ -3,6 +3,7 @@
     {{-- Swiper JS --}}
     {{-- <link rel="stylesheet" href="{{ url('swiper/js/swiper-bundle.min.css') }}"> --}}
     <link rel="stylesheet" href="{{ url('https://unpkg.com/swiper@8/swiper-bundle.min.css')}}"/>
+    @stack('style')
   @endpush
   <div class="">
     <!-- Slider main container -->
@@ -51,6 +52,10 @@
           <div class="swiper-button-next2"></div>
           <div class="swiper-button-prev2"></div>
         </div> --}}
+        {{-- <x-card_slider>
+          <img src="{{url('/image/benner/LayerSlider1.jpg')}}" alt="Clas Urban" class="card object-cover object-center">
+          <img src="{{url('/image/benner/LayerSlider2.jpg')}}" alt="Clas Urban" class="card object-cover object-center">
+        </x-card_slider> --}}
       </div>
       
     </div>
@@ -86,6 +91,7 @@
       //   }
       // });
     </script>
+    @stack('script')
   @endpush
 </x-main>
 {{-- @extends('layouts.main')
