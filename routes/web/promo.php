@@ -3,6 +3,7 @@
 use App\Http\Controllers\ContentController;
 use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\PublicController;
+use Illuminate\Support\Facades\Route;
 
 Route::get('/99k', function () {return view("public/content/99k");})->name('99k');
 Route::get('/sixpack-3', function () {return view("public/content/sixpack-3");})->name('sixpack-3');
