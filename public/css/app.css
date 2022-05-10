@@ -711,6 +711,14 @@ select {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }
+.mx-48 {
+  margin-left: 12rem;
+  margin-right: 12rem;
+}
+.mx-20 {
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
 .my-12 {
   margin-top: 3rem;
   margin-bottom: 3rem;
@@ -722,6 +730,14 @@ select {
 .my-14 {
   margin-top: 3.5rem;
   margin-bottom: 3.5rem;
+}
+.mx-16 {
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+.my-16 {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 .my-10 {
   margin-top: 2.5rem;
@@ -738,10 +754,6 @@ select {
 .mx-12 {
   margin-left: 3rem;
   margin-right: 3rem;
-}
-.mx-16 {
-  margin-left: 4rem;
-  margin-right: 4rem;
 }
 .ml-1 {
   margin-left: 0.25rem;
@@ -782,11 +794,20 @@ select {
 .mr-4 {
   margin-right: 1rem;
 }
-.mb-8 {
-  margin-bottom: 2rem;
+.mt-10 {
+  margin-top: 2.5rem;
 }
 .mb-5 {
   margin-bottom: 1.25rem;
+}
+.mt-12 {
+  margin-top: 3rem;
+}
+.mb-8 {
+  margin-bottom: 2rem;
+}
+.mt-14 {
+  margin-top: 3.5rem;
 }
 .ml-3 {
   margin-left: 0.75rem;
@@ -796,6 +817,9 @@ select {
 }
 .mb-18 {
   margin-bottom: 70px;
+}
+.mt-3 {
+  margin-top: 0.75rem;
 }
 .mb-12 {
   margin-bottom: 3rem;
@@ -808,9 +832,6 @@ select {
 }
 .ml-8 {
   margin-left: 2rem;
-}
-.mt-14 {
-  margin-top: 3.5rem;
 }
 .ml-5 {
   margin-left: 1.25rem;
@@ -829,6 +850,12 @@ select {
 }
 .mr-8 {
   margin-right: 2rem;
+}
+.mt-40 {
+  margin-top: 10rem;
+}
+.mt-5 {
+  margin-top: 1.25rem;
 }
 .block {
   display: block;
@@ -943,11 +970,17 @@ select {
 .w-10 {
   width: 2.5rem;
 }
+.w-3\/5 {
+  width: 60%;
+}
 .w-40 {
   width: 10rem;
 }
 .w-16 {
   width: 4rem;
+}
+.w-80 {
+  width: 20rem;
 }
 .w-96 {
   width: 24rem;
@@ -981,6 +1014,9 @@ select {
 }
 .border-collapse {
   border-collapse: collapse;
+}
+.border-separate {
+  border-collapse: separate;
 }
 .origin-top-left {
   transform-origin: top left;
@@ -1218,10 +1254,6 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(220 38 38 / var(--tw-bg-opacity));
 }
-.bg-blue-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
-}
 .bg-green-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(134 239 172 / var(--tw-bg-opacity));
@@ -1232,6 +1264,9 @@ select {
 }
 .bg-opacity-80 {
   --tw-bg-opacity: 0.8;
+}
+.bg-\[url\(\'\/image\/banner-background\.jpg\'\)\] {
+  background-image: url('/image/banner-background.jpg');
 }
 .bg-\[url\(\'\/image\/benner\/bg_content\.png\'\)\] {
   background-image: url('/image/benner/bg_content.png');
@@ -1244,6 +1279,12 @@ select {
 }
 .bg-cover {
   background-size: cover;
+}
+.bg-fixed {
+  background-attachment: fixed;
+}
+.bg-no-repeat {
+  background-repeat: no-repeat;
 }
 .object-cover {
   -o-object-fit: cover;
@@ -1324,10 +1365,6 @@ select {
   padding-left: 3.5rem;
   padding-right: 3.5rem;
 }
-.py-0 {
-  padding-top: 0px;
-  padding-bottom: 0px;
-}
 .px-0\.5 {
   padding-left: 0.125rem;
   padding-right: 0.125rem;
@@ -1339,6 +1376,18 @@ select {
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+}
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+.py-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+.py-0 {
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 .pt-8 {
   padding-top: 2rem;
@@ -1373,12 +1422,6 @@ select {
 .indent-4 {
   text-indent: 1rem;
 }
-.-indent-8 {
-  text-indent: -2rem;
-}
-.indent-8 {
-  text-indent: 2rem;
-}
 .align-baseline {
   vertical-align: baseline;
 }
@@ -1410,6 +1453,10 @@ select {
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
 }
 .text-xs {
   font-size: 0.75rem;
@@ -2010,10 +2057,6 @@ select {
     height: 3rem;
   }
 
-  .md\:h-64 {
-    height: 16rem;
-  }
-
   .md\:h-72 {
     height: 18rem;
   }
@@ -2036,6 +2079,10 @@ select {
 
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .md\:grid-cols-6 {
@@ -2148,10 +2195,6 @@ select {
     display: none;
   }
 
-  .lg\:h-60 {
-    height: 15rem;
-  }
-
   .lg\:h-80 {
     height: 20rem;
   }
@@ -2176,16 +2219,16 @@ select {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
+  .lg\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .lg\:grid-cols-6 {
     grid-template-columns: repeat(6, minmax(0, 1fr));
-  }
-
-  .lg\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .lg\:justify-start {
