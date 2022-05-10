@@ -137,7 +137,7 @@
                           Media
                         </li>
                       </a>
-                      <a href="{{ route('blog') }}" class="">
+                      <a href="{{ url('blog') }}" class="">
                         <li class="px-4 py-1 hover:bg-gray-100 hover:text-yellow-500">
                           Blog
                         </li>

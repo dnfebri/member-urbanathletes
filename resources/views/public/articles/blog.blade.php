@@ -1,7 +1,71 @@
 <x-main>
     <div class="container">
-        <img src="{{ url('/image/articles/blog/banner-blog1.jpg') }}" alt="banner1">
-        <div class="grid md:grid-cols-3 lg:grid-cols-3 gap-7 my-12">
+        @push('style')
+    {{-- Swiper JS --}}
+    {{-- <link rel="stylesheet" href="{{ url('swiper/js/swiper-bundle.min.css') }}"> --}}
+    <link rel="stylesheet" href="{{ url('https://unpkg.com/swiper@8/swiper-bundle.min.css')}}"/>
+  @endpush
+  <div class="">
+    <!-- Slider main container -->
+    <div class="swiper mt-3">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide flex justify-center items-center">
+          <img class="w-3/5" src="{{ url('/image/articles/blog/banner-blog1.jpg') }}" alt="Benner Blog 1">
+        </div>
+        <div class="swiper-slide flex justify-center items-center">
+          <img class="w-3/5" src="{{ url('/image/articles/blog/banner-blog2.jpg') }}" alt="Benner Blog 2">
+        </div>
+        <div class="swiper-slide flex justify-center items-center">
+          <img class="w-3/5" src="{{ url('/image/articles/blog/banner-blog3.jpg') }}" alt="Benner blog 2">
+        </div>
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+  
+      <!-- If we need navigation buttons -->
+      {{-- <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div> --}}
+    </div>
+      
+    </div>
+  </div>
+  
+  @push('script')
+    {{-- Swiper JS --}}
+    {{-- <script src="{{ url('swiper/js/swiper-bundle.min.js') }}"></script> --}}
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper('.swiper', {
+        spaceBetween: 300,
+        // centeredSlides: true,
+        effect: "fade",
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+
+    </script>
+  @endpush
+    
+        {{-- <div class="swiper">
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <img src="{{ url('/image/articles/blog/banner-blog1.jpg') }}" alt="banner1">
+                </div>
+        </div> --}}
+        <div class="grid md:grid-cols-3 lg:grid-cols-3 gap-7 mx-16 my-16">
             <div>
                 <img class="mb-5" src="{{ url('/image/articles/blog/foto-blog1.jpg') }}" alt="blog1">
                 <p class="text-3xl mb-5">Healthy Food #6: Walnuts</p>
@@ -20,7 +84,7 @@
             </div>
         </div>
 
-        <div class="grid md:grid-cols-3 lg:grid-cols-3 gap-7 my-12">
+        <div class="grid md:grid-cols-3 lg:grid-cols-3 gap-7 mx-16 my-16">
             <div>
                 <img class="mb-5" src="{{ url('/image/articles/blog/foto-blog4.jpg') }}" alt="blog4">
                 <p class="text-3xl mb-5">Healthy Food #3: Dark Chocolate</p>
