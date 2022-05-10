@@ -22,5 +22,10 @@ Route::get('/verawaty-budiyanto-banyak-orang-menemukan-hidup-berkat-gym', functi
 Route::get('/rayakan-ulang-tahun-pertama-urban-fitness-hadir-dengan-logo-dan-nama-baru', function () { return view("public/articles/media/rayakan-ulang-tahun-pertama-urban-fitness-hadir-dengan-logo-dan-nama-baru");});
 Route::get('/rayakan-ultah-pertama-urban-fitness-bertransformasi-jadi-urban-athletes', function () { return view("public/articles/media/rayakan-ultah-pertama-urban-fitness-bertransformasi-jadi-urban-athletes");});
 
-Route::get('/blog', [PublicController::class, 'blog'])->name('blog');
+// Route::get('/blog', [PublicController::class, 'blog'])->name('blog');
+Route::get('/blog', function () { return view("public/articles/blog");});
+Route::get('/healthy-food-6-walnuts', function () { return view("public/articles/blog/healthy-food-6-walnuts");});
+
+
+
 Route::get('/mobile-app-member', [PublicController::class, 'mobileAppMember'])->name('mobileAppMember');
