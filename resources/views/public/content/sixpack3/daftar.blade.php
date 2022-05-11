@@ -1,6 +1,6 @@
 <x-main specialPage=true title='Daftar GYM'>
   <x-layout_card_form>
-    <form action="{{ route('daftar.store') }}" method="post">
+    <form action="{{ route('sixpack3.store') }}" method="post">
       @csrf
       <div class="flex justify-center border-b my-4 pb-4">
         <h2 class="text-3xl font-Futura">Daftar form Sixpack 3</h2>
@@ -14,11 +14,11 @@
       <div class="flex-none ">
         <label class="block mx-4 my-4">
           <span class="">Club</span>
-          <select name="club" id="club" class="block border-0 border-b-2 w-full focus:border-black @error('nominal') border-red-300 @enderror">
+          <select name="club_id" id="club_id" class="block border-0 border-b-2 w-full focus:border-black @error('nominal') border-red-300 @enderror">
             <option value="" >Select club</option> 
             @foreach ($clubs['rows'] as $club)
               @if ( $club['id'] != '1' && $club['id'] != '6' )
-                @if ( old('club') == $club['id'] )
+                @if ( old('club_id') == $club['id'] )
                   <option value="{{ $club['id'] }}" selected>{{ $club['name'] }}</option>
                 @else
                   <option value="{{ $club['id'] }}">{{ $club['name'] }}</option> 
@@ -26,8 +26,8 @@
               @endif
             @endforeach
           </select>
-          @error('club')
-            <div id="club" class="text-sm text-red-500">
+          @error('club_id')
+            <div id="club_id" class="text-sm text-red-500">
                 {{ $message }}
             </div>
           @enderror

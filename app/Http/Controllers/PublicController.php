@@ -62,6 +62,8 @@ class PublicController extends Controller
                         ->join('joins', 'invoices.join_id', '=', 'joins.id')
                         ->where('kode', $kode)->first();
 
+        $dataEmail->url = url('daftar/confirm') . '/';
+        
         $clubs = $this->apiModels->allClubs()['rows'];
         Mail::to( $join->email )->send(new SendEmail($dataEmail, $clubs));
         // return redirect('/')->with('massage', 'Join ' . $request->nama . ' berhasi ditambahkan');
