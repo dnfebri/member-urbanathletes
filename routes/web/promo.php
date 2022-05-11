@@ -24,5 +24,7 @@ Route::prefix('sixpack-3')->name('sixpack3.')->group(function () {
   Route::get('daftar',[Sixpack3Controller::class, 'daftar'])->name('daftar');
   Route::get('/send/{kode}', [Sixpack3Controller::class, 'send'])->name('send');
   Route::get('/confirm/{kode}', [Sixpack3Controller::class, 'edit'])->name('edit');
+  Route::get('/confirm/{kode}/send', [Sixpack3Controller::class, 'confirmSend'])->name('confirmSend');
   Route::post('',[Sixpack3Controller::class, 'store'])->name('store');
+  Route::put('{kode}',[Sixpack3Controller::class, 'update'])->name('update');
 });
