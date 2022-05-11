@@ -739,6 +739,10 @@ select {
   margin-top: 4rem;
   margin-bottom: 4rem;
 }
+.mx-12 {
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
 .my-10 {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
@@ -746,6 +750,10 @@ select {
 .my-18 {
   margin-top: 70px;
   margin-bottom: 70px;
+}
+.mx-10 {
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
 }
 .ml-1 {
   margin-left: 0.25rem;
@@ -801,6 +809,12 @@ select {
 .mt-14 {
   margin-top: 3.5rem;
 }
+.mt-5 {
+  margin-top: 1.25rem;
+}
+.mt-3 {
+  margin-top: 0.75rem;
+}
 .ml-3 {
   margin-left: 0.75rem;
 }
@@ -809,9 +823,6 @@ select {
 }
 .mb-18 {
   margin-bottom: 70px;
-}
-.mt-3 {
-  margin-top: 0.75rem;
 }
 .mb-12 {
   margin-bottom: 3rem;
@@ -842,12 +853,6 @@ select {
 }
 .mr-8 {
   margin-right: 2rem;
-}
-.mt-40 {
-  margin-top: 10rem;
-}
-.mt-5 {
-  margin-top: 1.25rem;
 }
 .block {
   display: block;
@@ -1257,9 +1262,6 @@ select {
 .bg-opacity-80 {
   --tw-bg-opacity: 0.8;
 }
-.bg-\[url\(\'\/image\/banner-background\.jpg\'\)\] {
-  background-image: url('/image/banner-background.jpg');
-}
 .bg-\[url\(\'\/image\/benner\/bg_content\.png\'\)\] {
   background-image: url('/image/benner/bg_content.png');
 }
@@ -1271,12 +1273,6 @@ select {
 }
 .bg-cover {
   background-size: cover;
-}
-.bg-fixed {
-  background-attachment: fixed;
-}
-.bg-no-repeat {
-  background-repeat: no-repeat;
 }
 .object-cover {
   -o-object-fit: cover;
@@ -1345,6 +1341,10 @@ select {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
 }
+.py-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -1357,6 +1357,10 @@ select {
   padding-left: 3.5rem;
   padding-right: 3.5rem;
 }
+.py-0 {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
 .px-0\.5 {
   padding-left: 0.125rem;
   padding-right: 0.125rem;
@@ -1368,18 +1372,6 @@ select {
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-}
-.py-10 {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-}
-.py-16 {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
-.py-0 {
-  padding-top: 0px;
-  padding-bottom: 0px;
 }
 .pt-8 {
   padding-top: 2rem;
