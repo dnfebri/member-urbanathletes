@@ -32,7 +32,13 @@ class SendEmailConfirm extends Mailable
      */
     public function build()
     {
-        $clubData = ClubData::where('club_id', $this->dataEmail->club)->first();
+        $clubs = $this->clubs;
+        if ($this->dataEmail->club != null) {
+            $club_id = $this->dataEmail->club;
+        } else {
+            $club_id = $this->dataEmail->club_id;
+        }
+        $clubData = ClubData::where('club_id', $club_id)->first();
         return $this->subject('Konfirmasi Pembayaran Telah Terkirim.')
                     ->view('email.isi_email_confirm', compact('clubData'));
     }

@@ -82,8 +82,7 @@
       Dengan pengalaman lebih dari 14 tahun, Urban Athletes hadir menjadi bagian<br>
       dari awal komitmen sehat Anda mulai hari ini.</p>
   </div>
-
-  <div class="grid md:grid-cols-2 lg:grid-cols-2 relative mx-48 mt-12 mb-8">
+  <div class="container grid md:grid-cols-2 lg:grid-cols-2 mt-12 mb-8">
     <div>
         <p class="mt-14 mb-5 text-center">
           Untuk Menjaga kebugaran selama ISOMAN<br>
@@ -135,7 +134,25 @@
   <div>
     <h1 class="text-6xl text-white text-center">Our Impression</h1>
   </div>
-  <div class="flex justify-center gap-8 md:grid lg:grid-cols-4 relative mx-20 mt-12">
+  <div class="grid md:grid-cols-4 lg:grid-cols-4 mx-20 mt-12">
+    <div class="justify-center place-items-center">
+      <div class="flex justify-center place-items-center">
+        <img src="{{ url('/image/icon/home_gym_1.png') }}" alt="icon1">
+      </div>
+      <h1 class="mt-5 text-center text-5xl text-white">6528</h1>
+      <p class="mt-3 text-center text-white">Happy Gym Users</p>
+    </div>
+    <div class="flex justify-center place-items-center">
+      <img src="{{ url('/image/icon/home_gym_2.png') }}" alt="icon2">
+    </div>
+    <div class="flex justify-center place-items-center">
+      <img src="{{ url('/image/icon/home_gym_3.png') }}" alt="icon3">
+    </div>
+    <div class="flex justify-center place-items-center">
+      <img src="{{ url('/image/icon/home_gym_4.png') }}" alt="icon4">
+    </div>
+  </div>
+  <div class="grid md:grid-cols-4 lg:grid-cols-4 mx-20 mt-4">
     <div>
       <div class="flex justify-center place-items-center">
         <img src="{{ url('/image/icon/home_gym_1.png') }}" alt="icon1">

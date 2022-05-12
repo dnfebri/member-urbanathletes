@@ -130,7 +130,7 @@
     </table>
 
     <div style="text-align: center">
-      <a href="{{ url('daftar/confirm') . '/' . $dataEmail->kode }}" target="_blank"
+      <a href="{{ $dataEmail->url . $dataEmail->kode }}" target="_blank"
         style="
           text-decoration: none; font-weight: bold;
           display:inline-block;border-radius:20px;background-color:#33ff00;color:#fff;
@@ -140,8 +140,8 @@
       </a>
       <p>Alternative Link :</p>
       <a target="_blank"
-        href="{{ url('daftar/confirm') . '/' . $dataEmail->kode }}">
-        {{ url('daftar/confirm') . '/' . $dataEmail->kode }}
+        href="{{ $dataEmail->url . $dataEmail->kode }}">
+        {{ $dataEmail->url . $dataEmail->kode }}
       </a>
     </div>
     <p>Jangan menginformasikan bukti dan data pembayaran kepada pihak manapun kecuali Urban Athletes.</p>
