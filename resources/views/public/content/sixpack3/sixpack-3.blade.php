@@ -65,12 +65,12 @@
     </div>
     <div class="my-8 w-full aspect-auto bg-[url('/image/content/heading_bg.png')] bg-cover">
       <h2 class="text-black text-lg sm:text-xl md:text-3xl text-center font-black py-4 font-Futura italic tracking-tighter">
-        TBUKTIKAN SENDIRI ! <br>
+        BUKTIKAN SENDIRI ! <br>
         TERBATAS ! HANYA 50 ORANG PERTAMA !
       </h2>
     </div>
     <div class="flex items-center justify-center">
-      <a id="addToCartButton" class="relative py-1 px-4 rounded-full bg-red-600 text-white text-xl hover:text-2xl transition-all duration-500" href="{{ route('sixpack3.daftar') }}">
+      <a id="addToCartButton" class="relative py-1 px-4 rounded-full bg-red-600 text-white text-xl hover:text-2xl transition-all duration-500" href="http://wa.me/6281779176132?text=halo%20saya%20pingin%20bakar%20lemak%20perut%20saya%20">
         Hubingi Kami
       </a>
     </div>
