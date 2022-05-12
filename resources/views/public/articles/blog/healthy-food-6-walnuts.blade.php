@@ -3,7 +3,7 @@
         <h3 class="text-4xl ml-10 mt-14 mb-8">Healthy Food #6: Walnuts</h3>
         
         <div class="flex justify-center items-center mb-16">
-            <img src="{{ url('/image/articles/blog/foto-blog1.jpg') }}" alt="blog1">
+            <img src="{{ url('/image/articles/blog/foto-blog6.jpg') }}" alt="blog6">
         </div>
 
         <div class="ml-10 mr-8 the_content_wrapper">
@@ -13,12 +13,12 @@
                 Eat a few for dessert: The antioxidant melatonin, found in walnuts, helps to regulate sleep.
             </p>
 
-            <div class="border-b-2"></div>
+            <div class="border-b-2 mt-10"></div>
 
             <div>
                 <h3 class="text-2xl mt-14 mb-8">Related posts</h3>
                 <a href="/resmi-dibuka-urban-athletes-marvell-city-hadirkan-the-valor">
-                    <img class="w-80 mb-8 ml-5" src="{{ url('/image/articles/blog/foto-blog2.jpg') }}" alt="">
+                    <img class="w-80 mb-8 ml-5" src="{{ url('/image/articles/blog/foto-blog5.jpg') }}" alt="">
                     <h3 class="text-2xl mb-8">Healthy Food #5: Salmon</h3>
                 </a>
             </div>
