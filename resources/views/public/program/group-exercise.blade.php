@@ -19,7 +19,6 @@
                 <p class="text-sm">CIRCUIT adalah latihan bersepeda indoor, diiringi dengan musik pengantar semangat yang akan memacu Anda untuk membakar ratusan kalori dalam tubuh Anda (fat-burner). Berdasarkan olahraga balap sepeda, RPM menggunakan rangkaian simulasi bersepada dengan intensitas yang dapat dikontrol. Instruktor akan mengajarkan semua gerakan-gerakan dasar bersepeda, seperti berdiri, duduk, perubahan posisi tangan, mengayuh secara cepat dan juga lambat.<br>
                 <span class="font-bold">(burning up to 675 calories*)</span>
                 </p>
-                <video src="{{ url('/video/groupExercise/video1.mp4') }}"></video>
               </div>
             </div>
             {{-- Exaple conten --}}

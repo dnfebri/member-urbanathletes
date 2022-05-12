@@ -25,7 +25,11 @@ Route::get('/rayakan-ultah-pertama-urban-fitness-bertransformasi-jadi-urban-athl
 // Route::get('/blog', [PublicController::class, 'blog'])->name('blog');
 Route::get('/blog', function () { return view("public/articles/blog");});
 Route::get('/healthy-food-6-walnuts', function () { return view("public/articles/blog/healthy-food-6-walnuts");});
-Route::get('/mobile-app-member', function () { return view("public/member/mobile-app-member");})->name('mobileAppMember');
+Route::get('/healthy-food-5-salmon', function () { return view("public/articles/blog/healthy-food-5-salmon");});
+Route::get('/healthy-food-4-potatoes', function () { return view("public/articles/blog/healthy-food-4-potatoes");});
+Route::get('/healthy-food-3-dark-chocolate', function () { return view("public/articles/blog/healthy-food-3-dark-chocolate");});
+Route::get('/healthy-food-2-broccoli', function () { return view("public/articles/blog/healthy-food-2-broccoli");});
+Route::get('/healthy-food-1-lemons', function () { return view("public/articles/blog/healthy-food-1-lemons");});
 
 
 
