@@ -82,26 +82,25 @@
       Dengan pengalaman lebih dari 14 tahun, Urban Athletes hadir menjadi bagian<br>
       dari awal komitmen sehat Anda mulai hari ini.</p>
   </div>
-
   <div class="container grid md:grid-cols-2 lg:grid-cols-2 mt-12 mb-8">
     <div>
         <p class="mt-14 mb-5 text-center">
           Untuk Menjaga kebugaran selama ISOMAN<br>
           Yuk ikuti Class Online kami</p>
-          <div class="mt-10 text-center">
+          <div class="mt-10 mb-10 text-center">
             {{-- <a href="#" class="btn btn-primary">Read more</a> --}}
             <a class="bg-green-ua px-4 py-3 rounded-md border-separate text-white" href="/online-schedule" >Cari tahu</a>
           </div>
     </div>
     <div>
-      <img src="{{ url('/image/program/onlineSchedule/online-schedule.jpg') }}" alt="hm1">
+      <img class="scale-with-grid" src="{{ url('/image/program/onlineSchedule/online-schedule.jpg') }}" alt="hm1">
     </div>
 
     <div class="mt-10">
       <img src="{{ url('/image/program/group-exercise.jpg') }}" alt="hm2">
     </div>
 
-    <div class="mt-10">
+    <div>
       <p class="mt-14 mb-5 text-center">
         Berikan yang terbaik untuk mencapai tubuh ideal Anda!<br>
         Didukung dengan 500+ kelas dan fasilitas favorit<br>
@@ -155,23 +154,46 @@
   </div>
   <div class="grid md:grid-cols-4 lg:grid-cols-4 mx-20 mt-4">
     <div>
-      <h1 class="mt-5 text-center text-5xl text-white">6528</h1>
-      <p class="mt-3 text-center text-white">Happy Gym Users</p>
+      <div class="flex justify-center place-items-center">
+        <img src="{{ url('/image/icon/home_gym_1.png') }}" alt="icon1">
+      </div>
+      <div>
+        <h1 class="mt-5 text-center text-5xl text-white">6528</h1>
+        <p class="mt-3 text-center text-white">Happy Gym Users</p>
+      </div>
     </div>
+
     <div>
-      <h1 class="mt-5 text-center text-5xl text-white">47</h1>
-      <p class="mt-3 text-center text-white">Trainers and Instructors</p>
+      <div class="flex justify-center place-items-center">
+        <img src="{{ url('/image/icon/home_gym_2.png') }}" alt="icon2">
+      </div>
+      <div>
+        <h1 class="mt-5 text-center text-5xl text-white">47</h1>
+        <p class="mt-3 text-center text-white">Trainers and Instructors</p>
+      </div>
     </div>
+
     <div>
-      <h1 class="mt-5 text-center text-5xl text-white">5</h1>
-      <p class="mt-3 text-center text-white">Biggest Gym Units</p>
+      <div class="flex justify-center place-items-center">
+        <img src="{{ url('/image/icon/home_gym_3.png') }}" alt="icon3">
+      </div>
+      <div>
+        <h1 class="mt-5 text-center text-5xl text-white">5</h1>
+        <p class="mt-3 text-center text-white">Biggest Gym Units</p>
+      </div>
     </div>
+
     <div>
-      <h1 class="mt-5 text-center text-5xl text-white">7</h1>
-      <p class="mt-3 text-center text-white">Days a Week</p>
+      <div class="flex justify-center place-items-center">
+        <img src="{{ url('/image/icon/home_gym_4.png') }}" alt="icon4">
+      </div>
+      <div>
+        <h1 class="mt-5 text-center text-5xl text-white">7</h1>
+        <p class="mt-3 text-center text-white">Days a Week</p>
+      </div>
     </div>
   </div>
-
+ 
 </div>
 
 
