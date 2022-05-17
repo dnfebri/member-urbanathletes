@@ -18,6 +18,7 @@
   @empty($specialPage)
   <nav class="bg-green-ua">
     @include('components.admin_navbar')
+    <div class="py-7"></div>
   </nav>
   @endempty
   
@@ -30,6 +31,7 @@
   <footer>
     @include('components.admin_footer')
   </footer>
+  <script src="{{ url('/js/script_nav.js') }}"></script>
   @endempty
 
   @stack('script')

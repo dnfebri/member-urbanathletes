@@ -71,7 +71,7 @@
     </div>
     <div class="flex items-center justify-center">
       <a id="addToCartButton" class="relative py-1 px-4 rounded-full bg-red-600 text-white text-xl hover:text-2xl transition-all duration-500" href="http://wa.me/6281779176132?text=halo%20saya%20pingin%20bakar%20lemak%20perut%20saya%20">
-        Hubingi Kami
+        Hubungi Kami
       </a>
     </div>
     <div class="flex justify-center px-4 my-8">

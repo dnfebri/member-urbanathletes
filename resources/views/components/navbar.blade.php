@@ -13,7 +13,7 @@
             <span class="hamburger-line transition duration-300 ease-in-out"></span>
             <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
           </button>
-          <div id="nav-menu" class="text-[#598700] hidden absolute py-2 bg-white lg:text-white text-shadow-xl bg-opacity-80 lg:gb-opacity-100 shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
+          <div id="nav-menu" class="text-[#598700] transition duration-300 scale-y-0 lg:scale-100 absolute py-2 bg-white lg:text-white text-shadow-xl bg-opacity-80 lg:gb-opacity-100 shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
             <ul class="block lg:flex ">
               <li class="group"><a href="{{ url('/dev') }}" class="text-base py-2 mx-8 lg:mx-4 flex group-hover:text-yellow-500">Home</a></li>
               <li class="group">
@@ -80,7 +80,7 @@
                   </div>
                 </button>
               </li>
-              <li class="group"><a href="#" class="text-base py-2 mx-8 lg:mx-4 flex group-hover:text-yellow-500">What's on</a></li>
+              {{-- <li class="group"><a href="#" class="text-base py-2 mx-8 lg:mx-4 flex group-hover:text-yellow-500">What's on</a></li> --}}
               <li class="group"><a href="{{ route('successStory') }}" class="text-base py-2 mx-8 lg:mx-4 flex group-hover:text-yellow-500">Success Story</a></li>
               {{-- <li class="group">
                 <button class="relative text-shadow-xl py-2 mx-4 flex jutify-center items-center focus:outline-none hover:text-yellow-500 group">
@@ -149,14 +149,14 @@
               <li class="group"><a href="#" class="text-base py-2 mx-8 lg:mx-4 flex group-hover:text-yellow-500">Member</a></li>
               <li class="group">
                 <div class="flex md:hidden flex-col items-center hover:scale-110 mt-4 lg:mt-0">
-                  <a href="#" class="px-4 py-2 rounded-md text-black bg-yellow-400 hover:bg-yellow-500">Franchise Info</a>
+                  <a href="#" class="px-4 py-2 rounded-md text-black bg-yellow-400 hover:bg-yellow-500">Kemitraan</a>
                 </div>
               </li>
             </ul>
           </div>
         </div>
         <div class="hidden md:flex flex-col items-center hover:scale-110 lg:mt-0">
-          <a href="#" class="px-4 py-2 rounded-md bg-yellow-400 hover:bg-yellow-500">Franchise Info</a>
+          <a href="https://kemitraan.urbanathletes.co.id/home-franchise/" class="px-4 py-2 rounded-md bg-yellow-400 hover:bg-yellow-500">Kemitraan</a>
         </div>
       </div>
     </div>
