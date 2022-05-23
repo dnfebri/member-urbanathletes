@@ -147,16 +147,36 @@
                 </button>
               </li>
               <li class="group"><a href="#" class="text-base py-2 mx-8 lg:mx-4 flex group-hover:text-yellow-500">Member</a></li>
-              <li class="group">
-                <div class="flex md:hidden flex-col items-center hover:scale-110 mt-4 lg:mt-0">
-                  <a href="#" class="px-4 py-2 rounded-md text-black bg-yellow-400 hover:bg-yellow-500">Kemitraan</a>
+              <li class="">
+                <div class="flex md:hidden flex-col items-center mt-4 lg:mt-0">
+                  {{-- <a href="#" class="px-4 py-2 rounded-md text-black bg-yellow-400 hover:bg-yellow-500">Kemitraan</a> --}}
+                  <a class="group relative border border-yellow-500 focus:outline-none lg:hidden my-1" href="#">
+                    <span class="w-full inline-flex items-center justify-center self-stretch px-4 py-2 text-sm text-center font-bold uppercase bg-red-500 ring-1 ring-offset-1 border-red-500 ring-red-500 ring-offset-red-500 transform transition-transform group-hover:-translate-y-1 group-hover:-translate-x-1 group-focus:-translate-y-1 group-focus:-translate-x-1 text-white">
+                      <i class="fa-solid fa-ticket"></i> <p class="ml-2">Get Free Trial</p>
+                    </span>
+                  </a>
+                  <a class="group relative border border-yellow-500 focus:outline-none lg:hidden my-1" href="https://kemitraan.urbanathletes.co.id/home-franchise">
+                    <span class="w-full inline-flex items-center justify-center self-stretch px-4 py-2 text-sm text-center font-bold uppercase bg-red-500 ring-1 ring-offset-1 border-red-500 ring-red-500 ring-offset-red-500 transform transition-transform group-hover:-translate-y-1 group-hover:-translate-x-1 group-focus:-translate-y-1 group-focus:-translate-x-1 text-white">
+                      <i class="fa-solid fa-handshake"></i> <p class="ml-2">Kemitraan</p>
+                    </span>
+                  </a>
                 </div>
               </li>
             </ul>
           </div>
         </div>
-        <div class="hidden md:flex flex-col items-center hover:scale-110 lg:mt-0">
-          <a href="https://kemitraan.urbanathletes.co.id/home-franchise/" class="px-4 py-2 rounded-md bg-yellow-400 hover:bg-yellow-500">Kemitraan</a>
+        <div class="hidden lg:flex items-center lg:mt-0">
+          <a class="group relative border border-red-500 focus:outline-none hidden lg:ml-0 xl:ml-4 lg:inline-flex" href="{{ url('admin/membership') }}">
+            <span class="w-full inline-flex items-center justify-center self-stretch px-4 py-2 text-sm text-center font-bold uppercase bg-red-500 ring-1 ring-offset-1 border-red-500 ring-red-500 ring-offset-red-500 transform transition-transform group-hover:-translate-y-1 group-hover:-translate-x-1 group-focus:-translate-y-1 group-focus:-translate-x-1 text-white">
+              <i class="fa-solid fa-ticket"></i> <p class="ml-2">Get Free Trial</p>
+            </span>
+          </a>
+          <a class="group relative border border-red-500 focus:outline-none hidden lg:ml-0 xl:ml-4 lg:inline-flex" href="{{ url('admin/membership') }}">
+            <span class="w-full inline-flex items-center justify-center self-stretch px-4 py-2 text-sm text-center font-bold uppercase bg-red-500 ring-1 ring-offset-1 border-red-500 ring-red-500 ring-offset-red-500 transform transition-transform group-hover:-translate-y-1 group-hover:-translate-x-1 group-focus:-translate-y-1 group-focus:-translate-x-1 text-white">
+              <i class="fa-solid fa-handshake"></i> <p class="ml-2">Kemitraan</p>
+            </span>
+          </a>
+          {{-- <a href="https://kemitraan.urbanathletes.co.id/home-franchise/" class="px-4 py-2 rounded-md bg-yellow-400 hover:bg-yellow-500">Kemitraan</a> --}}
         </div>
       </div>
     </div>
