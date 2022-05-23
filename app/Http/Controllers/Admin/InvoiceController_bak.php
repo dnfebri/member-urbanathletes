@@ -1,30 +1,30 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use App\Models\ApiModels;
-use App\Models\Product;
+use App\Models\Invoice;
 use Illuminate\Http\Request;
 
-class ProductController extends Controller
+class InvoiceController extends Controller
 {
+    
     public function __construct()
     {
         $this->apiModels = new ApiModels();
-    }
-    
-    public function index()
-    {
-        $membership = $this->apiModels->membership();
-        // dd($membership);
-        return view("admin/products/membership/index", ['membership' => $membership['rows']]);
+        $this->dataInvoice = new Invoice();
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function index()
+    {
+        $invoices = $this->dataInvoice->getIndex()->paginate(10);
+        // dd($invoices);
+        $clubs = $this->apiModels->allClubs()['rows'];
+        // dd($invoices);
+        return view('admin.joins.index', compact('invoices', 'clubs'));
+    }
+
     public function create()
     {
         //
@@ -44,23 +44,21 @@ class ProductController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Product  $product
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($slug)
+    public function show($id)
     {
-        $membership = $this->apiModels->membership($slug);
-        
-        return view("admin/products/membership/show", compact('membership'));
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Product  $product
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Product $product)
+    public function edit($id)
     {
         //
     }
@@ -69,10 +67,10 @@ class ProductController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Product  $product
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Product $product)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -80,10 +78,10 @@ class ProductController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Product  $product
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Product $product)
+    public function destroy($id)
     {
         //
     }
