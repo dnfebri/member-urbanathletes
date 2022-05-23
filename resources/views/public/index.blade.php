@@ -84,12 +84,12 @@
   </div>
   <div class="container grid md:grid-cols-2 lg:grid-cols-2 mt-12 mb-8">
     <div>
-        <p class="mt-14 mb-5 text-center">
+        <p class="mt-14 mb-5 text-center h-auto">
           Untuk Menjaga kebugaran selama ISOMAN<br>
           Yuk ikuti Class Online kami</p>
           <div class="mt-10 mb-10 text-center">
             {{-- <a href="#" class="btn btn-primary">Read more</a> --}}
-            <a class="bg-green-ua px-4 py-3 rounded-md border-separate text-white" href="/online-schedule" >Cari tahu</a>
+            <a class="bg-green-ua px-4 py-3 rounded-md border-separate text-white" href="{{ url('/online-schedule') }}" >Cari tahu</a>
           </div>
     </div>
     <div>
@@ -112,7 +112,7 @@
         </div>
     </div>
 
-    <div class="mt-10">
+    <div class="mt-10 h-max">
       <p class="mt-10 mb-5 text-center">
         Personal Trainer kami yang telah tersertifikasi siap<br>
         untuk membantu Anda dalam mencapai target<br>
@@ -134,7 +134,7 @@
   <div>
     <h1 class="text-6xl text-white text-center">Our Impression</h1>
   </div>
-  <div class="grid md:grid-cols-4 lg:grid-cols-4 mx-20 mt-12">
+  {{-- <div class="grid md:grid-cols-4 lg:grid-cols-4 mx-20 mt-12">
     <div class="justify-center place-items-center">
       <div class="flex justify-center place-items-center">
         <img src="{{ url('/image/icon/home_gym_1.png') }}" alt="icon1">
@@ -151,9 +151,9 @@
     <div class="flex justify-center place-items-center">
       <img src="{{ url('/image/icon/home_gym_4.png') }}" alt="icon4">
     </div>
-  </div>
+  </div> --}}
   <div class="grid md:grid-cols-4 lg:grid-cols-4 mx-20 mt-4">
-    <div>
+    <div class="py-4">
       <div class="flex justify-center place-items-center">
         <img src="{{ url('/image/icon/home_gym_1.png') }}" alt="icon1">
       </div>
@@ -163,7 +163,7 @@
       </div>
     </div>
 
-    <div>
+    <div class="py-4">
       <div class="flex justify-center place-items-center">
         <img src="{{ url('/image/icon/home_gym_2.png') }}" alt="icon2">
       </div>
@@ -173,7 +173,7 @@
       </div>
     </div>
 
-    <div>
+    <div class="py-4">
       <div class="flex justify-center place-items-center">
         <img src="{{ url('/image/icon/home_gym_3.png') }}" alt="icon3">
       </div>
@@ -183,7 +183,7 @@
       </div>
     </div>
 
-    <div>
+    <div class="py-4">
       <div class="flex justify-center place-items-center">
         <img src="{{ url('/image/icon/home_gym_4.png') }}" alt="icon4">
       </div>

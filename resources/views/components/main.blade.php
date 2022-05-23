@@ -11,7 +11,7 @@
   
   @stack('style')
 
-  <title>Urban Athletes {{ $title ?? '' }}</title>
+  <title>Urban Athletes {{ $title ?? config('app.name') }}</title>
 </head>
 <body class="font-AmpleSoft">
   {{-- @dd($specialPage) --}}

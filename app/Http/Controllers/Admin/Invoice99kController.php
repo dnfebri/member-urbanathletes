@@ -7,7 +7,7 @@ use App\Models\ApiModels;
 use App\Models\Invoice;
 use Illuminate\Http\Request;
 
-class InvoiceController extends Controller
+class Invoice99kController extends Controller
 {
     
     public function __construct()
@@ -18,12 +18,13 @@ class InvoiceController extends Controller
 
     public function index()
     {
-        $invoices = $this->dataInvoice->getIndex()->sortByDesc('id');
+        $invoices = $this->dataInvoice->getIndex()->paginate(10);
+        // dd($invoices);
         $clubs = $this->apiModels->allClubs()['rows'];
         // dd($invoices);
         return view('admin.joins.index', compact('invoices', 'clubs'));
     }
-
+    
     public function create()
     {
         //

@@ -12,7 +12,20 @@ class ApiModels extends Model
 
     public function allClubs()
     {
-        $clubs = Http::get('https://api.urbanathletes.co.id/fitness/v1/branch')->json('data');
+        $clubs = Http::get( config('app.url_api') . 'fitness/v1/branch')->json('data');
         return $clubs;
+    }
+
+    public function membership($id = NULL)
+    {
+        if ($id === NULL) {
+            // $urlapi = config('app.url_api');
+            // dd($urlapi);
+            $data = Http::get( config('app.url_api') . 'fitness/v1/membership?is_show_mobile=1')->json('data');
+            return $data;
+        } else {
+            $data = Http::get( config('app.url_api') . 'fitness/v1/membership/'. $id )->json('data');
+            return $data;
+        }
     }
 }

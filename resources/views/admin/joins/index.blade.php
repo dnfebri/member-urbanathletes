@@ -50,7 +50,7 @@
           </tr>
         </tbody>
       </table> --}}
-      <div class="py-4 flex justify-end items-center">
+      <div class="py-4 px-4 flex justify-end items-center">
         <span class="px-4">Club</span>
           <select name="club" id="club" class="block border-0 border-b-2 focus:border-black @error('nominal') border-red-300 @enderror">
             <option value="" >Select club</option> 
@@ -60,39 +60,43 @@
           </select>
       </div>
 
-
-      <table class="items-center w-full bg-transparent border-collapse">
-        <thead>
-          <tr class=" border-collapse border-b-2 border-slate-500 w-full">
-            <th scope="col" class="px-6 py-3">No</th>
-            <th scope="col" class="px-6 py-3">Nama</th>
-            <th scope="col" class="px-6 py-3">Email</th>
-            <th scope="col" class="px-6 py-3">Nomor</th>
-            <th scope="col" class="px-6 py-3">Club</th>
-            <th scope="col" class="px-6 py-3">Tanggal Join</th>
-            <th scope="col" class="px-6 py-3">Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          @foreach ($invoices as $invoice)
-            <tr class=" border-collapse border-b-2 border-slate-500">
-              <th scope="row">{{ $loop->iteration }}</th>
-              <td class="px-6 py-4">{{$invoice->nama}}</td>
-              <td class="px-6 py-4">{{$invoice->email}}</td>
-              <td class="px-6 py-4">{{$invoice->nomor}}</td>
-              @foreach ($clubs as $club)
-                @if($club['id'] == $invoice->club)
-                  <td class="px-6 py-4">{{$club['name']}}</td>
-                @endif
-              @endforeach
-              <td class="px-6 py-4">{{$invoice->created_at}}</td>
-              <td class="px-6 py-4">
-                <button>detail</button>
-              </td>
+      <div class="overflow-x-auto px-4">
+        <table class="items-center w-full bg-transparent border-collapse">
+          <thead>
+            <tr class=" border-collapse border-b-2 border-slate-500 w-full">
+              <th scope="col" class="px-6 py-3">No</th>
+              <th scope="col" class="px-6 py-3">Nama</th>
+              <th scope="col" class="px-6 py-3">Email</th>
+              <th scope="col" class="px-6 py-3">Nomor</th>
+              <th scope="col" class="px-6 py-3">Club</th>
+              <th scope="col" class="px-6 py-3">Tanggal Join</th>
+              <th scope="col" class="px-6 py-3">Action</th>
             </tr>
-          @endforeach
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            @foreach ($invoices as $invoice => $row)
+              <tr class=" border-collapse border-b-2 border-slate-500">
+                <th scope="row">{{ $invoices->firstItem() + $invoice }}</th>
+                <td class="px-6 py-4">{{$row->nama}}</td>
+                <td class="px-6 py-4">{{$row->email}}</td>
+                <td class="px-6 py-4">{{$row->nomor}}</td>
+                @foreach ($clubs as $club)
+                  @if($club['id'] == $row->club)
+                    <td class="px-6 py-4">{{$club['name']}}</td>
+                  @endif
+                @endforeach
+                <td class="px-6 py-4">{{$row->created_at}}</td>
+                <td class="px-6 py-4">
+                  <button>detail</button>
+                </td>
+              </tr>
+            @endforeach
+          </tbody>
+        </table>
+        <div class="flex justify-between my-4">
+          {{ $invoices->links() }}
+        </div>
+      </div>
     </div>
   </div>
 </x-admin_main>

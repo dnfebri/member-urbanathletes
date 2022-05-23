@@ -35,3 +35,21 @@
 .opacity-hidden{
   @apply opacity-0;
 }
+
+/* Style Sidebar menu admin */
+
+.active-class{
+  @apply bg-gray-800 text-gray-200;
+}
+
+.expanded-class{
+  @apply border-l border-gray-400 ml-4 pl-4;
+}
+
+.shrinked-class{
+  @apply sm:absolute top-0 left-20 sm:shadow-md sm:z-10 sm:bg-gray-900 sm:rounded-md sm:p-4 border-l sm:border-none border-gray-400 ml-4 pl-4 sm:ml-0 w-28;
+}
+
+.visib-class{
+  @apply z-10 block sm:absolute -top-7 sm:border border-gray-800 left-5 sm:text-sm sm:bg-gray-900 sm:px-2 sm:py-1 sm:rounded-md;
+}
