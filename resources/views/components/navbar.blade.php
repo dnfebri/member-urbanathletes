@@ -13,7 +13,7 @@
             <span class="hamburger-line transition duration-300 ease-in-out"></span>
             <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
           </button>
-          <div id="nav-menu" class="text-[#598700] transition duration-300 scale-y-0 lg:scale-100 absolute py-2 bg-white lg:text-white text-shadow-xl bg-opacity-80 lg:gb-opacity-100 shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
+          <div id="nav-menu" class="text-[#598700] transition duration-300 lg:scale-100 absolute py-2 bg-white lg:text-white text-shadow-xl bg-opacity-80 lg:gb-opacity-100 shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none scale-y-0 ">
             <ul class="block lg:flex ">
               <li class="group"><a href="{{ url('/dev') }}" class="text-base py-2 mx-8 lg:mx-4 flex group-hover:text-yellow-500">Home</a></li>
               <li class="group">

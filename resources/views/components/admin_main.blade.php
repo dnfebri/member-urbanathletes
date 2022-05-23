@@ -10,31 +10,43 @@
   <link rel="stylesheet" href="{{ url('/fontawesome/css/all.min.css') }}">
   
   @stack('style')
+  {{-- <script src="https://cdn.tailwindcss.com"></script>  --}}
+  {{-- Seharusnya ini tidak di pakai--}}
+  {{-- <script src="https://unpkg.com/alpinejs@3.7.1/dist/cdn.min.js" defer></script> --}}
+  <script src="{{ asset('js/app.js') }}" defer></script>
 
   <title>Urban Athletes {{ $title ?? '' }}</title>
 </head>
 <body class="font-AmpleSoft">
-  {{-- @dd($specialPage) --}}
-  @empty($specialPage)
-  <nav class="bg-green-ua">
-    @include('components.admin_navbar')
-    <div class="py-7"></div>
-  </nav>
-  @endempty
-  
-  {{-- <header>Header</header> --}}
-  <main>
-    {{ $slot }}
-  </main>
+  <div class="flex justify-start">
+    {{-- @dd($specialPage) --}}
+    
+    <div class="relative w-full">
 
+      <div class="flex justify-start">
+        @include('components.admin_sidebar')
+        <div class="block w-full">
+          <nav class="bg-green-ua">
+            @include('components.admin_navbar')
+            {{-- <div class="py-7"></div> --}}
+          </nav>
+          
+          {{-- <header>Header</header> --}}
+          <main id="app">
+            {{ $slot }}
+          </main>
+        </div>
+      </div>
+    </div>
+  </div>
   @empty($specialPage)
-  <footer>
-    @include('components.admin_footer')
-  </footer>
-  <script src="{{ url('/js/script_nav.js') }}"></script>
+  <script src="{{ url('/js/script_sidebar.js') }}"></script>
   @endempty
-
   @stack('script')
   <script src="{{ url('/js/script.js') }}"></script>
+  {{-- <footer>
+    @include('components.admin_footer')
+  </footer> --}}
+  {{-- <script src="{{ url('/js/script_nav.js') }}"></script> --}}
 </body>
 </html>
