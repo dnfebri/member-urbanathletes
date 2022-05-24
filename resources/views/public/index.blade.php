@@ -19,12 +19,12 @@
         </div>
         <div class="swiper-slide">
           <img class="w-full" src="{{ url('/image/benner/Benner-2.jpg') }}" alt="Urban Athletes Benner 2">
-        </div>
-        <div class="swiper-slide">
-          <img class="w-full" src="{{ url('/image/benner/Benner-3.jpg') }}" alt="Urban Athletes Benner 3">
         </div> --}}
         <div class="swiper-slide">
-          <img class="w-full" src="{{ url('/image/benner/Benner-4.jpg') }}" alt="Urban Athletes Benner 4">
+          <img class="w-full" src="{{ url('/image/benner/Benner-4.jpg') }}" alt="Urban Athletes Benner 3">
+        </div>
+        <div class="swiper-slide">
+          <img class="w-full" src="{{ url('/image/benner/mobile-apps-urban-athletes.jpg') }}" alt="Urban Athletes Benner 4">
         </div>
       </div>
       <!-- If we need pagination -->

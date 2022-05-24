@@ -31,5 +31,6 @@ Route::get('/healthy-food-3-dark-chocolate', function () { return view("public/a
 Route::get('/healthy-food-2-broccoli', function () { return view("public/articles/blog/healthy-food-2-broccoli");});
 Route::get('/healthy-food-1-lemons', function () { return view("public/articles/blog/healthy-food-1-lemons");});
 
+Route::get('/get-free-trial', function () { return view("public/member/get-free-trial");});
 
 

@@ -101,7 +101,7 @@
       </div>
     </div>
     <div class="flex justify-end items-center pr-6">
-      <button id="btn-dropdown" class="relative text-shadow-xl py-2 mx-4 lg:mx-4 flex jutify-center items-center focus:outline-none hover:text-yellow-500 group z-20 px-4 lg:px-0 text-white font-medium">
+      <button id="btn-dropdown" class="relative text-shadow-xl py-2 mx-2 lg:mx-4 flex jutify-center items-center focus:outline-none hover:text-yellow-500 group z-20 px-4 lg:px-0 text-white font-medium">
         Admin
         <div id="dropdown-menu" class="absolute top-10 left-0 m-0 p-0 overflow-hidden transition ease-in-out duration-500 bg-white shadow-md rounded max-h-0">
           <ul class="text-black">
@@ -117,7 +117,7 @@
           </ul>
         </div>
       </button>
-      <img class="h-12 rounded-full mx-4" src="{{ asset('storage/default-img.png') }}" alt="Image Profile">
+      <img class="h-12 rounded-full mr-4" src="{{ asset('storage/default-img.png') }}" alt="Image Profile">
     </div>
   </div>
 

@@ -4,7 +4,7 @@
       <h1 class="text-xl">Product Detail</h1>
     </div>
     <div class="px-4 py-4">
-      <a class="group relative border border-black focus:outline-none hidden lg:ml-4 lg:inline-flex" href="{{ url('admin/membership') }}">
+      <a class="group relative border border-black focus:outline-none ml-4 inline-flex" href="{{ url('admin/membership') }}">
           <span class="w-full inline-flex items-center justify-center self-stretch px-4 py-2 text-sm text-center font-bold uppercase bg-white ring-1 ring-black ring-offset-1 transform transition-transform group-hover:-translate-y-1 group-hover:-translate-x-1 group-focus:-translate-y-1 group-focus:-translate-x-1">
             <i class="fa-solid fa-arrow-left mr-2"></i> Kembali
           </span>
