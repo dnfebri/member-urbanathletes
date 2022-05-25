@@ -10,6 +10,7 @@ include __DIR__.'/web/public.php';
 include __DIR__.'/web/promo.php';
 include __DIR__.'/web/crm.php';
 include __DIR__.'/web/product.php';
+include __DIR__.'/web/memberArea.php';
 
 // Untuk Testing View
 Route::get('/isiemail', function () { return view('email.isi_email_confirm');});

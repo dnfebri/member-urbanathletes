@@ -42,7 +42,7 @@ class Sixpack3Controller extends Controller
         );
         $datareq = $request->all();
         $datareq += array(
-            'kode' => '123',
+            // 'kode' => '123',
             'harga' => '1488000',
             'status' => '0'
         );

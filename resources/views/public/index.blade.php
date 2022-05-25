@@ -83,9 +83,9 @@
     <div class="md:flex justify-center items-center">
       <div class="my-10 px-8 justify-center text-center">
         <p class="mt-14 mb-5 text-center h-auto">
-          Berikan yang terbaik untuk mencapai tubuh ideal Anda!<br>
-          Didukung dengan 500+ kelas dan fasilitas favorit<br>
-          berstandar internasional, rutinitas berolahraga Anda akan terasa<br>
+          Berikan yang terbaik untuk mencapai tubuh ideal Anda! <br>
+          Didukung dengan 500+ kelas dan fasilitas favorit <br>
+          berstandar internasional, rutinitas berolahraga Anda akan terasa <br>
           lebih nyaman dan maksimal bersama kami.
         </p>
         <a class="bg-green-ua px-4 py-3 rounded-md border-separate text-white" href="{{ url('/personal-training') }}" >Cari tahu</a>
