@@ -48,9 +48,7 @@
       {{-- <div class="flex justify-center items-center mb-8 px-16"> --}}
       <div class="flex justify-center items-center">
         <p class="text-white text-sm md:text-base text-center font-extralight">
-          Membership terjangkau khusus bagi kamu yang mau cobain ngegym ditempat bonafit, tapi dana lagi pas-pasan. Dapatkan membership 14 hari dengan harga terjangkau. rasakan pengalaman ngegym yang berbeda dengan standar Gym Internasional.
-        </p>
-        <p class="text-white text-sm md:text-base text-center font-extralight">
+          Membership terjangkau khusus bagi kamu yang mau cobain ngegym ditempat bonafit, tapi dana lagi pas-pasan. Dapatkan membership 14 hari dengan harga terjangkau. rasakan pengalaman ngegym yang berbeda dengan standar Gym Internasional.<br>
           Promo 99k ini khusus untuk New Join Member, dan tidak bisa diperpanjang dengan promo yang sama. Promo tidak berlaku untuk ex member.
         </p>
       </div>
