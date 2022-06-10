@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
                 'club_id' => '2',
                 'club_email' => 'cs.urbanfitgwmerr@gmail.com',
                 'nowa' => '628113343168',
-                'an_rek' => 'Valdixon Signature Management',
+                'an_rek' => 'Mitra Sentral Indonesia',
                 'bca' => '0885-806-061',
                 'mandiri' => '140-00-789987-89',
                 
@@ -39,7 +39,7 @@ class DatabaseSeeder extends Seeder
                 'club_id' => '4',
                 'club_email' => 'cs.urbanathletestidar@gmail.com',
                 'nowa' => '628113432168',
-                'an_rek' => 'Valdixon Signature Management',
+                'an_rek' => 'Mitra Sentral Indonesia',
                 'bca' => '0885-856-808',
                 'mandiri' => '140-00-555988-83',
                 
