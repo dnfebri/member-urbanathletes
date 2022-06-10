@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Mail\ConfirmStaffClub;
 use App\Mail\SendEmailConfirm;
+use App\Models\ApiMidtrans;
 use App\Models\ApiModels;
 use App\Models\Invoice;
+use App\Models\Orders;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
@@ -44,23 +46,6 @@ class InvoiceController extends Controller
         //
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($kode)
     {
         $clubs = $this->apiModels->allClubs()['rows'];

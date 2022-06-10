@@ -146,7 +146,7 @@
                   </div>
                 </button>
               </li>
-              <li class="group"><a href="{{ route('member.loginForm') }}" class="text-base py-2 mx-8 lg:mx-4 flex group-hover:text-yellow-500">Member Area</a></li>
+              <li class="group"><a href="{{ url('/member') }}" class="text-base py-2 mx-8 lg:mx-4 flex group-hover:text-yellow-500">Member Area</a></li>
               <li class="">
                 <div class="flex lg:hidden flex-col items-center mt-4 lg:mt-0">
                   {{-- <a href="#" class="px-4 py-2 rounded-md text-black bg-yellow-400 hover:bg-yellow-500">Kemitraan</a> --}}

@@ -5,7 +5,7 @@
       <div class="flex justify-center border-b my-4 pb-4">
         <h2 class="text-3xl font-Futura">Daftar form GYM</h2>
       </div>
-      <input type="hidden" name="kode" value="UA{{ time() }}">
+      <input type="hidden" name="kode" value="">
       @error('kode')
         <div id="kode" class="text-sm text-red-500">
             {{ $message }}

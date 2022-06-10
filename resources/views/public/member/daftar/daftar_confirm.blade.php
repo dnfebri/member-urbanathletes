@@ -2,7 +2,7 @@
   @push('style')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css" rel="stylesheet">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
     
   @endpush
@@ -48,7 +48,7 @@
         </label>
         <label class="block mx-4 my-4">
           <span class="">Tanggal Transfer</span>
-          <input name="tanggal" class="date form-control" type="text" value="{{ old('tanggal') ?? $dataInvoice->tanggal }}" autocomplete="off">
+          <input name="tanggal" class="date form-control" type="text" value="{{ old('tanggal') ?? $dataInvoice->tanggal }}" autocomplete="off" readonly>
           @error('tanggal')
             <div id="tanggal" class="text-sm text-red-500">
                 {{ $message }}

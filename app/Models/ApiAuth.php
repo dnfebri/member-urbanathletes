@@ -12,7 +12,7 @@ class ApiAuth extends Model
 
     public function member($data = NULL)
     {
-        $url =  config('app.url_api') . 'vendor/v1/auth/member';
+        $url = config('app.url_api') . 'vendor/v1/auth/member';
         // $url = 'http://localhost/vendor/v1/auth/member';
         $memberLog = Http::post( $url, [
             'email' => $data['email'],

@@ -14,8 +14,9 @@ Route::prefix('daftar')->name('daftar.')->group(function () {
   Route::get('/send/{kode}', [PublicController::class, 'daftarSend'])->name('send');
   Route::get('/confirm/{kode}/success', [PublicController::class, 'daftarConfirmSuccess'])->name('confirmSuccess');
   // Route::get('/confirm', [PublicController::class, 'daftarConfirm'])->name('confirm');
+  Route::post('/order', [PublicController::class, 'daftarOrder'])->name('order');
   Route::get('/confirm/{kode}', [InvoiceController::class, 'edit'])->name('invoiceEdit');
-  Route::post('/confirm', [InvoiceController::class, 'update'])->name('updateConfirm');
+  Route::post('/confirm-update', [InvoiceController::class, 'update'])->name('updateConfirm');
   Route::post('', [PublicController::class, 'daftarSave'])->name('store');
 });
 

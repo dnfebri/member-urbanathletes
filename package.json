@@ -27,6 +27,8 @@
         "vue-template-compiler": "^2.6.12"
     },
     "dependencies": {
-        "alpinejs": "^3.10.2"
+        "alpinejs": "^3.10.2",
+        "dotenv": "^16.0.1",
+        "vue-router": "^3.5.4"
     }
 }

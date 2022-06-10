@@ -27,7 +27,7 @@ class Sixpack3Controller extends Controller
     {
         $request->validate(
             [
-                'kode' => 'unique:sixpack3s,kode',
+                // 'kode' => 'unique:sixpack3s,kode',
                 'club_id' => 'required',
                 'nama' => 'required',
                 'nomor' => ['required', 'numeric'],
@@ -40,6 +40,7 @@ class Sixpack3Controller extends Controller
                 // 'nomor.numeric' => 'Harus diisi dengan angka!'
             ]
         );
+        $request['kode'] = 'UA' . time() . '-' . rand(100, 999);
         $datareq = $request->all();
         $datareq += array(
             // 'kode' => '123',

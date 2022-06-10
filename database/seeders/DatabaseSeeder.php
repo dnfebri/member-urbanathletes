@@ -22,8 +22,8 @@ class DatabaseSeeder extends Seeder
                 'club_email' => 'cs.urbanfitgwmerr@gmail.com',
                 'nowa' => '628113343168',
                 'an_rek' => 'Valdixon Signature Management',
-                'bca' => '088-1844-400',
-                'mandiri' => '140-0069-791-979',
+                'bca' => '0885-806-061',
+                'mandiri' => '140-00-789987-89',
                 
             ],
             [   // Marvell
@@ -40,8 +40,8 @@ class DatabaseSeeder extends Seeder
                 'club_email' => 'cs.urbanathletestidar@gmail.com',
                 'nowa' => '628113432168',
                 'an_rek' => 'Valdixon Signature Management',
-                'bca' => '088-1844-400',
-                'mandiri' => '140-0069-791-979',
+                'bca' => '0885-856-808',
+                'mandiri' => '140-00-555988-83',
                 
             ],
             [   // Lenmarc

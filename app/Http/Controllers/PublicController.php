@@ -7,6 +7,7 @@ use App\Mail\SendEmailConfirm;
 use App\Models\ApiModels;
 use App\Models\Invoice;
 use App\Models\Join;
+use App\Models\Orders;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
@@ -30,7 +31,7 @@ class PublicController extends Controller
     {
         $request->validate(
             [
-                'kode' => 'unique:invoices,kode',
+                // 'kode' => 'unique:invoices,kode',
                 'club' => 'required',
                 'nama' => 'required',
                 'nomor' => ['required', 'numeric'],
@@ -44,6 +45,7 @@ class PublicController extends Controller
             ]
         );
 
+        $request['kode'] = 'UA' . time() . '-' . rand(100, 999);
         // dd($request->all());
         $join = Join::create($request->all());
         $data = $request->request->all(); // mengambil kode
@@ -75,7 +77,58 @@ class PublicController extends Controller
         $dataInvoice = DB::table('invoices')
                         ->join('joins', 'invoices.join_id', '=', 'joins.id')
                         ->where('kode', $kode)->first();
-        return view("public/member/daftar/daftar_send", compact('dataInvoice'));
+
+        // Set your Merchant Server Key
+        \Midtrans\Config::$serverKey = env('SERVER_KEY');
+        // Set to Development/Sandbox Environment (default). Set to true for Production Environment (accept real transaction).
+        \Midtrans\Config::$isProduction = false;
+        // Set sanitization on (default)
+        \Midtrans\Config::$isSanitized = true;
+        // Set 3DS transaction for credit card to true
+        \Midtrans\Config::$is3ds = true;
+        
+        $params = array(
+            'transaction_details' => array(
+                'order_id' => $dataInvoice->kode,
+                'gross_amount' => '',
+            ),
+            'item_details' => array(
+               [
+                'id' => $dataInvoice->id,
+                'price' => $dataInvoice->harga,
+                'quantity' => 1,
+                'name' => 'Promo 99k',
+               ]
+            ),
+            'customer_details' => array(
+                'name' => $dataInvoice->nama,
+                'email' => $dataInvoice->email,
+                'phone' => $dataInvoice->nomor,
+            ),
+        );
+        
+        $snapToken = \Midtrans\Snap::getSnapToken($params);
+
+        // Authorization sandbox midtrans
+        // $auth = base64_encode(env('SERVER_KEY') . ':');
+        // dd($auth);
+
+        return view("public/member/daftar/daftar_send", compact('dataInvoice', 'params'), ['token' => $snapToken]);
+    }
+
+    public function daftarOrder(Request $request)
+    {
+        $dataOrder = json_decode($request->data_json_bayar);
+        $order = Orders::create([
+            'order_id' => $request->kode,
+            'gross_amount' => $dataOrder->gross_amount,
+            'status' => $dataOrder->transaction_status,
+            'transaction_id' => $dataOrder->transaction_id,
+            'payment_type' => $dataOrder->payment_type,
+            'json_midtrans' => $request->data_json_bayar
+        ]);
+        // dd($order);
+        return redirect()->route('order.status', ['id' => $order->order_id]);
     }
 
     public function daftarConfirmSuccess($kode)
