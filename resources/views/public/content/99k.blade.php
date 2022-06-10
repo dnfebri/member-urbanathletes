@@ -48,7 +48,10 @@
       {{-- <div class="flex justify-center items-center mb-8 px-16"> --}}
       <div class="flex justify-center items-center">
         <p class="text-white text-sm md:text-base text-center font-extralight">
-          Membership terjangkau khusus bagi kamu yang mau cobain ngegym ditempat bonafit, tapi dana lagi pas-pasan. Dapatkan membership 14 hari dengan harga terjangkau. rasakan pengalaman ngegym yang berbeda dengan standar Gym Internasional.
+          Membership terjangkau khusus bagi kamu yang mau cobain ngegym ditempat bonafit, tapi dana lagi pas-pasan. Dapatkan membership 14 hari dengan harga terjangkau. rasakan pengalaman ngegym yang berbeda dengan standar Gym Internasional.<br>
+          Promo 99k ini khusus untuk New Join Member, dan tidak bisa diperpanjang dengan promo yang sama. <br>
+          Cabang yang dipilih tidak bisa diganti setelah proses registrasi selesai.<br>
+          Promo ini hanya berlaku untuk non member yang belum pernah melakukan trial di Urban Athletes. kami tidak bertanggung jawab atas salah transfer atau kehilangan sejumlah uang karena kelalaian pribadi calon member dan tidak bisa mengembalikan dana sejumlah yang telah ditransfer atau dibayarkan.
         </p>
       </div>
       <div class="bg-white border-t-2 border-white mt-4"></div>
