@@ -782,6 +782,10 @@ select {
   margin-left: 0.25rem;
   margin-right: 0.25rem;
 }
+.mx-5 {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+}
 .mx-12 {
   margin-left: 3rem;
   margin-right: 3rem;
@@ -858,14 +862,14 @@ select {
 .mb-18 {
   margin-bottom: 70px;
 }
+.ml-8 {
+  margin-left: 2rem;
+}
 .mb-12 {
   margin-bottom: 3rem;
 }
 .mt-20 {
   margin-top: 5rem;
-}
-.ml-8 {
-  margin-left: 2rem;
 }
 .ml-5 {
   margin-left: 1.25rem;
@@ -912,11 +916,11 @@ select {
 .aspect-auto {
   aspect-ratio: auto;
 }
-.aspect-\[4\/2\.5\] {
-  aspect-ratio: 4 / 2.5;
-}
 .aspect-video {
   aspect-ratio: 16 / 9;
+}
+.aspect-\[4\/2\.5\] {
+  aspect-ratio: 4 / 2.5;
 }
 .h-5 {
   height: 1.25rem;
@@ -957,11 +961,11 @@ select {
 .h-9 {
   height: 2.25rem;
 }
-.h-40 {
-  height: 10rem;
-}
 .h-72 {
   height: 18rem;
+}
+.h-40 {
+  height: 10rem;
 }
 .h-full {
   height: 100%;
@@ -1433,6 +1437,10 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(134 239 172 / var(--tw-bg-opacity));
 }
+.bg-red-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 113 113 / var(--tw-bg-opacity));
+}
 .bg-green-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(34 197 94 / var(--tw-bg-opacity));
@@ -1443,6 +1451,9 @@ select {
 }
 .bg-opacity-80 {
   --tw-bg-opacity: 0.8;
+}
+.bg-opacity-40 {
+  --tw-bg-opacity: 0.4;
 }
 .bg-gradient-to-br {
   background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
@@ -1563,10 +1574,6 @@ select {
   padding-left: 4rem;
   padding-right: 4rem;
 }
-.px-14 {
-  padding-left: 3.5rem;
-  padding-right: 3.5rem;
-}
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -1575,13 +1582,13 @@ select {
   padding-left: 0.125rem;
   padding-right: 0.125rem;
 }
+.px-14 {
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+}
 .py-0 {
   padding-top: 0px;
   padding-bottom: 0px;
-}
-.py-6 {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
 }
 .pt-8 {
   padding-top: 2rem;
@@ -1609,9 +1616,6 @@ select {
 }
 .pt-2 {
   padding-top: 0.5rem;
-}
-.pb-8 {
-  padding-bottom: 2rem;
 }
 .pb-6 {
   padding-bottom: 1.5rem;
@@ -1725,9 +1729,6 @@ select {
 .leading-3 {
   line-height: .75rem;
 }
-.leading-4 {
-  line-height: 1rem;
-}
 .leading-5 {
   line-height: 1.25rem;
 }
@@ -1737,20 +1738,23 @@ select {
 .leading-relaxed {
   line-height: 1.625;
 }
+.leading-4 {
+  line-height: 1rem;
+}
 .leading-loose {
   line-height: 2;
 }
 .tracking-widest {
   letter-spacing: 0.1em;
 }
-.tracking-normal {
-  letter-spacing: 0em;
-}
 .tracking-wider {
   letter-spacing: 0.05em;
 }
 .tracking-tighter {
   letter-spacing: -0.05em;
+}
+.tracking-normal {
+  letter-spacing: 0em;
 }
 .-tracking-normal {
   letter-spacing: -0em;
@@ -2275,14 +2279,14 @@ select {
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-green-500:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(34 197 94 / var(--tw-bg-opacity));
-}
-
 .hover\:bg-green-600:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(22 163 74 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-gray-500:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
 }
 
 .hover\:text-3xl:hover {
@@ -2323,6 +2327,12 @@ select {
 .hover\:underline:hover {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
+}
+
+.hover\:shadow-md:hover {
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .hover\:file\:bg-violet-100::-webkit-file-upload-button:hover {
@@ -2543,11 +2553,6 @@ select {
 
 @media (min-width: 768px) {
 
-  .md\:mx-4 {
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-
   .md\:mx-0 {
     margin-left: 0px;
     margin-right: 0px;
@@ -2556,6 +2561,11 @@ select {
   .md\:mx-2 {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
+  }
+
+  .md\:mx-4 {
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 
   .md\:ml-8 {
@@ -2663,6 +2673,11 @@ select {
     line-height: 1.75rem;
   }
 
+  .md\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
   .md\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
@@ -2673,19 +2688,14 @@ select {
     line-height: 2.25rem;
   }
 
-  .md\:text-base {
-    font-size: 1rem;
-    line-height: 1.5rem;
+  .md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 
   .md\:text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem;
-  }
-
-  .md\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
   }
 
   .md\:leading-5 {
@@ -2814,14 +2824,14 @@ select {
     padding-right: 0px;
   }
 
-  .lg\:px-14 {
-    padding-left: 3.5rem;
-    padding-right: 3.5rem;
-  }
-
   .lg\:px-16 {
     padding-left: 4rem;
     padding-right: 4rem;
+  }
+
+  .lg\:px-14 {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
   }
 
   .lg\:pl-32 {

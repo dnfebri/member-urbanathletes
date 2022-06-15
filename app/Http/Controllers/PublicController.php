@@ -116,20 +116,6 @@ class PublicController extends Controller
         return view("public/member/daftar/daftar_send", compact('dataInvoice', 'params'), ['token' => $snapToken]);
     }
 
-    public function daftarOrder(Request $request)
-    {
-        $dataOrder = json_decode($request->data_json_bayar);
-        $order = Orders::create([
-            'order_id' => $request->kode,
-            'gross_amount' => $dataOrder->gross_amount,
-            'status' => $dataOrder->transaction_status,
-            'transaction_id' => $dataOrder->transaction_id,
-            'payment_type' => $dataOrder->payment_type,
-            'json_midtrans' => $request->data_json_bayar
-        ]);
-        // dd($order);
-        return redirect()->route('order.status', ['id' => $order->order_id]);
-    }
 
     public function daftarConfirmSuccess($kode)
     {

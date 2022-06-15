@@ -76,10 +76,11 @@
   </div>
 </body>
 </html> --}}
-<div style="margin: auto; width: 80%; border: 3px dashed #000; padding: 10px">
+<div style="margin: auto; width: 80%; padding: 10px">
   <div>
     <h2>Hallo {{$dataEmail->nama}}</h2>
-    <p>Pesanan Anda telah kami terima dan dalam beberapa saat lagi akan segera kami proses.</p>
+    {{-- <p>Pesanan Anda telah kami terima dan dalam beberapa saat lagi akan segera kami proses.</p> --}}
+    <p>Kami hanya ingin mengkonfirmasi bahwa ini adalah email anda</p>
     <p>Berikut rincian pesanan Anda :</p>
     <table style="width: 100%; line-height: 2">
       <tr>
@@ -93,14 +94,15 @@
       <tr>
         <td>Club Yang di Pilih</td>
         @foreach ( $clubs as $club )
-          @if ($club['id'] == $dataEmail->club)
+          @if ($club['id'] == $dataEmail->club_id)
             <td>: {{$club['name']}}</td>
           @endif
         @endforeach
       </tr>
     </table>
-    <p>Silahkan segera lakukan pembayaran ke salah satu rekening di bawah ini :</p>
-    <table>
+    {{-- <p>Silahkan segera lakukan pembayaran ke salah satu rekening di bawah ini :</p> --}}
+    <p>Silahkan Silahkan klik tombol di bawah ini untuk melanjutkan pembayaran</p>
+    {{-- <table>
       <tr>
         <td>Bank</td>
         <td>: BCA</td>
@@ -127,7 +129,7 @@
         <td>Atas Nama</td>
         <td>: {{$clubData->an_rek}}</td>
       </tr>
-    </table>
+    </table> --}}
 
     <div style="text-align: center">
       <a href="{{ $dataEmail->url . $dataEmail->kode }}" target="_blank"
@@ -136,7 +138,7 @@
           display:inline-block;border-radius:20px;background-color:#33ff00;color:#fff;
           font-family:San,'Open Sans',Helvetica,Arial,sans-serif;font-size: 1rem;font-weight:500;margin:16px 0 0;box-sizing:border-box;padding: 0.3rem 2.5rem;
         ">
-        konfirmasi pembayaran
+        Lanjud ke pembayaran
       </a>
       <p>Alternative Link :</p>
       <a target="_blank"
@@ -144,6 +146,6 @@
         {{ $dataEmail->url . $dataEmail->kode }}
       </a>
     </div>
-    <p>Jangan menginformasikan bukti dan data pembayaran kepada pihak manapun kecuali Urban Athletes.</p>
+    <p>Jangan menginformasikan bukti atau data pembayaran kepada pihak manapun kecuali Urban Athletes.</p>
   </div>
 </div>

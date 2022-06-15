@@ -1,6 +1,6 @@
 <x-main specialPage=true title='Daftar GYM'>
   <x-layout_card_form>
-    <form action="{{ route('daftar.store') }}" method="post">
+    <form action="{{ route('99k.save') }}" method="post">
       @csrf
       <div class="flex justify-center border-b my-4 pb-4">
         <h2 class="text-3xl font-Futura">Daftar form GYM</h2>
@@ -11,14 +11,24 @@
             {{ $message }}
         </div>
       @enderror
+      @if(session('alert'))
+        <div class="p-4 w-full bg-red-400 rounded-md bg-opacity-40">
+          <h3 class="mx-5 font-bold">{{session('alert')}}</h3>
+        </div>
+      @endif
+      @if(session('success'))
+        <div class="p-4 w-full bg-green-600 rounded-md bg-opacity-40" data-massage="{{session('success')}}" id="success">
+          <h3 class="mx-5 font-bold">{{session('success')}}</h3>
+        </div>
+      @endif
       <div class="flex-none ">
         <label class="block mx-4 my-4">
           <span class="">Club</span>
-          <select name="club" id="club" class="block border-0 border-b-2 w-full focus:border-black @error('nominal') border-red-300 @enderror">
+          <select name="club_id" id="club_id" class="block border-0 border-b-2 w-full focus:border-black @error('nominal') border-red-300 @enderror">
             <option value="" >Select club</option> 
             @foreach ($clubs['rows'] as $club)
-              @if ( $club['id'] != '1' && $club['id'] != '6' )
-                @if ( old('club') == $club['id'] )
+              @if ( $club['id'] != '1' && $club['id'] != '6' && $club['id'] != '7' )
+                @if ( old('club_id') == $club['id'] )
                   <option value="{{ $club['id'] }}" selected>{{ $club['name'] }}</option>
                 @else
                   <option value="{{ $club['id'] }}">{{ $club['name'] }}</option> 
@@ -93,7 +103,7 @@
       <div class="border-t my-4 pb-4">
         <ul class="my-4 mx-4">
           <li>
-            <a href="#" class="text-blue-500 underline">Cek Invoice</a>
+            <a href="{{ route('order.search') }}" class="text-blue-500 underline">Cek Status Pembayaran</a>
           </li>
           <li>
             <a href="#" class="text-blue-500 underline">Lupa Invoice saya!</a>
@@ -102,8 +112,22 @@
       </div>
     </form>
   </x-layout_card_form>
+  @push('style')
+    
+  @endpush
 
   @push('script')
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script>
+    let success = document.querySelector('#success');
+    if (success) {
+      Swal.fire(
+        'Email Terkirim',
+        success.getAttribute("data-massage"),
+        'success'
+      )
+    }
+  </script>
     <!-- Meta Pixel Code -->
     <script>
       !function(f,b,e,v,n,t,s)

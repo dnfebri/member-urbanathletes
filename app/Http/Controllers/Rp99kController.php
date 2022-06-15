@@ -1,0 +1,172 @@
+<?php
+
+namespace App\Http\Controllers;
+
+Use RealRashid\SweetAlert\Facades\Alert;
+use App\Mail\ConfirmStaffClub;
+use App\Mail\SendEmail;
+use App\Mail\SendEmailConfirm;
+use App\Models\ApiModels;
+use App\Models\Orders;
+use App\Models\Rp99k;
+use DateTime;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
+
+class Rp99kController extends Controller
+{
+    public function __construct()
+    {
+        $this->apiModels = new ApiModels();
+    }
+
+    public function daftar()
+    {
+        // dd(date('YmdHi'));
+        return view("public/content/99k/daftar", ['clubs' => $this->apiModels->allClubs()]);
+    }
+
+    public function daftarSave(Request $request)
+    {
+        $member = $this->apiModels->getMember($request->email);
+        if ($member) {
+            foreach ($member as $key => $row) {
+                if ($row['email'] === $request->email) {
+                    $member['email'] = $row['email'];
+                }
+            }
+        } 
+        if (isset($member['email'])) {
+            return redirect()->route('99k.daftar')->withInput()->with('alert', 'Email anda sudah terdaftar sebagai member kami');
+        }
+        $request->validate(
+            [
+                // 'kode' => 'unique:invoices,kode',
+                'club_id' => 'required',
+                'nama' => 'required',
+                'nomor' => ['required', 'numeric'],
+                'email' => 'required|email|unique:rp99ks,email',
+                'alamat' => 'required'
+            ],
+            [
+                'kode.unique' => 'Terjadi kesalah, coba reload halaman lagi',
+                // 'nomor.required' => 'Jumlah Tps Harus diisi!',
+                // 'nomor.numeric' => 'Harus diisi dengan angka!'
+            ]
+        );
+        // dd($request);
+        $clubs = $this->apiModels->allClubs()['rows'];
+        $clubs_kode = $this->apiModels->allClubs($request->club_id);
+
+        $request['kode'] = 'UA' . date('YmdHi') . $clubs_kode['codename'] . rand(001, 999);
+        $datareq = $request->all();
+        $datareq += array(
+            // 'kode' => '123',
+            'harga' => '99000',
+            'status' => '0'
+        );
+        $rp99k = Rp99k::create($datareq);
+        $rp99k->url = url('99k/proses') . '/';
+        
+        Mail::to( $rp99k->email )->send(new SendEmail($rp99k, $clubs));
+        // return redirect('/')->with('massage', 'Join ' . $request->nama . ' berhasi ditambahkan');
+        // return redirect()->route('99k.proses', ['kode' => $rp99k->kode]);
+        return redirect()->route('99k.daftar')->with('success', 'Silahkan cek Email yang kami kirim ke ' . $rp99k->email);
+    }
+
+    public function proses($kode)
+    {
+        $order = Orders::where('order_id', $kode)->first();
+        if ($order) {
+            return redirect()->route('order.status', ['id' => $order->order_id]);
+        }
+
+        $dataInvoice = Rp99k::where('kode', $kode)->first();
+
+        // Set your Merchant Server Key
+        \Midtrans\Config::$serverKey = env('SERVER_KEY');
+        // Set to Development/Sandbox Environment (default). Set to true for Production Environment (accept real transaction).
+        \Midtrans\Config::$isProduction = false;
+        // Set sanitization on (default)
+        \Midtrans\Config::$isSanitized = true;
+        // Set 3DS transaction for credit card to true
+        \Midtrans\Config::$is3ds = true;
+        
+        $params = array(
+            'transaction_details' => array(
+                'order_id' => $dataInvoice->kode,
+                'gross_amount' => '',
+            ),
+            'item_details' => array(
+               [
+                'id' => $dataInvoice->id,
+                'price' => $dataInvoice->harga,
+                'quantity' => 1,
+                'name' => 'Promo 99k',
+               ]
+            ),
+            'customer_details' => array(
+                'first_name' => $dataInvoice->nama,
+                'last_name' => '',
+                'email' => $dataInvoice->email,
+                'phone' => $dataInvoice->nomor,
+            ),
+        );
+        
+        $snapToken = \Midtrans\Snap::getSnapToken($params);
+        // dd($params);
+        return view("public/content/99k/proses", compact('dataInvoice', 'params'), ['token' => $snapToken]);
+    }
+
+    public function edit($kode)
+    {
+        // dd($kode);
+        $dataInvoice = Rp99k::where('kode', $kode)->first();
+        return view("public/content/99k/daftar_confirm", compact('dataInvoice'), ['clubs' => $this->apiModels->allClubs()['rows']]);
+    }
+    
+    public function update(Request $request, $kode)
+    {
+        $request->validate(
+            [
+                'tanggal' => 'required',
+                'nominal' => ['required', 'numeric'],
+                'image' => 'required|image|mimes:jpeg,png,jpg|max:2048'
+            ],
+            [
+                'kode.unique' => 'Terjadi kesalah, coba reload halaman lagi',
+                'kode.required' => 'Terjadi kesalah, coba reload halaman',
+                // 'nomor.numeric' => 'Harus diisi dengan angka!'
+            ]
+        );
+        $namaImage = $request->kode . '.' . $request->file('image')->getClientOriginalExtension();
+        $request->file('image')->storeAs('99k',$namaImage);
+        Rp99k::where('kode', $kode)
+                    ->update([
+                        'tanggal' => $request->tanggal,
+                        'harga' => $request->nominal,
+                        'image' => '/'. '99k/' . $namaImage,
+                    ]);
+        
+        // dd($request);
+        $clubs = $this->apiModels->allClubs()['rows'];
+        // $dataEmail = Sixpack3::where('kode', $kode)->first();
+        $dataEmail = DB::table('rp99ks')
+                    ->join('club_data', 'rp99ks.club_id', '=', 'club_data.club_id')
+                    ->where('kode', $kode)->first();
+        $dataEmail->club = null;
+        Mail::to( $request->email )->send(new SendEmailConfirm($dataEmail, $clubs));
+        Mail::to( $dataEmail->club_email )->send(new ConfirmStaffClub($dataEmail, $clubs));
+        return redirect()->route('99k.confirmSend', ['kode'=>$request->kode]);
+    }
+
+    public function confirmSend($kode)
+    {
+        // $dataInvoice = Rp99k::where('kode', $kode)->first();
+        $dataInvoice = DB::table('rp99ks')
+                        ->join('club_data', 'rp99ks.club_id', '=', 'club_data.club_id')
+                        ->where('kode', $kode)->first();
+        return view("public/member/daftar/confirm_success", compact('dataInvoice'));
+    }
+}

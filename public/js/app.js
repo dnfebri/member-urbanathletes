@@ -5519,7 +5519,9 @@ Vue.component('footer-component', (__webpack_require__(/*! ./components/footer.v
 var app = new Vue({
   el: '#app',
   router: _router__WEBPACK_IMPORTED_MODULE_0__["default"]
-});
+}); // const Swal = require('sweetalert2');
+// import Swal from 'sweetalert2';
+
 
 window.Alpine = alpinejs__WEBPACK_IMPORTED_MODULE_1__["default"];
 alpinejs__WEBPACK_IMPORTED_MODULE_1__["default"].start();

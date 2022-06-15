@@ -7,7 +7,8 @@
     
   @endpush
   <x-layout_card_form>
-    <form action="{{ route('daftar.updateConfirm') }}" method="post" enctype="multipart/form-data">
+    <form action="{{ route('99k.update', ['kode'=>$dataInvoice->kode]) }}" method="post" enctype="multipart/form-data">
+      @method('put')
       @csrf
       <div class="flex justify-center border-b my-4 pb-4">
         <h2 class="text-2xl font-Futura">Confrim Daftar form GYM</h2>
@@ -94,7 +95,7 @@
               <tr>
                 <td></td>
                 <td>
-                  <img src="{{ asset('storage/invoice') . $dataInvoice->image }}" class="h-32 img-previuw">
+                  <img src="{{ asset('storage') . $dataInvoice->image }}" class="h-32 img-previuw">
                 </td>
               </tr>
             </tbody>

@@ -39,7 +39,7 @@ class SendEmail extends Mailable
         }
         
         $clubData = ClubData::where('club_id', $club_id)->first();
-        return $this->subject('Hai '. $this->dataEmail->nama . ', Pesanan Anda Sebentar Lagi Kami Proses')
+        return $this->subject('Hai '. $this->dataEmail->nama . ', Konfirmasi Pemesanan')
                     ->view('email.isi_email', compact('clubData', 'clubs'));
     }
 }

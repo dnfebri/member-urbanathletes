@@ -40,7 +40,8 @@ class Sixpack3Controller extends Controller
                 // 'nomor.numeric' => 'Harus diisi dengan angka!'
             ]
         );
-        $request['kode'] = 'UA' . time() . '-' . rand(100, 999);
+        $clubs_kode = $this->apiModels->allClubs($request->club_id);
+        $request['kode'] = 'UA' . time() . $clubs_kode['codename'] . rand(100, 999);
         $datareq = $request->all();
         $datareq += array(
             // 'kode' => '123',

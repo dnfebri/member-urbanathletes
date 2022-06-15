@@ -7,12 +7,12 @@
             <a href="{{ url('/') }}" class="underline bg-yellow-400 rounded-md py-2 px-4"><i class="fa-solid fa-globe"></i> Kembali</a>
           </div>
           <div>
-            <input class="" type="text" name="kode" id="kode">
+            <input class="" type="text" name="kode" id="kode" placeholder="Kode order">
             <button
               url-confirm="{{ url('/order/status') }}"
               id="view-detail"
               type="button"
-              class="rounded-md bg-gray-400 border border-black ml-4"
+              class="rounded-md bg-gray-400 border border-black ml-4 hover:bg-gray-500 hover:shadow-md"
             >
               <i class="fa-solid fa-magnifying-glass"></i> Search
             </button>
