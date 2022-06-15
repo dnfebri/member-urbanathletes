@@ -13,7 +13,7 @@ include __DIR__.'/web/crm.php';
 include __DIR__.'/web/product.php';
 include __DIR__.'/web/memberArea.php';
 
-Route::get('/home-franchise', function () { return Http::get('kemitraan.urbanathletes.co.id/home-franchise/');});
+Route::get('/home-franchise', function () { return Http::get('https://kemitraan.urbanathletes.co.id/home-franchise');});
 
 // Untuk Testing View
 Route::get('/isiemail', function () { return view('email.isi_email_confirm');});
