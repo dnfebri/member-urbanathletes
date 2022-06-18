@@ -17,8 +17,8 @@
         </div>
       @endif
       @if(session('success'))
-        <div class="p-4 w-full bg-green-600 rounded-md bg-opacity-40" data-massage="{{session('success')}}" id="success">
-          <h3 class="mx-5 font-bold">{{session('success')}}</h3>
+        <div class="p-4 w-full bg-green-600 rounded-md bg-opacity-40" data-massage="{{session('success')}}" data-email="{{session('email')}}" id="success">
+          <h3 class="mx-5 font-bold">Cek kotak masuk / spam email {{session('email')}} untuk melanjutkan pembayaran</h3>
         </div>
       @endif
       <div class="flex-none ">
@@ -78,7 +78,7 @@
             </div>
           @enderror
         </label>
-        <label class="block mx-4 my-4">
+        {{-- <label class="block mx-4 my-4">
           <span class="">Alamat</span>
           <input name="alamat" type="text" 
           placeholder="Alamat"
@@ -89,10 +89,10 @@
                 {{ $message }}
             </div>
           @enderror
-        </label>
+        </label> --}}
       </div>
       <div class="flex justify-end my-4">
-        <button id="btn-submit" class="bg-green-500 py-2 px-6 rounded-lg mx-4 text-white text-lg" type="submit">Kirim</button>
+        <button id="btn-submit" class="bg-green-500 py-2 px-6 rounded-lg mx-4 text-white text-lg" type="submit">Claim Promo</button>
         <span id="btn-disabled" class="hidden">
           <button class="flex items-center bg-green-500 opacity-80 py-2 px-2 mx-4 rounded-lg text-white text-lg" disabled>
             <img class="w-7 h-7" src="{{ url('/image/icon/Loading-white.svg') }}" alt="Urban Athletes"/> 
@@ -123,7 +123,7 @@
     if (success) {
       Swal.fire(
         'Email Terkirim',
-        success.getAttribute("data-massage"),
+        success.getAttribute("data-massage")+'<br>'+success.getAttribute("data-email"),
         'success'
       )
     }

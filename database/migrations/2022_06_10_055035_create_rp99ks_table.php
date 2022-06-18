@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('nama');
             $table->string('nomor');
             $table->string('email')->unique();
-            $table->string('alamat');
+            $table->string('alamat')->nullable();
             $table->string('kode');
             $table->integer('club_id')->nullable();
             $table->integer('harga');

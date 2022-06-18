@@ -6,6 +6,7 @@ Use RealRashid\SweetAlert\Facades\Alert;
 use App\Mail\ConfirmStaffClub;
 use App\Mail\SendEmail;
 use App\Mail\SendEmailConfirm;
+use App\Models\ApiMidtrans;
 use App\Models\ApiModels;
 use App\Models\Orders;
 use App\Models\Rp99k;
@@ -47,7 +48,7 @@ class Rp99kController extends Controller
                 'nama' => 'required',
                 'nomor' => ['required', 'numeric'],
                 'email' => 'required|email|unique:rp99ks,email',
-                'alamat' => 'required'
+                // 'alamat' => 'required'
             ],
             [
                 'kode.unique' => 'Terjadi kesalah, coba reload halaman lagi',
@@ -59,7 +60,7 @@ class Rp99kController extends Controller
         $clubs = $this->apiModels->allClubs()['rows'];
         $clubs_kode = $this->apiModels->allClubs($request->club_id);
 
-        $request['kode'] = 'UA' . date('YmdHi') . $clubs_kode['codename'] . rand(001, 999);
+        $request['kode'] = 'UA' . date('YmdHi') . $clubs_kode['codename'] . rand(100, 999);
         $datareq = $request->all();
         $datareq += array(
             // 'kode' => '123',
@@ -72,26 +73,26 @@ class Rp99kController extends Controller
         Mail::to( $rp99k->email )->send(new SendEmail($rp99k, $clubs));
         // return redirect('/')->with('massage', 'Join ' . $request->nama . ' berhasi ditambahkan');
         // return redirect()->route('99k.proses', ['kode' => $rp99k->kode]);
-        return redirect()->route('99k.daftar')->with('success', 'Silahkan cek Email yang kami kirim ke ' . $rp99k->email);
+        return redirect()->route('99k.daftar')->with('success', 'Silahkan cek Email yang kami kirim ke ')->with('email', $rp99k->email);
     }
 
     public function proses($kode)
     {
-        $order = Orders::where('order_id', $kode)->first();
-        if ($order) {
-            return redirect()->route('order.status', ['id' => $order->order_id]);
+        $dataInvoice = Rp99k::where('kode', $kode)->first();
+        if (!$dataInvoice) {
+            return view("public/member/daftar/order/notData");
         }
 
-        $dataInvoice = Rp99k::where('kode', $kode)->first();
+        $midtrans = new ApiMidtrans();
+        $midtrans->midtransConfig();
 
-        // Set your Merchant Server Key
-        \Midtrans\Config::$serverKey = env('SERVER_KEY');
-        // Set to Development/Sandbox Environment (default). Set to true for Production Environment (accept real transaction).
-        \Midtrans\Config::$isProduction = false;
-        // Set sanitization on (default)
-        \Midtrans\Config::$isSanitized = true;
-        // Set 3DS transaction for credit card to true
-        \Midtrans\Config::$is3ds = true;
+        // $order = \Midtrans\Transaction::status($kode);
+        $order = $midtrans->getStatusOrder($kode);
+        if ($order['status_code'] != 404) {
+            // dd($order);
+            return redirect()->route('order.status', ['id' => $order['order_id']]);
+        }
+        // dd($dataInvoice);
         
         $params = array(
             'transaction_details' => array(
@@ -115,7 +116,7 @@ class Rp99kController extends Controller
         );
         
         $snapToken = \Midtrans\Snap::getSnapToken($params);
-        // dd($params);
+        // dd($snapToken);
         return view("public/content/99k/proses", compact('dataInvoice', 'params'), ['token' => $snapToken]);
     }
 

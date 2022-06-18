@@ -5,6 +5,7 @@ use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('order')->name('order.')->group(function(){
+  Route::get('', [OrderController::class, 'notData'])->name('notData');
   Route::post('', [OrderController::class, 'save'])->name('save'); // <=== ini masih dipakai
   Route::get('/{id}/status', [OrderController::class, 'status'])->name('status');
   Route::get('/status/{id}', [OrderController::class, 'searchDetail']);

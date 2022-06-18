@@ -103,7 +103,7 @@
               <img class="w-full" src="{{ url('/image/content/slide/merr/slider2.JPG') }}" alt="Urban Athletes Benner 1">
             </div>
             <div class="swiper-slide">
-              <img class="w-full" src="{{ url('/image/content/slide/merr/slider3.JPG') }}" alt="Urban Athletes Benner 2">
+              <img class="w-full" src="{{ url('/image/content/slide/merr/slider3.jpg') }}" alt="Urban Athletes Benner 2">
             </div>
             <div class="swiper-slide">
               <img class="w-full" src="{{ url('/image/content/slide/merr/slider4.JPG') }}" alt="Urban Athletes Benner 3">
@@ -183,7 +183,7 @@
               <img class="w-full" src="{{ url('/image/content/slide/tidar/slider4.JPG') }}" alt="Urban Athletes Benner 3">
             </div>
             <div class="swiper-slide">
-              <img class="w-full" src="{{ url('/image/content/slide/tidar/slider5.JPG') }}" alt="Urban Athletes Benner 4">
+              <img class="w-full" src="{{ url('/image/content/slide/tidar/slider5.jpg') }}" alt="Urban Athletes Benner 4">
             </div>
           </div>
           <div class="swiper-button-next"></div>

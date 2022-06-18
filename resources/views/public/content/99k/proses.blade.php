@@ -3,7 +3,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- @TODO: replace SET_YOUR_CLIENT_KEY_HERE with your client key -->
     <script type="text/javascript"
-      src="https://app.sandbox.midtrans.com/snap/snap.js"
+      src="{{env('API_URL_MIDTRANS')}}"
       data-client-key="{{env('CLIENT_KEY')}}"></script>
     <!-- Note: replace with src="https://app.midtrans.com/snap/snap.js" for Production environment -->
   @endpush
@@ -33,10 +33,11 @@
       {{-- {{ $invoice }}
       <br>
       {{ $dataInvoice }} --}}
-      <p>Silahkan lakukan transfer senilai Rp {{number_format($dataInvoice->harga,2,',','.')}}</p>
+      {{-- <p>Silahkan lakukan transfer senilai Rp {{number_format($dataInvoice->harga,2,',','.')}}</p>
       <p>ke rekening kami</p>
       <p>yang kami kirimkan formnya di email</p>
-      <p>Silahkan cek email anda di pesan masuk atau spam email</p>
+      <p>Silahkan cek email anda di pesan masuk atau spam email</p> --}}
+      <p>Klik tombol bayar untuk menyelesaikan pembayaran</p>
       <div class="my-4">
         {{-- <a href="{{ route('content') }}" class="underline bg-yellow-400 rounded-md p-1"><i class="fa-solid fa-chevron-left"></i> Kembali</a> --}}
         {{-- <a href="https://mail.google.com/mail/" class="underline bg-yellow-400 rounded-md p-1"><i class="fa-solid fa-chevron-left"></i> Cek Email</a> --}}
@@ -51,6 +52,7 @@
       <input type="text" id="kode" name="kode" value="{{$params['customer_details']['first_name']}}">
       <input type="text" id="email" name="email" value="{{$params['customer_details']['email']}}">
       <input type="text" id="kode" name="kode" value="{{$params['transaction_details']['order_id']}}">
+      {{-- <input type="submit" value="Pay with Snap Redirect"> --}}
     </form>
   </x-layout_card_form>
   @push('script')
@@ -62,17 +64,20 @@
         window.snap.pay('{{$token}}', {
           onSuccess: function(result){
             /* You may add your own implementation here */
-            alert("payment success!"); console.log(result);
+            alert("payment success!"); 
+            // console.log(result);
             sendRespont(result)
           },
           onPending: function(result){
             /* You may add your own implementation here */
-            alert("wating your payment!"); console.log(result);
-            sendRespont(result)
+            alert("wating your payment!"); 
+            // console.log(result);
+            sendRespont(result) // <<============ INI PENYIMPANAN KE DB ===================>>
           },
           onError: function(result){
             /* You may add your own implementation here */
-            alert("payment failed!"); console.log(result);
+            alert("payment failed!"); 
+            // console.log(result);
           },
           onClose: function(){
             /* You may add your own implementation here */
@@ -81,7 +86,8 @@
         });
         // customer will be redirected after completing payment pop-up
       });
-
+    </script>
+    <script>
       function sendRespont(result) {
         const submitBayar = document.getElementById('submit_bayar');
         let dataJsonBayar = document.getElementById('data_json_bayar');
@@ -89,6 +95,7 @@
         submitBayar.submit();
         // console.log(dataJsonBayar.value);
       }
+
     </script>
   @endpush
 </x-main>
