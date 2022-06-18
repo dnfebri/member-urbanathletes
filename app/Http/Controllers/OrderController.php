@@ -24,14 +24,14 @@ class OrderController extends Controller
         ];
         $order = Orders::where('order_id', $id)->first();
         if (!$order) {
-            // dd('simpan');
+            // dd($data['status']);
             $order = Orders::create([
                 // 'order_name' => $request->order_name,
                 'order_id' => $dataOrder->kode,
-                'gross_amount' => $data['status']->gross_amount,
-                'status' => $data['status']->transaction_status,
-                'transaction_id' => $data['status']->transaction_id,
-                'payment_type' => $data['status']->payment_type,
+                'gross_amount' => $data['status']['gross_amount'],
+                'status' => $data['status']['transaction_status'],
+                'transaction_id' => $data['status']['transaction_id'],
+                'payment_type' => $data['status']['payment_type'],
                 'json_midtrans' => json_encode($data['status'])
             ]);
         }
