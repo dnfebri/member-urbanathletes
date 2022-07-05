@@ -52,6 +52,7 @@
           Promo 99k ini khusus untuk New Join Member atau ex-member dengan masa aktif kadaluarsa lebih dari 6 bulan, dan tidak bisa diperpanjang dengan promo yang sama. <br>
           Cabang yang dipilih tidak bisa diganti setelah proses registrasi selesai.<br>
           Promo ini hanya berlaku untuk non member yang belum pernah melakukan trial di Urban Athletes. kami tidak bertanggung jawab atas salah transfer atau kehilangan sejumlah uang karena kelalaian pribadi calon member dan tidak bisa mengembalikan dana sejumlah yang telah ditransfer atau dibayarkan.
+          Masa expired claim promo ini di club adalah 10 hari setelah pembayaran selesai.
         </p>
       </div>
       <div class="bg-white border-t-2 border-white mt-4"></div>
