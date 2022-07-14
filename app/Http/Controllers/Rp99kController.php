@@ -113,6 +113,8 @@ class Rp99kController extends Controller
                 'email' => $dataInvoice->email,
                 'phone' => $dataInvoice->nomor,
             ),
+            // "enabled_payments" => ["bri_epay", "echannel",
+            // "bni_va", "bri_va", "gopay"],
         );
         
         $snapToken = \Midtrans\Snap::getSnapToken($params);

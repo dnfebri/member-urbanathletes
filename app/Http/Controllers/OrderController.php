@@ -18,22 +18,30 @@ class OrderController extends Controller
         //             ->join('orders', 'rp99ks.kode', '=', 'orders.order_id')
         //             ->where('kode', $id)->first();
         $dataOrder = Rp99k::where('kode', $id)->first();
+        if (!$dataOrder) {
+            return redirect()->route('order.notData');
+        }
+        $dataOrder->order_name = 'rp99k';
         $data = [
             'status' => $dataStatus->getStatusOrder($id),
             'dataOrder' => $dataOrder
         ];
         $order = Orders::where('order_id', $id)->first();
         if (!$order) {
-            // dd('simpan');
-            $order = Orders::create([
-                // 'order_name' => $request->order_name,
-                'order_id' => $dataOrder->kode,
-                'gross_amount' => $data['status']->gross_amount,
-                'status' => $data['status']->transaction_status,
-                'transaction_id' => $data['status']->transaction_id,
-                'payment_type' => $data['status']->payment_type,
-                'json_midtrans' => json_encode($data['status'])
-            ]);
+            // dd($data);
+            if ($data['status']['status_code'] == 404) {
+                return redirect()->route('order.notData');
+            } else {
+                $order = Orders::create([
+                    'order_name' => $dataOrder->order_name,
+                    'order_id' => $dataOrder->kode,
+                    'gross_amount' => $data['status']['gross_amount'],
+                    'status' => $data['status']['transaction_status'],
+                    'transaction_id' => $data['status']['transaction_id'],
+                    'payment_type' => $data['status']['payment_type'],
+                    'json_midtrans' => json_encode($data['status'])
+                ]);
+            }
         }
         // dd($data);
         return view("public/member/daftar/order/status", $data);
