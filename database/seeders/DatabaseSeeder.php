@@ -21,9 +21,9 @@ class DatabaseSeeder extends Seeder
                 'club_id' => '2',
                 'club_email' => 'cs.urbanfitgwmerr@gmail.com',
                 'nowa' => '628113343168',
-                'an_rek' => 'Mitra Sentral Indonesia',
+                'an_rek' => 'Valdixon Signature Management',
                 'bca' => '0885-806-061',
-                'mandiri' => '140-00-789987-89',
+                'mandiri' => '140-00-697-91-979',
                 
             ],
             [   // Marvell
@@ -32,16 +32,16 @@ class DatabaseSeeder extends Seeder
                 'nowa' => '628113443168',
                 'an_rek' => 'Urbanfit Valdixon Indonesia',
                 'bca' => '889-901-979',
-                'mandiri' => '140-00-002219-79',
+                'mandiri' => '140-0000-221-979',
                 
             ],
             [   // Tidar
                 'club_id' => '4',
                 'club_email' => 'cs.urbanathletestidar@gmail.com',
                 'nowa' => '628113432168',
-                'an_rek' => 'Mitra Sentral Indonesia',
+                'an_rek' => 'Valdixon Sukses Abadi',
                 'bca' => '0885-856-808',
-                'mandiri' => '140-00-555988-83',
+                'mandiri' => '140-00-777-91-979',
                 
             ],
             [   // Lenmarc
@@ -50,7 +50,7 @@ class DatabaseSeeder extends Seeder
                 'nowa' => '628113302168',
                 'an_rek' => 'VALDIXON SUKSES BERSAMA',
                 'bca' => '258-88319-79',
-                'mandiri' => '140-00-8777-197',
+                'mandiri' => '140-00-8777-1979',
                 
             ],
         ];

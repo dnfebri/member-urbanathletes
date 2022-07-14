@@ -14,12 +14,17 @@ class ApiMidtrans extends Model
     {
         // Set your Merchant Server Key
         \Midtrans\Config::$serverKey = env('SERVER_KEY');
-        // Set to Development/Sandbox Environment (default). Set to true for Production Environment (accept real transaction).
-        \Midtrans\Config::$isProduction = false;
-        // \Midtrans\Config::$isProduction = true;
-        // Set sanitization on (default)
-        \Midtrans\Config::$isSanitized = true;
-        // \Midtrans\Config::$isSanitized = false;
+        
+        // Buat pengkondisian di sini =============================>>>>
+        if (env('MIDTRANS_Production') == true) {
+            \Midtrans\Config::$isProduction = true;
+            \Midtrans\Config::$isSanitized = false;
+        } else {
+            \Midtrans\Config::$isProduction = false;
+            \Midtrans\Config::$isSanitized = true;
+        }
+        
+
         // Set 3DS transaction for credit card to true
         \Midtrans\Config::$is3ds = true;
     }
@@ -35,7 +40,7 @@ class ApiMidtrans extends Model
             'Content-Type' => 'application/json',
             'Authorization' => 'Basic ' . base64_encode(env('SERVER_KEY') . ':')
         ];
-        $data = Http::withHeaders($header)->get('https://api.sandbox.midtrans.com/v2/' . $id . '/status');
+        $data = Http::withHeaders($header)->get( env('API_URL_MIDTRANS_GET') . $id . '/status');
         return $data->json();
     }
 

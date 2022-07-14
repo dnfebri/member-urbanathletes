@@ -138,7 +138,7 @@
           display:inline-block;border-radius:20px;background-color:#33ff00;color:#fff;
           font-family:San,'Open Sans',Helvetica,Arial,sans-serif;font-size: 1rem;font-weight:500;margin:16px 0 0;box-sizing:border-box;padding: 0.3rem 2.5rem;
         ">
-        Lanjud ke pembayaran
+        Lanjut ke pembayaran
       </a>
       <p>Alternative Link :</p>
       <a target="_blank"
