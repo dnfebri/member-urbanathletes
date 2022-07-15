@@ -11,7 +11,7 @@
     <div class="p-4">
       <h3>Hallo {{ $dataInvoice->nama }}</h3>
       <p>Terimakasih banyak atas pemesanannya, data pemesanan {{ $dataInvoice->nama }} sudah kami terima.</p>
-      <p>Kode invoice kak {{ $dataInvoice->nama }} sudah kami kirim email, silahkan cek email untuk meneruskan transaksi</p>
+      <p>invoice kak {{ $dataInvoice->nama }} Sudah kami kirimkan ke email. Mohon untuk menyelesaikan transaksi segera.</p>
       <table class="w-full my-4">
         <thead>
         </thead>
@@ -30,18 +30,8 @@
           </tr>
         </tbody>
       </table>
-      {{-- {{ $invoice }}
-      <br>
-      {{ $dataInvoice }} --}}
-      {{-- <p>Silahkan lakukan transfer senilai Rp {{number_format($dataInvoice->harga,2,',','.')}}</p>
-      <p>ke rekening kami</p>
-      <p>yang kami kirimkan formnya di email</p>
-      <p>Silahkan cek email anda di pesan masuk atau spam email</p> --}}
       <p>Klik tombol bayar untuk menyelesaikan pembayaran</p>
       <div class="my-4">
-        {{-- <a href="{{ route('content') }}" class="underline bg-yellow-400 rounded-md p-1"><i class="fa-solid fa-chevron-left"></i> Kembali</a> --}}
-        {{-- <a href="https://mail.google.com/mail/" class="underline bg-yellow-400 rounded-md p-1"><i class="fa-solid fa-chevron-left"></i> Cek Email</a> --}}
-        <!-- <a href="#" class="underline bg-yellow-400 rounded-md p-1"><i class="fa-solid fa-chevron-left"></i> Bayar sekarang</a> -->
         <button id="pay-button" class="bg-green-500 hover:bg-green-600 rounded-md py-1 px-4 font-bold"><i class="fa-solid fa-money-bill-wave"></i> Bayar</button>
       </div>
     </div>
