@@ -12,6 +12,7 @@
       <h3>Hallo {{ $dataInvoice->nama }}</h3>
       <p>Terimakasih banyak atas pemesanannya, data pemesanan {{ $dataInvoice->nama }} sudah kami terima.</p>
       <p>invoice kak {{ $dataInvoice->nama }} Sudah kami kirimkan ke email. Mohon untuk menyelesaikan transaksi segera.</p>
+      <p>Pastikan anda mendapatkan email pembayaran berhasil setelah melakukan pembayaran berhasil, sebagai syarat redeem promo di club</p>
       <table class="w-full my-4">
         <thead>
         </thead>
