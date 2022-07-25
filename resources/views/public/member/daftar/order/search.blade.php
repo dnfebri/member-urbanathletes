@@ -7,7 +7,7 @@
             <a href="{{ url('/') }}" class="underline bg-yellow-400 rounded-md py-2 px-4"><i class="fa-solid fa-globe"></i> Kembali</a>
           </div>
           <div>
-            <input class="" type="text" name="kode" id="kode" placeholder="Kode order">
+            <input class="outline-none focus:ring-0" type="text" name="kode" id="kode" placeholder="Kode order">
             <button
               url-confirm="{{ url('/order/status') }}"
               id="view-detail"

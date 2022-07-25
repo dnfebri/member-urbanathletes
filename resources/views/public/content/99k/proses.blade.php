@@ -40,7 +40,7 @@
       @csrf
       <input type="text" id="data_json_bayar" name="data_json_bayar">
       <input type="text" id="order_name" name="order_name" value="rp99k">
-      <input type="text" id="kode" name="kode" value="{{$params['customer_details']['first_name']}}">
+      <input type="text" id="name" name="name" value="{{$params['customer_details']['first_name']}}">
       <input type="text" id="email" name="email" value="{{$params['customer_details']['email']}}">
       <input type="text" id="kode" name="kode" value="{{$params['transaction_details']['order_id']}}">
       {{-- <input type="submit" value="Pay with Snap Redirect"> --}}

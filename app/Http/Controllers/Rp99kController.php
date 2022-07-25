@@ -28,6 +28,43 @@ class Rp99kController extends Controller
         return view("public/content/99k/daftar", ['clubs' => $this->apiModels->allClubs()]);
     }
 
+    public function generate()
+    {
+        return view("public/content/99k/generate");
+    }
+
+    public function updateKode(Request $request)
+    {
+        $clubs = $this->apiModels->allClubs()['rows'];
+        $member = $this->apiModels->getMember($request->email);
+        $rp99k = Rp99k::where('email', $request->email)->first();
+        if ($member) {
+            foreach ($member as $key => $row) {
+                if ($row['email'] === $request->email) {
+                    $member['email'] = $row['email'];
+                }
+            }
+        } 
+        if (isset($member['email'])) {
+            return redirect()->route('99k.daftar')->withInput()->with('alert', 'Email anda sudah terdaftar sebagai member kami');
+        } elseif (!$rp99k) {
+            return redirect()->route('99k.daftar')->withInput()->with('alert', 'Email anda belum terdaftar di 99K kami');
+        } else {
+            $clubs_kode = $this->apiModels->allClubs($rp99k->club_id);
+            $request->validate([
+                'email' => 'required|email',
+            ]);
+            Rp99k::where('email', $request->email)
+                    ->update([
+                        'kode' => 'UA' . date('YmdHi') . $clubs_kode['codename'] . rand(100, 999),
+                    ]);
+            $rp99kUpdate = Rp99k::where('email', $request->email)->first();
+            $rp99kUpdate->url = url('99k/proses') . '/';
+            Mail::to( $request->email )->send(new SendEmail($rp99kUpdate, $clubs));
+            return redirect()->route('99k.daftar')->with('success', 'Silahkan cek Email yang kami kirim ke ')->with('email', $rp99k->email);
+        }
+    }
+
     public function daftarSave(Request $request)
     {
         $member = $this->apiModels->getMember($request->email);

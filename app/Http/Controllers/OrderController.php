@@ -11,6 +11,15 @@ use Laravel\Ui\Presets\Vue;
 
 class OrderController extends Controller
 {
+    public function __construct()
+    {
+        function dataOrderJoin ($id) {
+            return DB::table('rp99ks')
+                    ->join('orders', 'rp99ks.kode', '=', 'orders.order_id')
+                    ->where('kode', $id)->first();
+        }
+    }
+
     public function status($id)
     {
         $dataStatus = new ApiMidtrans();
@@ -51,30 +60,58 @@ class OrderController extends Controller
     {
         return view("public/member/daftar/order/search");
     }
-    
+
     public function searchDetail($id = NULL)
     {
+        // dd(dataOrderJoin($id));
         $dataStatus = new ApiMidtrans();
         $local = Orders::where('order_id', $id)->first();
         $midtrans = $dataStatus->getStatusOrder($id);
-        if ($local->status !== $midtrans['transaction_status']) {
-            // echo "rubah status";
-            Orders::where('order_id', $local->order_id)
-                        ->update([
-                            'status' => $midtrans['transaction_status'],
-                            'json_midtrans' => json_encode($midtrans)
-                        ]);
+        if (!$local) {
+            if ($midtrans['status_code'] != 200) {
+                $dataOrder = dataOrderJoin($id);
+                $data = [
+                    'status' => $dataStatus->getStatusOrder($id),
+                    'dataOrder' => $dataOrder
+                ];
+                return view("public/member/daftar/order/searchDetail", $data);
+            } else {
+                $dataOrder99k = Rp99k::where('kode', $id)->first();
+                $dataMidtrans = json_encode($midtrans);
+                $order = Orders::create([
+                    'order_name' => "99K",
+                    'order_id' => $dataOrder99k->kode,
+                    'gross_amount' => $midtrans['gross_amount'],
+                    'status' => $midtrans['transaction_status'],
+                    'transaction_id' => $midtrans['transaction_id'],
+                    'payment_type' => $midtrans['payment_type'],
+                    'json_midtrans' => $dataMidtrans
+                ]);
+                $dataOrder = dataOrderJoin($id);
+                $data = [
+                    'status' => $dataStatus->getStatusOrder($id),
+                    'dataOrder' => $dataOrder
+                ];
+                return view("public/member/daftar/order/searchDetail", $data);
+            }
+        } else {
+            if ($local->status !== $midtrans['transaction_status']) {
+                // echo "rubah status";
+                Orders::where('order_id', $local->order_id)
+                    ->update([
+                        'status' => $midtrans['transaction_status'],
+                        'json_midtrans' => json_encode($midtrans)
+                    ]);
+            }
+            $dataOrder = dataOrderJoin($id);
+            $data = [
+                'status' => $dataStatus->getStatusOrder($id),
+                'dataOrder' => $dataOrder
+            ];
+            return view("public/member/daftar/order/searchDetail", $data);
         }
-        $dataOrder = DB::table('rp99ks')
-                    ->join('orders', 'rp99ks.kode', '=', 'orders.order_id')
-                    ->where('kode', $id)->first();
-        $data = [
-            'status' => $dataStatus->getStatusOrder($id),
-            'dataOrder' => $dataOrder
-        ];
-        return view("public/member/daftar/order/searchDetail", $data);
     }
-    
+
     public function save(Request $request)
     {
         $dataOrder = json_decode($request->data_json_bayar);

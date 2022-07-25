@@ -22,11 +22,13 @@ Route::prefix('daftar')->name('daftar.')->group(function () {
 Route::prefix('99k')->name('99k.')->group(function () {
   Route::get('', function () {return view("public/content/99k/index");})->name('index');
   Route::get('/daftar', [Rp99kController::class, 'daftar'])->name('daftar');
+  Route::get('/generate', [Rp99kController::class, 'generate'])->name('generate');
   Route::get('/proses/{kode}', [Rp99kController::class, 'proses'])->name('proses');
   Route::get('/confirm/{kode}', [Rp99kController::class, 'edit'])->name('invoiceEdit');
   Route::get('/confirm/{kode}/send', [Rp99kController::class, 'confirmSend'])->name('confirmSend');
   Route::post('', [Rp99kController::class, 'daftarSave'])->name('save');
   Route::put('{kode}',[Rp99kController::class, 'update'])->name('update');
+  Route::post('/generate',[Rp99kController::class, 'updateKode'])->name('updateKode');
 });
 
 Route::prefix('sixpack-3')->name('sixpack3.')->group(function () {

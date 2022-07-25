@@ -106,7 +106,7 @@
             <a href="{{ route('order.search') }}" class="text-blue-500 underline">Cek Status Pembayaran</a>
           </li>
           <li>
-            <a href="#" class="text-blue-500 underline">Lupa Invoice saya!</a>
+            <a href="{{ route('99k.updateKode') }}" class="text-blue-500 underline">Generate Kode Baru</a>
           </li>
         </ul>
       </div>
