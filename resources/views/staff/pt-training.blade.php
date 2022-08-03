@@ -29,9 +29,18 @@
     </div>
   </div>
   @push('script')
-    <script src="{{ url('/js/coba.js') }}">
-      
-      // console.log('oke');
+    <script>
+      function btnKlick(btn) {
+        hideVideo();
+        btn.nextElementSibling.classList.remove('hidden')
+      }
+
+      function hideVideo() {
+        let hideVideo = document.querySelectorAll('#video-training')
+        hideVideo.forEach(hide => {
+          hide.classList.add('hidden');
+        });
+      }
     </script>
   @endpush
 </x-admin_main>
