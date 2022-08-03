@@ -1,6 +1,8 @@
 <?php
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Admin;
+use Illuminate\Support\Facades\Route;
+
 // use App\Http\Controllers\ProductController;
 
 Auth::routes([
@@ -14,4 +16,5 @@ Route::middleware(['auth', 'verified'])->group(function () {
     // Route::prefix('product')->name('product.')->group(function () {
     // });
   });
+  Route::get('pt-training', function() {return view('staff/pt-training');});
 });

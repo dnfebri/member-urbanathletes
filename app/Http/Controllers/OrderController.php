@@ -13,11 +13,11 @@ class OrderController extends Controller
 {
     public function __construct()
     {
-        function dataOrderJoin ($id) {
-            return DB::table('rp99ks')
-                    ->join('orders', 'rp99ks.kode', '=', 'orders.order_id')
-                    ->where('kode', $id)->first();
-        }
+        // function dataOrderJoin($id) {
+        //     return DB::table('rp99ks')
+        //             ->join('orders', 'rp99ks.kode', '=', 'orders.order_id')
+        //             ->where('kode', $id)->first();
+        // }
     }
 
     public function status($id)
@@ -64,6 +64,11 @@ class OrderController extends Controller
     public function searchDetail($id = NULL)
     {
         // dd(dataOrderJoin($id));
+        function dataOrderJoin($id) {
+            return DB::table('rp99ks')
+                    ->join('orders', 'rp99ks.kode', '=', 'orders.order_id')
+                    ->where('kode', $id)->first();
+        }
         $dataStatus = new ApiMidtrans();
         $local = Orders::where('order_id', $id)->first();
         $midtrans = $dataStatus->getStatusOrder($id);

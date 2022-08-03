@@ -47,7 +47,8 @@
           </h1>
         </div>
       </a>
-
+      
+      @if (Auth::user()->role == 1)
       <!-- Promotion -->
       <div x-data="dropdown" class="relative">
         <!-- Dropdown head -->
@@ -139,6 +140,25 @@
           8
         </span>
       </div>
+      @endif
+
+      <a href="{{ url('pt-training') }}">
+        <div x-data="tooltip" x-on:mouseover="show = true" x-on:mouseleave="show = false"
+          @click="$store.sidebar.active = 'home' "
+          class=" relative flex items-center hover:text-gray-200 hover:bg-gray-800 space-x-2 rounded-md p-2 cursor-pointer my-2"
+          x-bind:class="{'justify-start': $store.sidebar.full, 'sm:justify-center':!$store.sidebar.full,'text-gray-200 bg-gray-800':$store.sidebar.active == 'posts','text-gray-400 ':$store.sidebar.active != 'posts'}">
+          {{-- x-bind:class="{'justify-start': $store.sidebar.full, 'sm:justify-center':!$store.sidebar.full,'text-gray-200 bg-gray-800':$store.sidebar.active == 'home','text-gray-400 ':$store.sidebar.active != 'home'}"> --}}
+          {{-- <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+          </svg> --}}
+          <i class="fa-solid fa-book h-6 w-6 text-xl px-1"></i>
+          <h1 x-cloak
+            x-bind:class="!$store.sidebar.full && show ? visibleClass :'' || !$store.sidebar.full && !show ? 'sm:hidden':''">
+            PT Training
+          </h1>
+        </div>
+      </a>
 
     </div>
   </div>
