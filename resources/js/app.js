@@ -1,11 +1,11 @@
 // require('./bootstrap');
 
-window.Vue = require('vue').default;
-import router from './router';
+// window.Vue = require('vue').default;
+// import router from './router';
 
-Vue.component('header-component', require('./components/header.vue').default);
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-Vue.component('footer-component', require('./components/footer.vue').default);
+// Vue.component('header-component', require('./components/header.vue').default);
+// Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+// Vue.component('footer-component', require('./components/footer.vue').default);
 
 const app = new Vue({
     el: '#app',
@@ -14,8 +14,8 @@ const app = new Vue({
 
 // const Swal = require('sweetalert2');
 // import Swal from 'sweetalert2';
-import Alpine from 'alpinejs'
+// import Alpine from 'alpinejs'
  
-window.Alpine = Alpine
+// window.Alpine = Alpine
  
-Alpine.start()
+// Alpine.start()

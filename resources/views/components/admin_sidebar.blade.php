@@ -48,7 +48,7 @@
         </div>
       </a>
       
-      @if (Auth::user()->role == 1)
+      {{-- @if (Auth::user()->role == 1) --}}
       <!-- Promotion -->
       <div x-data="dropdown" class="relative">
         <!-- Dropdown head -->
@@ -140,9 +140,9 @@
           8
         </span>
       </div>
-      @endif
+      {{-- @endif --}}
 
-      <a href="{{ url('pt-training') }}">
+      <a href="{{ url('sales-training') }}">
         <div x-data="tooltip" x-on:mouseover="show = true" x-on:mouseleave="show = false"
           @click="$store.sidebar.active = 'home' "
           class=" relative flex items-center hover:text-gray-200 hover:bg-gray-800 space-x-2 rounded-md p-2 cursor-pointer my-2"
@@ -155,7 +155,7 @@
           <i class="fa-solid fa-book h-6 w-6 text-xl px-1"></i>
           <h1 x-cloak
             x-bind:class="!$store.sidebar.full && show ? visibleClass :'' || !$store.sidebar.full && !show ? 'sm:hidden':''">
-            PT Training
+            Sales Training
           </h1>
         </div>
       </a>

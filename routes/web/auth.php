@@ -16,5 +16,5 @@ Route::middleware(['auth', 'verified'])->group(function () {
     // Route::prefix('product')->name('product.')->group(function () {
     // });
   });
-  Route::get('pt-training', function() {return view('staff/pt-training');});
+  Route::get('sales-training', function() {return view('staff/sales-training');});
 });

@@ -2,7 +2,7 @@
   <div class="container">
     <div class="grid row w-full">
       <div class="py-4 px-4 flex justify-start items-center border-b">
-        <h1 class="text-xl">PT Training</h1>
+        <h1 class="text-xl">Sales Training</h1>
       </div>
       {{-- isi page mulai sini --}}
       <div class="p-4 border-b-2">
