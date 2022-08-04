@@ -48,7 +48,7 @@
         </div>
       </a>
       
-      {{-- @if (Auth::user()->role == 1) --}}
+      @if (Auth::user()->role == 1)
       <!-- Promotion -->
       <div x-data="dropdown" class="relative">
         <!-- Dropdown head -->
@@ -140,7 +140,7 @@
           8
         </span>
       </div>
-      {{-- @endif --}}
+      @endif
 
       <a href="{{ url('sales-training') }}">
         <div x-data="tooltip" x-on:mouseover="show = true" x-on:mouseleave="show = false"
