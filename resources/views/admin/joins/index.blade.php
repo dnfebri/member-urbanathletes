@@ -70,7 +70,7 @@
               <th scope="col" class="px-6 py-3">Nomor</th>
               <th scope="col" class="px-6 py-3">Club</th>
               <th scope="col" class="px-6 py-3">Tanggal Join</th>
-              <th scope="col" class="px-6 py-3">Action</th>
+              <th scope="col" class="px-6 py-3">Status</th>
             </tr>
           </thead>
           <tbody>
@@ -81,13 +81,22 @@
                 <td class="px-6 py-4">{{$row->email}}</td>
                 <td class="px-6 py-4">{{$row->nomor}}</td>
                 @foreach ($clubs as $club)
-                  @if($club['id'] == $row->club)
+                  @if($club['id'] == $row->club_id)
                     <td class="px-6 py-4">{{$club['name']}}</td>
                   @endif
                 @endforeach
                 <td class="px-6 py-4">{{$row->created_at}}</td>
                 <td class="px-6 py-4">
-                  <button>detail</button>
+                  {{-- <button>detail</button> --}}
+                  <a href="{{ url('order/status') . '/' . $row->kode }}">
+                    @if ($row->status === 'settlement')
+                      <span class="bg-green-400 rounded-md px-2">{{$row->status}}</span>
+                    @elseif ($row->status === 'deny')
+                      <span class="bg-green-400 rounded-md px-2">{{$row->status}}</span>
+                    @else
+                      <span class="bg-yellow-400 rounded-md px-2">{{$row->status}}</span>
+                    @endif
+                  </a>
                 </td>
               </tr>
             @endforeach
