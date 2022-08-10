@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\ApiMidtrans;
 use App\Models\Orders;
+use App\Models\Rp77k;
 use App\Models\Rp99k;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -13,24 +14,23 @@ class OrderController extends Controller
 {
     public function __construct()
     {
-        // function dataOrderJoin($id) {
-        //     return DB::table('rp99ks')
-        //             ->join('orders', 'rp99ks.kode', '=', 'orders.order_id')
-        //             ->where('kode', $id)->first();
-        // }
+        
     }
 
     public function status($id)
     {
         $dataStatus = new ApiMidtrans();
-        // $dataOrder = DB::table('rp99ks')
-        //             ->join('orders', 'rp99ks.kode', '=', 'orders.order_id')
-        //             ->where('kode', $id)->first();
         $dataOrder = Rp99k::where('kode', $id)->first();
-        if (!$dataOrder) {
+        if ($dataOrder) {
+            $dataOrder->order_name = 'rp99k';
+        }
+        else if (!$dataOrder) {
+            $dataOrder = Rp77k::where('kode', $id)->first();
+            $dataOrder->order_name = 'rp77k';
+        }
+        else {
             return redirect()->route('order.notData');
         }
-        $dataOrder->order_name = 'rp99k';
         $data = [
             'status' => $dataStatus->getStatusOrder($id),
             'dataOrder' => $dataOrder
@@ -51,6 +51,14 @@ class OrderController extends Controller
                     'json_midtrans' => json_encode($data['status'])
                 ]);
             }
+        }
+        if ($order->status !== $data['status']['transaction_status']) {
+            // echo "rubah status";
+            Orders::where('order_id', $order->order_id)
+                ->update([
+                    'status' => $data['status']['transaction_status'],
+                    'json_midtrans' => json_encode($data['status'])
+                ]);
         }
         // dd($data);
         return view("public/member/daftar/order/status", $data);

@@ -1,9 +1,9 @@
-<x-main specialPage=true title='Daftar GYM'>
+<x-main specialPage=true title='Daftar 77K'>
   <x-layout_card_form>
-    <form action="{{ route('99k.save') }}" method="post">
+    <form action="{{ route('77k.save') }}" method="post">
       @csrf
       <div class="flex justify-center border-b my-4 pb-4">
-        <h2 class="text-3xl font-Futura">Daftar form GYM</h2>
+        <h2 class="text-3xl font-Futura">Daftar form Promo 77</h2>
       </div>
       <input type="hidden" name="kode" value="">
       @error('kode')
@@ -78,18 +78,6 @@
             </div>
           @enderror
         </label>
-        {{-- <label class="block mx-4 my-4">
-          <span class="">Alamat</span>
-          <input name="alamat" type="text" 
-          placeholder="Alamat"
-          value="{{ old('alamat') }}"
-          class="block w-full px-0.5 border-0 border-b-2 focus:ring-0 focus:border-black @error('alamat') border-red-300 @enderror">
-          @error('alamat')
-            <div id="alamat" class="text-sm text-red-500">
-                {{ $message }}
-            </div>
-          @enderror
-        </label> --}}
       </div>
       <div class="flex justify-end my-4">
         <button id="btn-submit" class="bg-green-500 py-2 px-6 rounded-lg mx-4 text-white text-lg" type="submit">Claim Promo</button>
@@ -106,7 +94,7 @@
             <a href="{{ route('order.search') }}" class="text-blue-500 underline">Cek Status Pembayaran</a>
           </li>
           <li>
-            <a href="{{ route('99k.updateKode') }}" class="text-blue-500 underline">Generate Kode Baru</a>
+            <a href="{{ route('77k.updateKode') }}" class="text-blue-500 underline">Generate Kode Baru</a>
           </li>
         </ul>
       </div>

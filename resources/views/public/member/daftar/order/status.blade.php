@@ -6,7 +6,7 @@
           <tr class="border-b">
             <th class="py-2 text-left">Order Kode : {{$status['order_id']}}</th>
             <th class="py-2"></th>
-            <th class="py-2"></th>
+            <th class="py-2 text-right">Order : <span class="uppercase">{{$dataOrder->order_name}}</span></th>
           </tr>
         </thead>
         <tbody>
