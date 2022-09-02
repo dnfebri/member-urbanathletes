@@ -1077,17 +1077,6 @@ select {
 .max-w-sm {
   max-width: 24rem;
 }
-.max-w-full {
-  max-width: 100%;
-}
-.max-w-max {
-  max-width: -webkit-max-content;
-  max-width: -moz-max-content;
-  max-width: max-content;
-}
-.max-w-\[30px\] {
-  max-width: 30px;
-}
 .flex-1 {
   flex: 1 1 0%;
 }

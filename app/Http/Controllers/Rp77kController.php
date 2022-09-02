@@ -18,7 +18,8 @@ class Rp77kController extends Controller
 
     public function daftar()
     {
-        return view("public/content/77k/daftar", ['clubs' => $this->apiModels->allClubs()]);
+        // return view("public/content/77k/daftar", ['clubs' => $this->apiModels->allClubs()]);
+        return redirect('/');
     }
 
     public function save(Request $request)

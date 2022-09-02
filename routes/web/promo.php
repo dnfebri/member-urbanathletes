@@ -35,14 +35,14 @@ Route::prefix('99k')->name('99k.')->group(function () {
 Route::prefix('77k')->name('77k.')->group(function () {
   // Route::get('', function () {return view("public/content/77k/index");})->name('index');
   Route::get('', [Rp77kController::class, 'daftar'])->name('daftar');
-  Route::get('/generate', [Rp77kController::class, 'generate'])->name('generate');
-  // Route::get('/proses/{kode}', [Rp77kController::class, 'proses'])->name('proses');
-  Route::get('/proses', [Rp77kController::class, 'proses'])->name('proses');
-  Route::get('/confirm/{kode}', [Rp77kController::class, 'edit'])->name('invoiceEdit');
-  Route::get('/confirm/{kode}/send', [Rp77kController::class, 'confirmSend'])->name('confirmSend');
-  Route::post('', [Rp77kController::class, 'save'])->name('save');
-  Route::put('{kode}',[Rp77kController::class, 'update'])->name('update');
-  Route::post('/generate',[Rp77kController::class, 'updateKode'])->name('updateKode');
+  // Route::get('/generate', [Rp77kController::class, 'generate'])->name('generate');
+  // // Route::get('/proses/{kode}', [Rp77kController::class, 'proses'])->name('proses');
+  // Route::get('/proses', [Rp77kController::class, 'proses'])->name('proses');
+  // Route::get('/confirm/{kode}', [Rp77kController::class, 'edit'])->name('invoiceEdit');
+  // Route::get('/confirm/{kode}/send', [Rp77kController::class, 'confirmSend'])->name('confirmSend');
+  // Route::post('', [Rp77kController::class, 'save'])->name('save');
+  // Route::put('{kode}',[Rp77kController::class, 'update'])->name('update');
+  // Route::post('/generate',[Rp77kController::class, 'updateKode'])->name('updateKode');
 });
 
 Route::prefix('sixpack-3')->name('sixpack3.')->group(function () {

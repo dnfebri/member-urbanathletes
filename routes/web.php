@@ -16,7 +16,7 @@ include __DIR__.'/web/memberArea.php';
 Route::get('/home-franchise', function () { return Http::get('https://kemitraan.urbanathletes.co.id/home-franchise');});
 
 // Untuk Testing View
-Route::get('/isiemail', function () { return view('email.isi_email_confirm');});
+Route::get('/isiemail', function () { return view('email.isi_email');});
 // Route::get('/ini', function () { return view('public/content/index');});
 Route::get('/ini', function () { 
   dd(auth()->guard());
