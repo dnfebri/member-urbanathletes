@@ -349,7 +349,7 @@
     </script>
 
     <!-- Meta Pixel Code -->
-    <script>
+    {{-- <script>
       !function(f,b,e,v,n,t,s)
       {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
       n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -368,7 +368,7 @@
       document.getElementById('addToCartButton').addEventListener('click', function() {
       fbq('track', 'AddToCart');
       }, false);
-    </script>
+    </script> --}}
     <!-- End Meta Pixel Code -->
     
   @stack('script')
