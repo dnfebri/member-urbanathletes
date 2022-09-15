@@ -141,7 +141,7 @@
     <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=544863203544959&ev=PageView&noscript=1"
     /></noscript> --}}
-    <script>
+    {{-- <script>
       !function(f,b,e,v,n,t,s)
       {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
       n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -160,9 +160,9 @@
       document.getElementById('btn-submit').addEventListener('click', function() {
       fbq('track', 'CompleteRegistration');
       }, false);
-    </script>
+    </script> --}}
     <!-- End Meta Pixel Code -->
-    <script>
+    {{-- <script>
       const btnSubmid = document.getElementById('btn-submit');
       // console.log(btnSubmid);
       btnSubmid.addEventListener("click", function (e) {
@@ -170,6 +170,6 @@
         btnDisabled.classList.toggle("hidden");
         btnSubmid.classList.toggle("hidden");
       });
-    </script>
+    </script> --}}
   @endpush
 </x-main>
