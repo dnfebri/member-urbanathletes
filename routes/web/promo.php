@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BackInShapeController;
 use App\Http\Controllers\ContentController;
 use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\PublicController;
@@ -53,4 +54,11 @@ Route::prefix('sixpack-3')->name('sixpack3.')->group(function () {
   Route::get('/confirm/{kode}/send', [Sixpack3Controller::class, 'confirmSend'])->name('confirmSend');
   Route::post('',[Sixpack3Controller::class, 'store'])->name('store');
   Route::put('{kode}',[Sixpack3Controller::class, 'update'])->name('update');
+});
+
+Route::prefix('v2')->name('v2.')->group(function () {
+  Route::prefix('back-in-shape')->name('back-in-shape.')->group(function () {
+    Route::get('/{kode}', [BackInShapeController::class, 'index']);
+    Route::get('', [BackInShapeController::class, 'daftar'])->name('daftar');
+  });
 });
