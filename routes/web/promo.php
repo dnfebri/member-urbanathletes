@@ -58,7 +58,9 @@ Route::prefix('sixpack-3')->name('sixpack3.')->group(function () {
 
 Route::prefix('v2')->name('v2.')->group(function () {
   Route::prefix('back-in-shape')->name('back-in-shape.')->group(function () {
-    Route::get('/{kode}', [BackInShapeController::class, 'index']);
+    Route::get('/proses', [BackInShapeController::class, 'proses']);
+    Route::get('/{kdref}', [BackInShapeController::class, 'index']);
     Route::get('', [BackInShapeController::class, 'daftar'])->name('daftar');
+    Route::post('', [BackInShapeController::class, 'save'])->name('save');
   });
 });

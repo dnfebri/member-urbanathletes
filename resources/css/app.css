@@ -53,3 +53,7 @@
 .visib-class{
   @apply z-10 block sm:absolute -top-7 sm:border border-gray-800 left-5 sm:text-sm sm:bg-gray-900 sm:px-2 sm:py-1 sm:rounded-md;
 }
+
+.input-active {
+  @apply -top-9 -left-1 scale-75 opacity-100
+}

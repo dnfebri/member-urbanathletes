@@ -14,25 +14,26 @@
           <img class="h-9 md:h-12 ml-4 md:ml-8" src="{{ url('/image/Logo_Urban-2.png') }}" alt="Urban Athletes">
         </div>
         <div class="text-white w-full">
-          <p class="text-center text-base md:text-xl font-extrabold italic tracking-widest md:tracking-[.55em] z-10">PINGIN PUNYA BADAN IDEAL SEPERTI MEREKA?</p>
+          {{-- <p class="text-center text-base md:text-xl font-extrabold italic tracking-widest md:tracking-[.55em] z-10">PINGIN PUNYA BADAN IDEAL SEPERTI MEREKA?</p> --}}
         </div>
       </div>
       <div class="pb-4 w-full flex aspect-auto bg-[url('/image/benner/bg_content.png')] bg-cover">
-        <div class="absolute bottom-0 right-0 lg:mr-28">
-          <img class="w-56 lg:w-64" src="{{ url('/image/promo/back-in-shape/bis.png')}}" alt="BIS">
+        <div class="absolute bottom-0 right-0 lg:mr-20">
+          <img class="w-56 md:w-72" src="{{ url('/image/promo/back-in-shape/bis.png')}}" alt="BIS">
         </div>
-        <div class="mx-8 mb-12 lg:pl-32 z-10">
+        <div class="mx-8 mb-12 lg:pl-32 z-10 md:max-w-5xl">
           <h3 class="text-white text-2xl md:text-4xl font-[1000] font-Futura tracking-widest my-4 lg:text-5xl italic">
-            <span class="text-black font-Futura tracking-widest">MULAI SEKARANG <br>
-            DENGAN MENGIKUTI</span> <br>
-            BACK IN SHAPE CHALLENGE!
+            <span class="text-black font-Futura tracking-widest">
+              PINGIN PUNYA BADAN IDEAL 
+              SEPERTI MEREKA? </span> <br>
+              MULAI SEKARANG DENGAN MENGIKUTI
           </h3>
           <div class="flex items-center justify-center absolute">
             <span class="animate-ping py-2 px-4 absolute rounded-full bg-red-600 text-red-600 text-sm">
               Daftar Sekarang!
             </span>
             <form action="{{ route('v2.back-in-shape.daftar') }}" method="get">
-              <input type="text" name="kode" value="{{$kode}}" class="hidden">
+              <input type="text" name="kdRef" value="{{$kdRef}}" class="hidden">
               <button type="submit" class="relative py-2 px-4 rounded-full bg-red-600 text-white text-2xl hover:text-3xl transition-all duration-500">
                 Daftar Sekarang!
               </button>
@@ -45,7 +46,8 @@
       </div>
     </div>
     <div class="container px-4 md:px-16">
-      <div class="flex justify-center items-center my-4">
+      <div class="my-4">
+        <h2 class="text-white text-lg md:text-3xl text-center font-bold font-Futura tracking-wider italic">BACK IN SHAPE CHALLENGE</h2>
         <h2 class="text-white text-lg md:text-3xl text-center font-bold font-Futura tracking-wider italic">APA ITU BACK IN SHAPE CHALLENGE?</h2>
       </div>
       {{-- <div class="flex justify-center items-center mb-8 px-16"> --}}
@@ -61,10 +63,10 @@
       <div class="max-w-xl text-white mx-auto">
         <ul class="list-decimal space-y-4">
           <li>
-            melatih otot punggung berarti memperkuat otot bagian punggung dan dapat membantu memperbaiki postur tubuh lebih ideal
+            Melatih otot punggung berarti memperkuat otot bagian punggung dan dapat membantu memperbaiki postur tubuh lebih ideal
           </li>
           <li>
-            melatih otot punggung juga bermanfaat untuk menguatkan core
+            Melatih otot punggung juga bermanfaat untuk menguatkan core
           </li>
           <li>
             Dilihat dari sisi kesehatan, rutin melatih otot punggung dapat menurunkan resiko sakit punggung
@@ -102,7 +104,7 @@
     </div>
     <div class="container content-center items-center lg:px-16 py-4">
       <div class="mx-auto max-w-3xl">
-        <p class="text-white text-center font-extralight text-2xl md:text-4xl leading-relaxed">
+        <p class="text-white text-center text-2xl md:text-3xl leading-relaxed font-Futura">
           Ayo Ikuti Back in Shape Challenge
           Mulai Fitness goals mu dengan Program Latihan dan dapatkan bimbingan langsung dari Trainer Profesional kami
           Dapatkan juga support langsung dari group motivation kami
