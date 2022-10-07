@@ -59,8 +59,12 @@ Route::prefix('sixpack-3')->name('sixpack3.')->group(function () {
 Route::prefix('v2')->name('v2.')->group(function () {
   Route::prefix('back-in-shape')->name('back-in-shape.')->group(function () {
     Route::get('/proses', [BackInShapeController::class, 'proses']);
+    Route::get('/generate', [BackInShapeController::class, 'generate'])->name('generate');
     Route::get('/{kdref}', [BackInShapeController::class, 'index']);
     Route::get('', [BackInShapeController::class, 'daftar'])->name('daftar');
     Route::post('', [BackInShapeController::class, 'save'])->name('save');
+    Route::post('/updateKode', [BackInShapeController::class, 'updateKode'])->name('updateKode');
+    Route::post('/savePay', [BackInShapeController::class, 'savePay'])->name('savePay');
+    Route::get('/status/{id}', [BackInShapeController::class, 'status'])->name('status');
   });
 });

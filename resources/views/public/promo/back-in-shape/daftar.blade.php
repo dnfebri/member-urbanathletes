@@ -14,12 +14,12 @@
       </div>
       <input type="hidden" name="kdRef" value="{{$kdRef}}">
       @if(session('alert'))
-        <div class="p-4 w-full bg-red-400 rounded-md bg-opacity-40">
+        <div class="p-4 bg-red-400 rounded-md bg-opacity-40">
           <h3 class="mx-5 font-bold">{{session('alert')}}</h3>
         </div>
       @endif
       @if(session('success'))
-        <div class="p-4 mx-4 w-full bg-green-600 rounded-md bg-opacity-40" data-massage="{{session('success')}}" data-email="{{session('email')}}" id="success">
+        <div class="p-4 mx-4 bg-green-600 rounded-md bg-opacity-40" data-massage="{{session('success')}}" data-email="{{session('email')}}" id="success">
           <h3 class="mx-5 font-bold">Cek kotak masuk / spam email {{session('email')}} untuk melanjutkan pembayaran</h3>
         </div>
       @endif
@@ -181,11 +181,11 @@
       </div>
       <div class="border-t my-4 pb-4">
         <ul class="my-4 mx-4">
-          <li>
+          {{-- <li>
             <a href="{{ route('order.search') }}" class="text-blue-500 underline">Cek Status Pembayaran</a>
-          </li>
+          </li> --}}
           <li>
-            <a href="{{ route('99k.updateKode') }}" class="text-blue-500 underline">Generate Kode Baru</a>
+            <a href="{{ route('v2.back-in-shape.generate') }}" class="text-blue-500 underline">Generate Kode Baru</a>
           </li>
         </ul>
       </div>
@@ -218,7 +218,7 @@
               </li>
               <li class="py-2">
                 Setiap peserta diwajibkan mengupload foto before tersebut di story IG masing – masing
-                dan mention  @urban .athletes dan tulis hashtag #UAbackinshapechallenge #buildingabetteryou
+                dan mention  @urban.athletes dan tulis hashtag #UAbackinshapechallenge #buildingabetteryou
               </li>
               <li class="py-2">
                 Peserta wajib membuat HIGHLIGHT/SOROTAN khusus berjudul #UrbanAthletes yang berisi  progress dan  proses perjalanan selama mengikuti #UAbackinshapechallenge
@@ -230,19 +230,19 @@
                 Setiap Peserta wajib melakukan sesi foto setiap minggunya dan melakukan penimbangan di mesin TANITA   / inbody dibantu oleh Personal Trainer dan diposting di Instagram masing 
               </li>
               <li class="py-2">
-                masing dan di UA MOTIVATION GROUP
+                Masing dan di UA MOTIVATION GROUP
               </li>
               <li class="py-2">
-                Periode kompetisi dari tanggal 24 Oktober 2022 – 20 November 2022 ( 4 minggu )
+                Periode kompetisi dari tanggal 24 Oktober 2022 – 20 November 2022 (4 minggu)
               </li>
               <li class="py-2">
-                membership aktif per tanggal 24 Oktober (khusus paket modul + membership)
+                Membership aktif per tanggal 24 Oktober (khusus paket modul + membership)
               </li>
               <li class="py-2">
                 Sesi foto after akan dilakukan serempak di Club masing-masing, sekaligus penimbangan terakhir
               </li>
               <li class="py-2">
-                ketentuan-ketentuan lain yang belum tercantum akan disampaikan dan dijelaskan saat Technical Meeting (akan diinfokan melalui WA)
+                Ketentuan-ketentuan lain yang belum tercantum akan disampaikan dan dijelaskan saat Technical Meeting (akan diinfokan melalui WA)
               </li>
             </ol>
 
@@ -279,7 +279,7 @@
                 Pengumuman pemenang Back in Shape Challenge akan diumumkan setelah kompetisi berlangsung
               </li>
               <li class="py-2">
-                mekanisme lebih lanjut akan disampaikan saat Technical meeting
+                Mekanisme lebih lanjut akan disampaikan saat Technical meeting
               </li>
             </ol>
 
@@ -298,25 +298,25 @@
                 Peserta bersedia diliput (dokumentasi, interview, atau lainnya) selama masa kompetisi oleh pihak Urban Athletes, dan materi dokumentasi dapat digunakan untuk kebutuhan promosi brand Urban Athletes.
               </li>
               <li class="py-2">
-                Peserta menyatakan berada dalam kondisi sehat lahir batin, serta tidak dalam 
+                Peserta menyatakan berada dalam kondisi sehat lahir batin, serta tidak dalam proses pengobatan / perawatan kesehatan
               </li>
               <li class="py-2">
                 Para peserta tidak diperkenankan menggunakan  segala jenis suplemen, steroid dan obat obatan.
               </li>
               <li class="py-2">
-                Pihak Urban Athletes tidak bertanggung jawab atas kecelakaan / cedera dan komplikasi kesehatan lainnya yang terjadi selama mengikuti kompetisi.
+                Pihak Urban Athletes tidak bertanggung jawab atas kecelakaan / cedera dan komplikasi kesehatan lainnya yang terjadi selama mengikuti kompetisi
               </li>
               <li class="py-2">
-                Keputusan pemenang oleh pihak Urban Athletes bersifat mutlak dan tidak dapat diganggu gugat.
+                Keputusan pemenang oleh pihak Urban Athletes bersifat mutlak dan tidak dapat diganggu gugat
               </li>
               <li class="py-2">
-                Peserta mengetahui, memahami, dan menyepakati seluruh syarat dan ketentuan yang telah ditetapkan oleh Urban Athletes.
+                Peserta mengetahui, memahami, dan menyepakati seluruh syarat dan ketentuan yang telah ditetapkan oleh Urban Athletes
               </li>
               <li class="py-2">
-                Peserta mengisi form ini sendiri secara sadar dan penuh tanggung jawab, tanpa ada paksaan dan interfensi dari pihak manapun.
+                Peserta mengisi form ini sendiri secara sadar dan penuh tanggung jawab, tanpa ada paksaan dan interfensi dari pihak manapun
               </li>
               <li class="py-2">
-                Disclaimer, Program Back in Shape Challenge ini dilakukan atas dasar semangat kami mewujudkan masyarakat yang sehat dan bugar. Hasil dapat berbeda untuk setiap orang. Peserta diharapkan berlatih dengan konsisten, bertanggung jawab, dan didampingi oleh PT dan berkonsultasi dengan Diet Coach kami.
+                Disclaimer, Program Back in Shape Challenge ini dilakukan atas dasar semangat kami mewujudkan masyarakat yang sehat dan bugar. Hasil dapat berbeda untuk setiap orang. Peserta diharapkan berlatih dengan konsisten, bertanggung jawab, dan didampingi oleh PT dan berkonsultasi dengan Diet Coach kami
               </li>
             </ol>
             <div class=" flex items-center">

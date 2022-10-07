@@ -43,7 +43,10 @@
     </div>
     <div class="container px-4 md:px-16">
       <div class="my-4">
-        <h2 class="text-white text-lg md:text-3xl text-center font-bold font-Futura tracking-wider italic">MULAI SEKARANG DENGAN MENGIKUTI</h2>
+        <h2 class="text-white text-lg md:text-3xl text-center font-bold font-Futura tracking-wider italic">
+          MULAI SEKARANG <br>
+          DENGAN MENGIKUTI
+        </h2>
         <h2 class="text-white text-lg md:text-3xl text-center font-bold font-Futura tracking-wider italic">BACK IN SHAPE CHALLENGE</h2>
         {{-- <h2 class="text-white text-lg md:text-3xl text-center font-bold font-Futura tracking-wider italic">APA ITU BACK IN SHAPE CHALLENGE?</h2> --}}
       </div>
@@ -108,9 +111,9 @@
     <div class="container content-center items-center lg:px-16 py-4">
       <div class="mx-auto max-w-3xl">
         <p class="text-white text-center text-2xl md:text-3xl leading-relaxed font-Futura">
-          Ayo Ikuti Back in Shape Challenge
-          Mulai Fitness goals mu dengan Program Latihan dan dapatkan bimbingan langsung dari Trainer Profesional kami
-          Dapatkan juga support langsung dari group motivation kami
+          Ayo Ikuti Back in Shape Challenge.
+          Mulai Fitness goals mu dengan Program Latihan dan dapatkan bimbingan langsung dari Trainer Profesional kami.
+          Dapatkan juga support langsung dari group motivation kami.
         </p>
         <div class="my-8">
           <img class="w-full" src="{{ url('/image/promo/back-in-shape/Poster-Back-In-Shape_A4.jpg')}}" alt="Poster">
