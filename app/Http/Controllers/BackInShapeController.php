@@ -82,8 +82,6 @@ class BackInShapeController extends Controller
         
         Mail::to( $Bis->email )->send(new BisVerifEmail($Bis, $clubs));
         return redirect('v2/back-in-shape?kdRef=' . $request->kdRef)->with('success', 'Silahkan cek Email yang kami kirim ke ')->with('email', $Bis->email);
-        // dump($this->dataStatict->PromoBisV2());
-        // dd($request);
     }
 
     public function proses(Request $request)

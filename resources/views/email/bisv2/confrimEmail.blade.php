@@ -1,11 +1,10 @@
 
 <div style="margin: auto; width: 80%; padding: 10px">
   <div>
-    <img src="{{ url('image/Logo-Urban-Athletes.png') }}" alt="UA" sizes="50px" style="margin-left: auto; margin-right: auto;">
+    <img src="{{ url('image/Logo-Urban-Athletes.png') }}" alt="UA" width="150" style="">
   </div>
   <div>
     <h2>Hallo {{$dataEmail->nama}}</h2>
-    {{-- <p>Pesanan Anda telah kami terima dan dalam beberapa saat lagi akan segera kami proses.</p> --}}
     <p>Kami hanya ingin mengkonfirmasi bahwa ini adalah email anda</p>
     <p>Berikut rincian pesanan Anda :</p>
     <table style="width: 100%; line-height: 2">
@@ -19,12 +18,7 @@
       </tr>
       <tr>
         <td>Promo Yang di Pilih</td>
-        <td>{{$dataEmail->promo}}</td>
-        {{-- @foreach ( $clubs as $club )
-          @if ($club['id'] == $dataEmail->club_id)
-            <td>: {{$club['name']}}</td>
-          @endif
-        @endforeach --}}
+        <td>: {{$dataEmail->promo}}</td>
       </tr>
     </table>
     <p>Silahkan Silahkan klik tombol di bawah ini untuk melanjutkan pembayaran</p>

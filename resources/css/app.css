@@ -57,3 +57,7 @@
 .input-active {
   @apply -top-9 -left-1 scale-75 opacity-100
 }
+
+.modal-active {
+  @apply bottom-0
+}
