@@ -12,7 +12,6 @@
       <div class="flex justify-center border-b my-4 pb-4">
         <h2 class="text-3xl font-Futura">Daftar Back In Shape</h2>
       </div>
-      <input type="hidden" name="kdRef" value="{{$kdRef}}">
       @if(session('alert'))
         <div class="p-4 bg-red-400 rounded-md bg-opacity-40">
           <h3 class="mx-5 font-bold">{{session('alert')}}</h3>
@@ -44,7 +43,6 @@
           </div>
         @enderror
 
-        <!-- Select -->
         {{-- <div class="pt-4 my-4">
           <label class="relative">
             <span class="absolute ml-2 -top-0.5 right-full left-2 opacity-70 w-max transition-all duration-300">
@@ -64,6 +62,21 @@
             @enderror
           </label>
         </div> --}}
+        <div class="pt-4 my-4">
+          <label class="relative text-black">
+            <span class="absolute -top-0.5 right-full left-2 opacity-70 min-w-max transition-all duration-300">
+              Kode Influencer
+            </span>
+            <input name="kdRef" type="text" id="inputs"
+            value="{{ old('kdRef') ? old('kdRef') : ($kdRef!=='ua' ? $kdRef : '') }}" onfocus="inInput(this)" onblur="outInput(this)"
+            @if($kdRef !== 'ua')
+              readonly
+            @endif
+            class="w-full bg-transparent focus:ring-0 focus:border-black h-10 px-2 group-focus:bg-black @if($kdRef !== 'ua') bg-neutral-200 text-neutral-700 @endif">
+          </label>
+        </div>
+
+        <!-- Select -->
         <div class="pt-4 my-4">
           <label class="relative">
             <span class="absolute ml-2 -top-0.5 right-full left-2 opacity-70 w-max transition-all duration-300">
@@ -326,7 +339,7 @@
           </div>
           <!-- Modal footer -->
           <div class="flex items-center p-6 space-x-2 rounded-b border-t border-gray-200 ">
-            <button id="btn-agree" class="bg-green-500 py-2 px-6 rounded-lg mx-4 text-white text-lg hidden" type="button" >Submit</button>
+            <button id="btn-agree" class="bg-green-500 hover:bg-green-600 py-2 px-6 rounded-lg mx-4 text-white text-lg hidden" type="button" >Submit</button>
             <button id="btn-agree2" class="bg-green-500/60 py-2 px-6 rounded-lg mx-4 text-white text-lg" disabled type="button" >Submit</button>
           </div>
         </div>

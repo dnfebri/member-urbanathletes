@@ -39,7 +39,9 @@ class BackInShapeController extends Controller
     {
         $clubs = $this->apiModels->allClubs()['rows'];
         $kdRef = '';
+        $kdRefName = 'UA';
         $harga = 0;
+        $promoName = '';
         $request->validate(
             [
                 // 'kode' => 'unique:invoices,kode',
@@ -61,13 +63,14 @@ class BackInShapeController extends Controller
         foreach ($this->dataStatict->PromoBisV2() as $key => $kdp) {
             if ($kdp['id'] == $request->kdRef) {
                 $kdRef = $kdp['id'];
+                $kdRefName = $kdp['name'];
             }
         }
 
         if ($kdRef != '') {
             $request['kode'] = 'BIS-' . $request->kdRef . '-' . date('YmdH') . '-' . rand(100, 999);
         } else {
-            $request['kode'] = 'BIS-' . date('YmdH') . '-' . rand(100, 999);
+            $request['kode'] = 'BIS-UA-' . date('YmdH') . '-' . rand(100, 999);
         }
 
         if($request->promo == 1) {$harga = 488000;}
@@ -81,9 +84,14 @@ class BackInShapeController extends Controller
         $Bis = BackInShape::create($datareq);
         // dd($Bis);
         $Bis->url = url('v2/back-in-shape/proses?kode=') . $Bis->kode;
+        if ($Bis->promo == 1) {$promoName = 'Back In Shape - 488 K';}
+        if ($Bis->promo == 2) {$promoName = 'Back In Shape - 988 K';}
+        $Bis->promoName = $promoName;
+        $Bis->kdRefName = $kdRefName;
         
         Mail::to( $Bis->email )->send(new BisVerifEmail($Bis, $clubs));
-        return redirect('v2/back-in-shape?kdRef=' . $request->kdRef)->with('success', 'Silahkan cek Email yang kami kirim ke ')->with('email', $Bis->email);
+        $ridirectLink = $request->kdRef != '' ? $request->kdRef : 'ua';
+        return redirect('v2/back-in-shape?kdRef=' . $ridirectLink)->with('success', 'Silahkan cek Email yang kami kirim ke ')->with('email', $Bis->email);
     }
 
     public function proses(Request $request)
@@ -218,7 +226,7 @@ class BackInShapeController extends Controller
         if ($dataBis->kdRef != '') {
             $newKode = 'BIS-' . $dataBis->kdRef . '-' . date('YmdH') . '-' . rand(100, 999);
         } else {
-            $newKode = 'BIS-' . date('YmdH') . '-' . rand(100, 999);
+            $newKode = 'BIS-UA-' . date('YmdH') . '-' . rand(100, 999);
         }
         BackInShape::where('email', $request->email)
                 ->update([

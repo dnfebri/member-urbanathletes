@@ -18,7 +18,11 @@
       </tr>
       <tr>
         <td>Promo Yang di Pilih</td>
-        <td>: {{$dataEmail->promo}}</td>
+        <td>: {{$dataEmail->promoName}}</td>
+      </tr>
+      <tr>
+        <td>Influencer</td>
+        <td>: {{$dataEmail->kdRef}} - {{$dataEmail->kdRefName}}</td>
       </tr>
     </table>
     <p>Silahkan Silahkan klik tombol di bawah ini untuk melanjutkan pembayaran</p>

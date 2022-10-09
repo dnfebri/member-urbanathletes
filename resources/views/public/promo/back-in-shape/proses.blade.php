@@ -54,18 +54,19 @@
         // Trigger snap popup. @TODO: Replace TRANSACTION_TOKEN_HERE with your transaction token
         window.snap.pay('{{$token}}', {
           onSuccess: function(result){
+            sendRespont(result)
             /* You may add your own implementation here */
             alert("payment success!"); 
             // console.log(result);
-            sendRespont(result)
           },
           onPending: function(result){
+            sendRespont(result) // <<============ INI PENYIMPANAN KE DB ===================>>
             /* You may add your own implementation here */
             alert("wating your payment!"); 
             // console.log(result);
-            sendRespont(result) // <<============ INI PENYIMPANAN KE DB ===================>>
           },
           onError: function(result){
+            sendRespont(result)
             /* You may add your own implementation here */
             alert("payment failed!"); 
             // console.log(result);
