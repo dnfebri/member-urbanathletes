@@ -240,10 +240,7 @@
                 Semua peserta akan mendapatkan  panduan latihan dan pola makan dan dipandu langsung oleh Personal Trainer Lv 4 kami
               </li>
               <li class="py-2">
-                Setiap Peserta wajib melakukan sesi foto setiap minggunya dan melakukan penimbangan di mesin TANITA   / inbody dibantu oleh Personal Trainer dan diposting di Instagram masing 
-              </li>
-              <li class="py-2">
-                Masing dan di UA MOTIVATION GROUP
+                Setiap Peserta wajib melakukan sesi foto setiap minggunya dan melakukan penimbangan di mesin TANITA   / inbody dibantu oleh Personal Trainer dan diposting di Instagram masing - masing dan di UA MOTIVATION GROUP
               </li>
               <li class="py-2">
                 Periode kompetisi dari tanggal 24 Oktober 2022 – 20 November 2022 (4 minggu)

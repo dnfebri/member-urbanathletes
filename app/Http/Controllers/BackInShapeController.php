@@ -96,10 +96,13 @@ class BackInShapeController extends Controller
 
     public function proses(Request $request)
     {
+        $promoName = '';
         $dataReq = BackInShape::where('kode', $request->kode)->first();
         if (!$dataReq) {
             return view("public/member/daftar/order/notData");
         }
+        if ($dataReq->promo == 1) {$promoName = 'Back In Shape - 488 K';}
+        if ($dataReq->promo == 2) {$promoName = 'Back In Shape - 988 K';}
         
         $midtrans = new ApiMidtrans();
         $midtrans->midtransConfig();
@@ -120,7 +123,7 @@ class BackInShapeController extends Controller
                 'id' => $dataReq->id,
                 'price' => $dataReq->harga,
                 'quantity' => 1,
-                'name' => 'Promo 99k',
+                'name' => $promoName,
                ]
             ),
             'customer_details' => array(
@@ -132,6 +135,7 @@ class BackInShapeController extends Controller
             // "enabled_payments" => ["bri_epay", "echannel",
             // "bni_va", "bri_va", "gopay"],
         );
+        // dd($params);
         $snapToken = \Midtrans\Snap::getSnapToken($params);
         return view("public/promo/back-in-shape/proses", compact('dataReq', 'params'), ['token' => $snapToken]);
         // dd($dataReq);

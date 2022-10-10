@@ -39,7 +39,7 @@
     <form action="{{ route('v2.back-in-shape.savePay') }}" method="post" class="hidden" id="submit_bayar">
       @csrf
       <input type="text" id="data_json_bayar" name="data_json_bayar">
-      <input type="text" id="order_name" name="order_name" value="rp99k">
+      <input type="text" id="order_name" name="order_name" value="{{$params['item_details'][0]['name']}}">
       <input type="text" id="name" name="name" value="{{$params['customer_details']['first_name']}}">
       <input type="text" id="email" name="email" value="{{$params['customer_details']['email']}}">
       <input type="text" id="kode" name="kode" value="{{$params['transaction_details']['order_id']}}">
@@ -56,19 +56,19 @@
           onSuccess: function(result){
             sendRespont(result)
             /* You may add your own implementation here */
-            alert("payment success!"); 
+            // alert("payment success!"); 
             // console.log(result);
           },
           onPending: function(result){
             sendRespont(result) // <<============ INI PENYIMPANAN KE DB ===================>>
             /* You may add your own implementation here */
-            alert("wating your payment!"); 
+            // alert("wating your payment!"); 
             // console.log(result);
           },
           onError: function(result){
             sendRespont(result)
             /* You may add your own implementation here */
-            alert("payment failed!"); 
+            // alert("payment failed!"); 
             // console.log(result);
           },
           onClose: function(){

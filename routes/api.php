@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\BackInShapeController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -16,4 +17,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+Route::prefix('v2')->group(function() {
+    Route::get('/back-in-shapes', [BackInShapeController::class, 'getAll']);
+    Route::get('/bis', [BackInShapeController::class, 'order']);
 });
