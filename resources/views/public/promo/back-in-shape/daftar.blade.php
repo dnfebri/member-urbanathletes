@@ -192,6 +192,13 @@
           </button>
         </span>
       </div>
+      <div class="text-red-600 font-semibold max-w-xl px-4 mx-auto">
+        <p>
+          * Screenshot bukti pembayaran mu dan bawa  ke club Urban Athletes terdekat untuk aktivasi challenge
+          Atau silakan kirim ke nomor WA di bawah: <br>
+          08179188880
+        </p>
+      </div>
       <div class="border-t my-4 pb-4">
         <ul class="my-4 mx-4">
           {{-- <li>

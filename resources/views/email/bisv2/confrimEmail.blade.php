@@ -43,5 +43,10 @@
       </a>
     </div>
     <p>Jangan menginformasikan bukti atau data pembayaran kepada pihak manapun kecuali Urban Athletes.</p>
+    <p style="color:rgb(190, 24, 24);">
+      * Screenshot bukti pembayaran mu dan bawa  ke club Urban Athletes terdekat untuk aktivasi challenge
+      Atau silakan kirim ke nomor WA di bawah: <br>
+      08179188880
+    </p>
   </div>
 </div>
