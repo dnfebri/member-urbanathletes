@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Helpers\ApiFormatter;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\BackInShapeCollection;
+use App\Http\Resources\BisPayCollection;
 use App\Models\BackInShape;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -25,7 +26,7 @@ class BackInShapeController extends Controller
         // return response()->json($dataResource, 200);
     }
 
-    public function order()
+    public function payProses()
     {
         // $data = OrderBisV2::whereColumn('order_id', 'back_in_shapes.kode')->orderByDesc('id')->get();
         $data = DB::table('order_bis_v2_s')
@@ -46,7 +47,13 @@ class BackInShapeController extends Controller
                     )
                 ->orderBy('id', 'desc')
                 ->get();
-        // dd($data);
-        return response()->json($data, 200);
+        // return response()->json($data, 200);
+        
+        $dataResource = BisPayCollection::collection($data);
+        if ($data) {
+            return ApiFormatter::createApi(200, 'success', $dataResource);
+        } else {
+            return ApiFormatter::createApi(400, 'Failed');
+        }
     }
 }

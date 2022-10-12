@@ -21,5 +21,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::prefix('v2')->group(function() {
     Route::get('/back-in-shapes', [BackInShapeController::class, 'getAll']);
-    Route::get('/bis', [BackInShapeController::class, 'order']);
+    Route::get('/back-in-shapes/pay-proses', [BackInShapeController::class, 'payProses']);
 });
