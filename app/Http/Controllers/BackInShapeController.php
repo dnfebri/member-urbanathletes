@@ -61,7 +61,7 @@ class BackInShapeController extends Controller
         );
 
         foreach ($this->dataStatict->PromoBisV2() as $key => $kdp) {
-            if ($kdp['id'] == $request->kdRef) {
+            if (strtolower($kdp['id']) == strtolower($request->kdRef)) {
                 $kdRef = $kdp['id'];
                 $kdRefName = $kdp['name'];
             }

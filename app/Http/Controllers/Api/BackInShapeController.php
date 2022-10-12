@@ -13,6 +13,7 @@ class BackInShapeController extends Controller
 {
     public function getAll()
     {
+        // dd(strtolower("Hello WORLD."));
         $data = BackInShape::orderByDesc('id')->get();
         $dataResource = BackInShapeCollection::collection($data);
         // dd($dataResource);

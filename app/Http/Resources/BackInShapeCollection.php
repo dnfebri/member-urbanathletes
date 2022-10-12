@@ -22,7 +22,8 @@ class BackInShapeCollection extends JsonResource
         $dataStatict = new DataStatict();
         $influensers = $dataStatict->PromoBisV2();
         foreach ($influensers as $row ) {
-            if ($row['id'] == $this->kdRef) {
+            // dump(strtolower($row['id']) === strtolower($this->kdRef));
+            if (strtolower($row['id']) == strtolower($this->kdRef)) {
                 $kdRefName = $row['name'];
             }
         }

@@ -14,11 +14,12 @@ class DataStatict extends Model
         $data = [
             ['id'=> 'BIS1', 'name'=> 'Markom'],
             ['id'=> 'BIS2', 'name'=> 'Sosmed'],
-            ['id'=> '101', 'name'=> 'Rio'],
-            ['id'=> '102', 'name'=> 'Dening'],
-            ['id'=> '103', 'name'=> 'Julia'],
-            ['id'=> '104', 'name'=> 'Yohanes'],
-            ['id'=> '105', 'name'=> 'Fariz']
+            ['id'=> 'UAxRio', 'name'=> 'Rio'],
+            ['id'=> 'UAxDening', 'name'=> 'Dening'],
+            ['id'=> 'UAxJulia', 'name'=> 'Julia'],
+            ['id'=> 'UAxYohanes', 'name'=> 'Yohanes'],
+            ['id'=> 'UAxFariz', 'name'=> 'Fariz'],
+            ['id'=> 'UrbanAthletes', 'name'=> 'Urban Athletes']
         ];
         return $data;
     }
