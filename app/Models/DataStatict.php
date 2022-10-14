@@ -19,6 +19,7 @@ class DataStatict extends Model
             ['id'=> 'UAxJulia', 'name'=> 'Julia'],
             ['id'=> 'UAxYohanes', 'name'=> 'Yohanes'],
             ['id'=> 'UAxFariz', 'name'=> 'Fariz'],
+            ['id'=> 'UAxWidya', 'name'=> 'Widya'],
             ['id'=> 'UrbanAthletes', 'name'=> 'Urban Athletes']
         ];
         return $data;
