@@ -10,15 +10,13 @@ class Rp99k extends Model
     use HasFactory;
     protected $fillable = ['nama', 'nomor', 'email', 'alamat', 'kode', 'club_id', 'harga', 'tanggal', 'status', 'image'];
 
-    public function getIndex()
+    public function getIndex($search = null)
     {
-        $data = Rp99k::join('orders', 'rp99ks.kode', 'orders.order_id')
-                                // ->get(['rp99ks.id', 'rp99ks.kode', 'rp99ks.club', 'joins.*'])
+        $data = Rp99k::where('nama', 'like', '%'.$search.'%')
+                                ->orwhere('rp99ks.email', 'like', '%'.$search.'%')
+                                ->orwhere('order_id', 'like', '%'.$search.'%')
+                                ->join('orders', 'rp99ks.kode', 'orders.order_id')
                                 ->orderBy('rp99ks.id', 'DESC');
-        // $data = DB::table('invoices')
-        //                         ->join('joins', 'invoices.join_id', '=', 'joins.id')
-        //                         // ->join('club_data', 'invoices.club', '=', 'club_data.club_id')
-        //                         ->paginate(15);
         return $data;
     }
 }
