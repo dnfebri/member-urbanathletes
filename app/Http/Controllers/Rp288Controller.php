@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Mail\SendEmail;
 use App\Models\ApiMidtrans;
 use App\Models\ApiModels;
+use App\Models\Orders;
 use App\Models\Rp288;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -47,7 +48,7 @@ class Rp288Controller extends Controller
             'status' => '0'
         );
         $rp288s = Rp288::create($datareq);
-        $rp288s->url = url('288/confirm?kode=') . $rp288s->kode ;
+        $rp288s->url = url('288/confirm?kode=') ;
 
         $clubs = $this->apiModels->allClubs()['rows'];
         Mail::to( $rp288s->email )->send(new SendEmail($rp288s, $clubs));
@@ -62,7 +63,7 @@ class Rp288Controller extends Controller
 
     public function confirm(Request $request)
     {
-        dd($request);
+        // dd($request);
         $promoName = 'Membership 288';
         $dataReq = Rp288::where('kode', $request->kode)->first();
         if (!$dataReq) {
@@ -83,14 +84,12 @@ class Rp288Controller extends Controller
                 'order_id' => $dataReq->kode,
                 'gross_amount' => '',
             ),
-            'item_details' => array(
-               [
+            'item_details' => array([
                 'id' => $dataReq->id,
                 'price' => $dataReq->harga,
                 'quantity' => 1,
                 'name' => $promoName,
-               ]
-            ),
+            ]),
             'customer_details' => array(
                 'first_name' => $dataReq->nama,
                 'last_name' => '',
@@ -101,5 +100,22 @@ class Rp288Controller extends Controller
         // dd($params);
         $snapToken = \Midtrans\Snap::getSnapToken($params);
         return view("public/promo/288/confirm", compact('params'), ['token' => $snapToken, 'dataInvoice' => $dataReq]);
+    }
+
+    public function order(Request $request)
+    {
+        // dd($request);
+        $dataOrder = json_decode($request->data_json_bayar);
+        $order = Orders::create([
+            'order_name' => '288 Membership',
+            'order_id' => $request->kode,
+            'gross_amount' => $dataOrder->gross_amount,
+            'status' => $dataOrder->transaction_status,
+            'transaction_id' => $dataOrder->transaction_id,
+            'payment_type' => $dataOrder->payment_type,
+            'json_midtrans' => $request->data_json_bayar
+        ]);
+        // dd($order);
+        return redirect()->route('order.status', ['id' => $order->order_id]);
     }
 }

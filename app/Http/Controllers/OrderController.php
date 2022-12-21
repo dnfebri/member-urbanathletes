@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\ApiMidtrans;
 use App\Models\Orders;
+use App\Models\Rp288;
 use App\Models\Rp77k;
 use App\Models\Rp99k;
 use Illuminate\Http\Request;
@@ -20,17 +21,24 @@ class OrderController extends Controller
     public function status($id)
     {
         $dataStatus = new ApiMidtrans();
-        $dataOrder = Rp99k::where('kode', $id)->first();
-        if ($dataOrder) {
+        $dataOrder = null;
+        $rp99k = Rp99k::where('kode', $id)->first();
+        $rp77k = Rp77k::where('kode', $id)->first();
+        $rp288k = Rp288::where('kode', $id)->first();
+        
+        if ($rp99k) { 
+            $dataOrder = $rp99k; 
             $dataOrder->order_name = 'rp99k';
         }
-        else if (!$dataOrder) {
-            $dataOrder = Rp77k::where('kode', $id)->first();
+        if ($rp77k) { 
+            $dataOrder = $rp77k; 
             $dataOrder->order_name = 'rp77k';
         }
-        else {
-            return redirect()->route('order.notData');
+        if ($rp288k) { 
+            $dataOrder = $rp288k; 
+            $dataOrder->order_name = '288 membership';
         }
+        if ($dataOrder === null) { return redirect()->route('order.notData'); }
         $data = [
             'status' => $dataStatus->getStatusOrder($id),
             'dataOrder' => $dataOrder

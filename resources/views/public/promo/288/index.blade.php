@@ -174,7 +174,7 @@
     <div class="my-12 px-8">
       <h2 class="text-xl md:text-3xl text-center font-black italic leading-snug text-transparent bg-clip-text bg-black text-shadow-lg">URBAN ATHLETES CLUBS</h2>
       <div class="flex flex-wrap py-4 justify-around">
-        <div class="m-4 w-full max-w-[280px] lg:max-w-sm px-2">
+        <div class="m-4 w-full max-w-[280px] lg:max-w-sm px-2 relative min-h-[30rem]">
           <img class="object-cover object-center w-full mx-auto transition-all duration-300" src="{{ url('/image/promo/288/clubs/1.png')}}" alt="clubs Urban Athletes">
           <div class="p-4 font-AmpleSoft">
             <h3 class="text-xl font-FuturaBold italic pb-4">URBAN ATHLETES GUNAWANGSA MERR</h3>
@@ -187,13 +187,15 @@
               <p>Jl. Mayjend. Jonosewojo No.9, Pradahkalikendal, Kec. Dukuhpakis, Kota Surabaya, Jawa Timur 60216</p>
             </div>
           </div>
-          <a href="" target="_blank"
-            class="bg-gradient-to-r from-[#F0BE2E] to-[#FCF086] py-2"
-          >
-            <button class="w-full">Lihat Lokasi</button>
-          </a>
+          <div class="absolute bottom-2 right-2 left-2">
+            <a href="https://goo.gl/maps/cL9JFBqttF9mavmr8" target="_blank"
+              class="bg-gradient-to-r from-[#F0BE2E] to-[#FCF086] py-2"
+            >
+              <button class="w-full">Lihat Lokasi</button>
+            </a>
+          </div>
         </div>
-        <div class="m-4 w-full max-w-[280px] lg:max-w-sm px-2">
+        <div class="m-4 w-full max-w-[280px] lg:max-w-sm px-2 relative min-h-[30rem]">
           <img class="object-cover object-center w-full mx-auto transition-all duration-300" src="{{ url('/image/promo/288/clubs/2.png')}}" alt="clubs Urban Athletes">
           <div class="p-4 font-AmpleSoft">
             <h3 class="text-xl font-FuturaBold italic pb-4">URBAN ATHLETES GUNAWANGSA TIDAR</h3>
@@ -206,13 +208,15 @@
               <p>Jl. Tidar No.350, Tembok Dukuh, Kec. Bubutan, Kota Surabaya, Jawa Timur 60173</p>
             </div>
           </div>
-          <a href="" target="_blank"
-            class="bg-gradient-to-r from-[#F0BE2E] to-[#FCF086] py-2"
-          >
-            <button class="w-full">Lihat Lokasi</button>
-          </a>
+          <div class="absolute bottom-2 right-2 left-2">
+            <a href="https://goo.gl/maps/YPkvi67RBMGurZv57" target="_blank"
+              class="bg-gradient-to-r from-[#F0BE2E] to-[#FCF086] py-2"
+            >
+              <button class="w-full">Lihat Lokasi</button>
+            </a>
+          </div>
         </div>
-        <div class="m-4 w-full max-w-[280px] lg:max-w-sm px-2">
+        <div class="m-4 w-full max-w-[280px] lg:max-w-sm px-2 relative min-h-[30rem]">
           <img class="object-cover object-center w-full mx-auto transition-all duration-300" src="{{ url('/image/promo/288/clubs/3.png')}}" alt="clubs Urban Athletes">
           <div class="p-4 font-AmpleSoft">
             <h3 class="text-xl font-FuturaBold italic pb-4">URBAN ATHLETES LENMARC MALL</h3>
@@ -225,11 +229,13 @@
               <p>Jl. Raya Kedung Baruk No.96, Kedung Baruk, Kec. Rungkut, Kota Surabaya, Jawa Timur 60298</p>
             </div>
           </div>
-          <a href="" target="_blank"
-            class="bg-gradient-to-r from-[#F0BE2E] to-[#FCF086] py-2"
-          >
-            <button class="w-full">Lihat Lokasi</button>
-          </a>
+          <div class="absolute bottom-2 right-2 left-2">
+            <a href="https://goo.gl/maps/54V2ZzUrBqrFktpc6" target="_blank"
+              class="bg-gradient-to-r from-[#F0BE2E] to-[#FCF086] py-2"
+            >
+              <button class="w-full">Lihat Lokasi</button>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -242,7 +248,7 @@
             <h3 class="text-2xl italic">URBAN ATHLETES ADALAH GYM DENGAN PROTOKOL COVID-19 PERTAMA DAN TERJAMIN DI SURABAYA!</h3>
             <div class="flex items-center py-4">
               <button id="btn-submit"
-                class="mx-auto text-white
+                class="text-white
                     py-2 px-4 rounded-xl bg-red-600 text-base uppercase font-thin
                     hover:shadow hover:shadow-red-400 hover:bg-red-700
                     transition-all duration-300
@@ -287,7 +293,7 @@
               Cabang yang dipilih tidak bisa diganti setelah proses registrasi selesai. Promo ini hanya berlaku untuk non member yang belum pernah melakukan trial di Urban Athletes dan berusia di atas 18 tahun.
             </li>
             <li class="py-2">
-              Kami tidak bertanggung jawab atas salah transfer atau kehilangan sejumlah uang karena kelalaian pribadi calon member dan tidak ada pengembalian dana dengan alasan apapun.
+              Kami tidak bertanggung jawab atas kelalaian atau kehilangan sejumlah uang pribadi calon member dan tidak ada pengembalian dana dengan alasan apapun.
             </li>
             <li class="py-2">
               Pengaktifan membership ini paling lambat 10 hari setelah pembayaran selesai di cabang yang di pilih.
@@ -312,8 +318,7 @@
   
   @push('script')
     <script>
-      const btnSubmit = document.getElementById('btn-submit');
-      // const btnDisable = document.getElementById('btn-disabled');
+      const btnSubmit = document.querySelectorAll('#btn-submit');
       const tncModal = document.getElementById('tnc-modal');
       const btnCloseModal = document.getElementById('btn-close-modal');
       const btnAgree = document.getElementById('btn-agree');
@@ -321,14 +326,16 @@
       const form = document.getElementById('form');
       const agreeCheck = document.getElementById('agree');
 
-      btnSubmit.addEventListener('click', () => {
-        btnSubmit.classList.add('hidden');
-        // btnDisable.classList.remove('hidden');
-        tncModal.classList.remove('hidden');
-      })
+      function submitFun(el) {
+        el.addEventListener('click', () => {
+          el.classList.add('hidden');
+          tncModal.classList.remove('hidden');
+        })
+      }
+
+      btnSubmit.forEach((btn) => submitFun(btn))
       btnCloseModal.addEventListener('click', () => {
-        btnSubmit.classList.remove('hidden');
-        // btnDisable.classList.add('hidden');
+        btnSubmit.forEach((btn) => {btn.classList.remove('hidden')})
         tncModal.classList.add('hidden');
       })
 

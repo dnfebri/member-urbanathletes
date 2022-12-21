@@ -63,6 +63,7 @@ Route::prefix('288')->name('288.')->group(function () {
   Route::get('/confirm', [Rp288Controller::class, 'confirm'])->name('confirm');
   Route::get('/send/{kode}', [Rp288Controller::class, 'send'])->name('send');
   Route::post('', [Rp288Controller::class, 'save'])->name('save');
+  Route::post('order', [Rp288Controller::class, 'order'])->name('order');
   // Route::get('/daftar', [Rp99kController::class, 'daftar'])->name('daftar');
 });
 

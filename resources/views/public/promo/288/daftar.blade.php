@@ -149,5 +149,15 @@
       }
     }
   </script>
+  <script>
+    const btnSubmit = document.getElementById('btn-submit');
+    const btnDisable = document.getElementById('btn-disabled');
+
+    btnSubmit.addEventListener('click', () => {
+    btnSubmit.classList.add('hidden');
+    btnDisable.classList.remove('hidden');
+    });
+
+  </script>
   @endpush
 </x-main>

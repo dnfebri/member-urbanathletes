@@ -36,10 +36,10 @@
         <button id="pay-button" class="bg-green-500 hover:bg-green-600 rounded-md py-1 px-4 font-bold"><i class="fa-solid fa-money-bill-wave"></i> Bayar</button>
       </div>
     </div>
-    <form action="{{ route('order.save') }}" method="post" class="hidden" id="submit_bayar">
+    <form action="{{ route('288.order') }}" method="post" class="hidden" id="submit_bayar">
       @csrf
       <input type="text" id="data_json_bayar" name="data_json_bayar">
-      <input type="text" id="order_name" name="order_name" value="Rp288">
+      {{-- <input type="text" id="order_name" name="order_name" value="Rp288"> --}}
       <input type="text" id="name" name="name" value="{{$params['customer_details']['first_name']}}">
       <input type="text" id="email" name="email" value="{{$params['customer_details']['email']}}">
       <input type="text" id="kode" name="kode" value="{{$params['transaction_details']['order_id']}}">
