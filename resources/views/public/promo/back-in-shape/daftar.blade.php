@@ -87,7 +87,7 @@
             class="w-full bg-transparent focus:ring-0 text-black focus:border-black h-10 px-2 group-focus:bg-black">
               <option value="" ></option> 
               @foreach ($clubs['rows'] as $club)
-                @if ( $club['id'] != '1' && $club['id'] != '6' && $club['id'] != '7' )
+                @if ( $club['id'] != '1' && $club['id'] != '3'  && $club['id'] != '6' && $club['id'] != '7' )
                   @if ( old('club_id') == $club['id'] )
                     <option value="{{ $club['id'] }}" selected>{{ $club['name'] }}
                     </option>

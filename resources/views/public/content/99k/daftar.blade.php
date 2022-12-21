@@ -27,7 +27,7 @@
           <select name="club_id" id="club_id" class="block border-0 border-b-2 w-full focus:border-black @error('nominal') border-red-300 @enderror">
             <option value="" >Select club</option> 
             @foreach ($clubs['rows'] as $club)
-              @if ( $club['id'] != '1' && $club['id'] != '6' && $club['id'] != '7' )
+              @if ( $club['id'] != '1' && $club['id'] != '3' && $club['id'] != '6' && $club['id'] != '7' )
                 @if ( old('club_id') == $club['id'] )
                   <option value="{{ $club['id'] }}" selected>{{ $club['name'] }}</option>
                 @else

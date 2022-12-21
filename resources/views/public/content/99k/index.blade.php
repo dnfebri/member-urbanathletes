@@ -130,8 +130,7 @@
         </div>
       </div>
       {{-- UA Marvell --}}
-      <div class="grid grid-cols-2 md:grid-cols-2 gap-4 md:gap-8 my-4 md:mx-4 overflow-hidden">
-        {{-- SwiperJS --}}
+      {{-- <div class="grid grid-cols-2 md:grid-cols-2 gap-4 md:gap-8 my-4 md:mx-4 overflow-hidden">
         <div class="swiper mySwiper w-full">
           <div class="swiper-wrapper aspect-[4/2.5]">
             <div class="swiper-slide">
@@ -165,7 +164,7 @@
             <p class=""><i class="fa-solid fa-circle-check text-yellow-500"></i><span class="ml-3">The Valor</span></p>
           </div>
         </div>
-      </div>
+      </div> --}}
       {{-- UA Tidar --}}
       <div class="grid grid-cols-2 md:grid-cols-2 gap-4 md:gap-8 my-4 md:mx-4 overflow-hidden">
         {{-- SwiperJS --}}
@@ -264,14 +263,14 @@
         <img src="{{url('/image/schedule/merr/Artboard 6.png')}}" alt="Clas Urban" class="card object-cover object-center">
         <img src="{{url('/image/schedule/merr/Artboard 7.png')}}" alt="Clas Urban" class="card object-cover object-center">
         {{-- Marvell --}}
-        <img src="{{url('/image/schedule/marvell/Artboard1.png')}}" alt="Clas Urban" class="card object-cover object-center">
+        {{-- <img src="{{url('/image/schedule/marvell/Artboard1.png')}}" alt="Clas Urban" class="card object-cover object-center">
         <img src="{{url('/image/schedule/marvell/Artboard2.png')}}" alt="Clas Urban" class="card object-cover object-center">
         <img src="{{url('/image/schedule/marvell/Artboard3.png')}}" alt="Clas Urban" class="card object-cover object-center">
         <img src="{{url('/image/schedule/marvell/Artboard4.png')}}" alt="Clas Urban" class="card object-cover object-center">
         <img src="{{url('/image/schedule/marvell/Artboard5.png')}}" alt="Clas Urban" class="card object-cover object-center">
         <img src="{{url('/image/schedule/marvell/Artboard6.png')}}" alt="Clas Urban" class="card object-cover object-center">
         <img src="{{url('/image/schedule/marvell/Artboard7.png')}}" alt="Clas Urban" class="card object-cover object-center">
-        <img src="{{url('/image/schedule/marvell/Artboard8.png')}}" alt="Clas Urban" class="card object-cover object-center">
+        <img src="{{url('/image/schedule/marvell/Artboard8.png')}}" alt="Clas Urban" class="card object-cover object-center"> --}}
         {{-- Tidar --}}
         <img src="{{url('/image/schedule/tidar/Artboard 1.jpeg')}}" alt="Clas Urban" class="card object-cover object-center">
         <img src="{{url('/image/schedule/tidar/Artboard 2.jpeg')}}" alt="Clas Urban" class="card object-cover object-center">

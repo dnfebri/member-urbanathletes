@@ -4,6 +4,7 @@ use App\Http\Controllers\BackInShapeController;
 use App\Http\Controllers\ContentController;
 use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\PublicController;
+use App\Http\Controllers\Rp288Controller;
 use App\Http\Controllers\Rp77kController;
 use App\Http\Controllers\Rp99kController;
 use App\Http\Controllers\Sixpack3Controller;
@@ -54,6 +55,15 @@ Route::prefix('sixpack-3')->name('sixpack3.')->group(function () {
   Route::get('/confirm/{kode}/send', [Sixpack3Controller::class, 'confirmSend'])->name('confirmSend');
   Route::post('',[Sixpack3Controller::class, 'store'])->name('store');
   Route::put('{kode}',[Sixpack3Controller::class, 'update'])->name('update');
+});
+
+Route::prefix('288')->name('288.')->group(function () {
+  Route::get('', function () {return view("public/promo/288/index");})->name('index');
+  Route::get('/daftar', [Rp288Controller::class, 'daftar'])->name('daftar');
+  Route::get('/confirm', [Rp288Controller::class, 'confirm'])->name('confirm');
+  Route::get('/send/{kode}', [Rp288Controller::class, 'send'])->name('send');
+  Route::post('', [Rp288Controller::class, 'save'])->name('save');
+  // Route::get('/daftar', [Rp99kController::class, 'daftar'])->name('daftar');
 });
 
 Route::prefix('v2')->name('v2.')->group(function () {
