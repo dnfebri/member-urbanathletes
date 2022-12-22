@@ -1,5 +1,10 @@
 <x-main specialPage=true>
   <x-layout_card_form>
+    @if(session('success'))
+      <div data-massage="{{session('success')}}" data-email="{{session('email')}}" id="success">
+        {{-- <h3 class="mx-5 font-bold">Cek kotak masuk / spam email {{session('email')}} untuk melanjutkan pembayaran</h3> --}}
+      </div>
+    @endif
     <div class="p-4">
       <h3 class="font-FuturaBold my-2">Hallo {{ $dataInvoice->nama }}</h3>
       <p>Terimakasih banyak atas pemesanannya, data pemesanan {{ $dataInvoice->nama }} sudah kami terima.</p>
@@ -34,4 +39,17 @@
       </div>
     </div>
   </x-layout_card_form>
+  @push('script')
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+      let success = document.querySelector('#success');
+      if (success) {
+        Swal.fire(
+          'Email Terkirim',
+          success.getAttribute("data-massage")+'<br>'+success.getAttribute("data-email"),
+          'success'
+        )
+      }
+    </script>
+    @endpush
 </x-main>

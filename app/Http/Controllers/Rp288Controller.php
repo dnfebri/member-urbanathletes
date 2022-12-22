@@ -52,7 +52,7 @@ class Rp288Controller extends Controller
 
         $clubs = $this->apiModels->allClubs()['rows'];
         Mail::to( $rp288s->email )->send(new SendEmail($rp288s, $clubs));
-        return redirect()->route('288.send', ['kode' => $rp288s->kode]);
+        return redirect()->route('288.send', ['kode' => $rp288s->kode])->with('success', 'Silahkan cek Email yang kami kirim ke ')->with('email', $rp288s->email);
     }
 
     public function send($kode)

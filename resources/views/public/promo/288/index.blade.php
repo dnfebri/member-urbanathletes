@@ -103,7 +103,7 @@
         </div>
         <div class="text-center space-y-2 font-AmpleSoft">
           <img class="w-18 mx-auto rounded-lg" src="{{ url('/image/promo/288/mobileApp/mItem3.png')}}" alt="Booking apps UA">
-          <p>PT Session</p>
+          <p>Booking <br/>PT Session</p>
         </div>
         <div class="text-center space-y-2 font-AmpleSoft">
           <img class="w-18 mx-auto rounded-lg" src="{{ url('/image/promo/288/mobileApp/mItem4.png')}}" alt="Booking apps UA">
@@ -174,20 +174,20 @@
     <div class="my-12 px-8">
       <h2 class="text-xl md:text-3xl text-center font-black italic leading-snug text-transparent bg-clip-text bg-black text-shadow-lg">URBAN ATHLETES CLUBS</h2>
       <div class="flex flex-wrap py-4 justify-around">
-        <div class="m-4 w-full max-w-[280px] lg:max-w-sm px-2 relative min-h-[30rem]">
+        <div class="m-4 w-full max-w-[280px] lg:max-w-sm px-2 relative">
           <img class="object-cover object-center w-full mx-auto transition-all duration-300" src="{{ url('/image/promo/288/clubs/1.png')}}" alt="clubs Urban Athletes">
           <div class="p-4 font-AmpleSoft">
             <h3 class="text-xl font-FuturaBold italic pb-4">URBAN ATHLETES GUNAWANGSA MERR</h3>
-            <div class="flex items-center space-x-4 px-2">
+            {{-- <div class="flex items-center space-x-4 px-2">
               <i class="fa-solid fa-phone text-sm"></i>
               <p>(031) 51163660 </p>
             </div>
             <div class="flex items-start space-x-4 px-2 my-2">
               <i class="fa-solid fa-location-dot text-sm pt-1"></i>
               <p>Jl. Mayjend. Jonosewojo No.9, Pradahkalikendal, Kec. Dukuhpakis, Kota Surabaya, Jawa Timur 60216</p>
-            </div>
+            </div> --}}
           </div>
-          <div class="absolute bottom-2 right-2 left-2">
+          <div class="">
             <a href="https://goo.gl/maps/cL9JFBqttF9mavmr8" target="_blank"
               class="bg-gradient-to-r from-[#F0BE2E] to-[#FCF086] py-2"
             >
@@ -195,20 +195,20 @@
             </a>
           </div>
         </div>
-        <div class="m-4 w-full max-w-[280px] lg:max-w-sm px-2 relative min-h-[30rem]">
+        <div class="m-4 w-full max-w-[280px] lg:max-w-sm px-2 relative">
           <img class="object-cover object-center w-full mx-auto transition-all duration-300" src="{{ url('/image/promo/288/clubs/2.png')}}" alt="clubs Urban Athletes">
           <div class="p-4 font-AmpleSoft">
             <h3 class="text-xl font-FuturaBold italic pb-4">URBAN ATHLETES GUNAWANGSA TIDAR</h3>
-            <div class="flex items-center space-x-4 px-2">
+            {{-- <div class="flex items-center space-x-4 px-2">
               <i class="fa-solid fa-phone text-sm"></i>
               <p>(031) 99252900 </p>
             </div>
             <div class="flex items-start space-x-4 px-2 my-2">
               <i class="fa-solid fa-location-dot text-sm pt-1"></i>
               <p>Jl. Tidar No.350, Tembok Dukuh, Kec. Bubutan, Kota Surabaya, Jawa Timur 60173</p>
-            </div>
+            </div> --}}
           </div>
-          <div class="absolute bottom-2 right-2 left-2">
+          <div class="">
             <a href="https://goo.gl/maps/YPkvi67RBMGurZv57" target="_blank"
               class="bg-gradient-to-r from-[#F0BE2E] to-[#FCF086] py-2"
             >
@@ -216,20 +216,20 @@
             </a>
           </div>
         </div>
-        <div class="m-4 w-full max-w-[280px] lg:max-w-sm px-2 relative min-h-[30rem]">
+        <div class="m-4 w-full max-w-[280px] lg:max-w-sm px-2 relative">
           <img class="object-cover object-center w-full mx-auto transition-all duration-300" src="{{ url('/image/promo/288/clubs/3.png')}}" alt="clubs Urban Athletes">
           <div class="p-4 font-AmpleSoft">
             <h3 class="text-xl font-FuturaBold italic pb-4">URBAN ATHLETES LENMARC MALL</h3>
-            <div class="flex items-center space-x-4 px-2">
+            {{-- <div class="flex items-center space-x-4 px-2">
               <i class="fa-solid fa-phone text-sm"></i>
               <p>(031) 87853222 </p>
             </div>
             <div class="flex items-start space-x-4 px-2 my-2">
               <i class="fa-solid fa-location-dot text-sm pt-1"></i>
               <p>Jl. Raya Kedung Baruk No.96, Kedung Baruk, Kec. Rungkut, Kota Surabaya, Jawa Timur 60298</p>
-            </div>
+            </div> --}}
           </div>
-          <div class="absolute bottom-2 right-2 left-2">
+          <div class="">
             <a href="https://goo.gl/maps/54V2ZzUrBqrFktpc6" target="_blank"
               class="bg-gradient-to-r from-[#F0BE2E] to-[#FCF086] py-2"
             >
@@ -302,7 +302,7 @@
 
           <div class=" flex items-center">
             <input type="checkbox" value="1" name="agree" id="agree" onchange="agree(this)">
-            <label for="agree" class="mx-4">Saya Setujuh dengan Syarat & Ketentuan</label>
+            <label for="agree" class="mx-4">Saya Setuju dengan Syarat & Ketentuan</label>
           </div>
         </div>
         <!-- Modal footer -->
@@ -360,5 +360,20 @@
       });
 
     </script>
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '907245660654805');
+      fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=907245660654805&ev=PageView&noscript=1"
+    /></noscript>
   @endpush
 </x-main>

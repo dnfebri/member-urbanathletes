@@ -97,7 +97,7 @@
           </label>
         </div>
       </div>
-      <div class="flex justify-end my-4">
+      <div class="flex justify-end my-4 md:px-8">
         <button id="btn-submit" class="bg-green-500 py-2 px-6 rounded-lg mx-4 text-white text-lg" type="submit">Claim Promo</button>
         <span id="btn-disabled" class="hidden">
           <button class="flex items-center bg-green-500 opacity-80 py-2 px-2 mx-4 rounded-lg text-white text-lg" disabled>
