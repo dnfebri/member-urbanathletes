@@ -4,18 +4,24 @@
   @endpush
   <div class="2xl:container font-FuturaBold">
     <div class="p-4 w-full aspect-auto bg-[url('/image/promo/288/bgHeader.png')] bg-cover relative">
-      <div class="w-24 lg:ml-12 lg:mt-8">
+      <div class="w-24 lg:ml-12 lg:mt-4">
         <img class="w-full" src="{{ url('/image/Logo_Urban-2.png')}}" alt="Logo Urban Athletes">
       </div>
       <div class="container grid md:grid-cols-2 items-center">
-        <div class="my-8 lg:pl-32 text-white text-4xl md:text-5xl xl:text-6xl">
+        <div class="my-8 lg:ml-4 text-white text-4xl md:text-5xl xl:text-6xl">
           <h3 class="leading-snug font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#F0BE2E] to-[#FCF086] italic uppercase">
-            Gym Sultan Harga Rakyat
+            New YEAR <br/>new you
           </h3>
-          <h3 class="font-extrabold italic my-4 md:my-8 text-3xl md:text-4xl xl:text-5xl">
-            Hanya Rp.288.000
-          </h3>
-          <div class="flex items-center py-4">
+          <div class="text-2xl md:text-3xl">
+            <h4 class="leading-snug font-extrabold italic my-4 md:my-8 uppercase">
+              Jadikan Versi terbaik diri anda. 
+              Mulailah hari ini, jangan tunggu hari esok 
+            </h4>
+          </div>
+          <h4 class="text-2xl text-transparent bg-clip-text bg-gradient-to-r from-[#F0BE2E] to-[#FCF086] italic uppercase">
+            One click away from the New You
+          </h4>
+          <div class="flex items-center py-6">
             <button id="btn-submit"
               class="
                 py-2 px-4 rounded-xl bg-red-600 text-base uppercase font-thin
@@ -34,12 +40,12 @@
     </div>
 
     
-    <div class="mx-auto max-w-4xl text-center px-4 py-8">
+    <div class="mx-auto max-w-5xl text-center px-4 py-8">
       <h2 class="my-4 md:my-6 italic font-extrabold text-xl md:text-4xl">HAJAR LEMAKMU ! BUKAN DOMPETMU !</h2>
-      <p>Dapatkan membership dengan harga terjangkau selama 30 hari.</p>
+      <p class="md:text-2xl font-AmpleSoft font-black">Membership gym premium 30 hari hanya 288K, Buat orang cemburu dari perubahanmu.</p>
     </div>
 
-    <div class="p-4 w-full aspect-auto bg-[url('/image/promo/288/bgMain1.png')] bg-cover relative h-32 md:h-[19rem] lg:h-[23rem]">
+    <div class="p-4 w-full aspect-auto bg-[url('/image/promo/288/bgMain1.png')] bg-cover relative h-44 md:h-[23rem] lg:h-[26rem]">
       <div class="max-w-lg lg:max-w-3xl
         leading-snug font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#F0BE2E] to-[#FCF086] italic uppercase
         absolute bottom-0 py-4 md:p-8 md:text-2xl lg:p-12 lg:text-4xl
@@ -49,41 +55,37 @@
     </div>
 
     <div class="bg-black relative">
-      <div class="relative p-4 w-full max-w-xl lg:max-w-4xl aspect-auto bg-[url('/image/promo/288/bgMain2.png')] bg-cover h-44 sm:h-72 md:h-[23rem] lg:h-[23rem]">
-        <div class="absolute top-0 bottom-0 left-0 right-0 bg-gradient-to-t sm:bg-gradient-to-l from-black md:max-w-2xl lg:max-w-4xl"></div>
+      <div class="relative p-4 w-full max-w-xl lg:max-w-4xl aspect-auto bg-[url('/image/promo/288/bgMain2.png')] bg-cover h-44 sm:h-72 md:h-[23rem] lg:h-[26rem]">
+        <div class="absolute top-0 bottom-0 left-0 right-0 bg-gradient-to-t sm:bg-gradient-to-l from-black md:max-w-3xl lg:max-w-5xl"></div>
       </div>
-      <div class="max-w-xs md:max-w-lg px-4
+      <div class="max-w-xs md:max-w-lg px-4 mx-auto
         sm:absolute right-0 top-0 bottom-0 
-        py-4 md:pl-8 md:text-2xl
+        py-4 md:pl-8 md:text-2xl md:grid md:items-center
       ">
-        <h2 class="leading-snug font-extrabold text-red-700 italic uppercase">FREE</h2>
-        <h2 class="leading-snug font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#F0BE2E] to-[#FCF086] italic uppercase">
-          Tes komposisi lemak tubuh dengan In Body
-        </h2>
-        <div class="pl-4 font-AmpleSoft tracking-widest">
-          <ul class="list-disc text-[#F0BE2E]">
-            <li>
-              <p class="text-white font-thin text-sm">Hitung komposisi lemak</p>
-            </li>
-            <li>
-              <p class="text-white font-thin text-sm">Massa otot</p>
-            </li>
-            <li>
-              <p class="text-white font-thin text-sm">Berat & kekuatan tulang</p>
-            </li>
-            <li>
-              <p class="text-white font-thin text-sm">Hitung usia metabolisme tubuh</p>
-            </li>
-            <li>
-              <p class="text-white font-thin text-sm">Keseimbangan massa otot & lemak</p>
-            </li>
-            <li>
-              <p class="text-white font-thin text-sm">Hitung usia metabolisme tubuh</p>
-            </li>
-            <li>
-              <p class="text-white font-thin text-sm">Keseimbangan massa otot & lemak</p>
-            </li>
-          </ul>
+        <div class="py-8">
+          <h2 class="leading-snug font-extrabold text-red-700 italic uppercase">FREE</h2>
+          <h2 class="leading-snug font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#F0BE2E] to-[#FCF086] italic uppercase">
+            Tes komposisi lemak tubuh dengan In Body
+          </h2>
+          <div class="pl-4 my-2 tracking-widest">
+            <ul class="list-disc text-[#F0BE2E]">
+              <li>
+                <p class="text-white font-thin text-sm">Hitung komposisi lemak</p>
+              </li>
+              <li>
+                <p class="text-white font-thin text-sm">Massa otot</p>
+              </li>
+              <li>
+                <p class="text-white font-thin text-sm">Berat & kekuatan tulang</p>
+              </li>
+              <li>
+                <p class="text-white font-thin text-sm">Hitung usia metabolisme tubuh</p>
+              </li>
+              <li>
+                <p class="text-white font-thin text-sm">Keseimbangan massa otot & lemak</p>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -93,27 +95,27 @@
         <img class="w-full max-w-lg mx-auto" src="{{ url('/image/promo/288/mobileApp/imgMobileApp.png')}}" alt="Mobile apps UA">
       </div>
       <div class="grid grid-cols-3 gap-14 lg:gap-x-20 gap-y-12">
-        <div class="text-center space-y-2 font-AmpleSoft">
+        <div class="text-center space-y-2">
           <img class="w-18 mx-auto rounded-lg" src="{{ url('/image/promo/288/mobileApp/mItem1.png')}}" alt="Booking apps UA">
           <p>Booking kelas</p>
         </div>
-        <div class="text-center space-y-2 font-AmpleSoft">
+        <div class="text-center space-y-2">
           <img class="w-18 mx-auto rounded-lg" src="{{ url('/image/promo/288/mobileApp/mItem2.png')}}" alt="Booking apps UA">
           <p>Pembelian <br/>Membership</p>
         </div>
-        <div class="text-center space-y-2 font-AmpleSoft">
+        <div class="text-center space-y-2">
           <img class="w-18 mx-auto rounded-lg" src="{{ url('/image/promo/288/mobileApp/mItem3.png')}}" alt="Booking apps UA">
           <p>Booking <br/>PT Session</p>
         </div>
-        <div class="text-center space-y-2 font-AmpleSoft">
+        <div class="text-center space-y-2">
           <img class="w-18 mx-auto rounded-lg" src="{{ url('/image/promo/288/mobileApp/mItem4.png')}}" alt="Booking apps UA">
           <p>Point Reward <br/>Stamp</p>
         </div>
-        <div class="text-center space-y-2 font-AmpleSoft">
+        <div class="text-center space-y-2">
           <img class="w-18 mx-auto rounded-lg" src="{{ url('/image/promo/288/mobileApp/mItem5.png')}}" alt="Booking apps UA">
           <p>Members <br/>Benefit</p>
         </div>
-        <div class="text-center space-y-2 font-AmpleSoft">
+        <div class="text-center space-y-2">
           <img class="w-18 mx-auto rounded-lg" src="{{ url('/image/promo/288/mobileApp/mItem6.png')}}" alt="Booking apps UA">
           <p>Members <br/> Progress</p>
         </div>
@@ -173,7 +175,7 @@
 
     <div class="my-12 px-8">
       <h2 class="text-xl md:text-3xl text-center font-black italic leading-snug text-transparent bg-clip-text bg-black text-shadow-lg">URBAN ATHLETES CLUBS</h2>
-      <div class="flex flex-wrap py-4 justify-around">
+      <div class="flex flex-wrap lg:flex-nowrap py-4 justify-around">
         <div class="m-4 w-full max-w-[280px] lg:max-w-sm px-2 relative">
           <img class="object-cover object-center w-full mx-auto transition-all duration-300" src="{{ url('/image/promo/288/clubs/1.png')}}" alt="clubs Urban Athletes">
           <div class="p-4 font-AmpleSoft">
