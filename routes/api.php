@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\BackInShapeController;
+use App\Http\Controllers\Api\Rp288ControllerApi;
 use App\Http\Controllers\Api\Rp99kControllerApi;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -27,4 +28,8 @@ Route::prefix('v2')->group(function() {
 
 Route::prefix('rp99k')->group(function() {
     route::get('/', [Rp99kControllerApi::class, 'getAll']);
+});
+
+Route::prefix('288')->group(function() {
+    route::get('/', [Rp288ControllerApi::class, 'getAll']);
 });
