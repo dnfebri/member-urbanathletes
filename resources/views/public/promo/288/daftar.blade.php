@@ -108,12 +108,12 @@
       </div>
       <div class="border-t my-4 pb-4">
         <ul class="my-4 mx-4">
-          {{-- <li>
+          <li>
             <a href="{{ route('order.search') }}" class="text-blue-500 underline">Cek Status Pembayaran</a>
           </li>
           <li>
-            <a href="{{ route('99k.updateKode') }}" class="text-blue-500 underline">Generate Kode Baru</a>
-          </li> --}}
+            <a href="{{ route('288.generate') }}" class="text-blue-500 underline">Generate Kode Baru</a>
+          </li>
         </ul>
       </div>
     </form>

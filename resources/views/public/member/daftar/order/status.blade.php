@@ -31,8 +31,8 @@
             <td class="py-2 ">
               @if ($status['transaction_status'] === 'settlement' || $status['transaction_status'] === 'deny')
                 <span class="bg-green-400 rounded-md px-2">Telah Di Bayar</span>
-              {{-- @elseif ($status['transaction_status'] === 'deny')
-                <span class="bg-green-400 rounded-md px-2">{{$status['transaction_status']}}</span> --}}
+              @elseif ($status['transaction_status'] === 'expire')
+                <span class="bg-red-400 rounded-md px-2">{{$status['transaction_status']}}</span>
               @else
                 <span class="bg-yellow-400 rounded-md px-2">{{$status['transaction_status']}}</span>
               @endif

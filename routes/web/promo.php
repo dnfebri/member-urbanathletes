@@ -60,10 +60,12 @@ Route::prefix('sixpack-3')->name('sixpack3.')->group(function () {
 Route::prefix('288')->name('288.')->group(function () {
   Route::get('', function () {return view("public/promo/288/index");})->name('index');
   Route::get('/daftar', [Rp288Controller::class, 'daftar'])->name('daftar');
+  Route::get('/generate', [Rp288Controller::class, 'generate'])->name('generate');
   Route::get('/confirm', [Rp288Controller::class, 'confirm'])->name('confirm');
   Route::get('/send/{kode}', [Rp288Controller::class, 'send'])->name('send');
   Route::post('', [Rp288Controller::class, 'save'])->name('save');
   Route::post('order', [Rp288Controller::class, 'order'])->name('order');
+  Route::put('/generate',[Rp288Controller::class, 'updateKode'])->name('updateKode');
   // Route::get('/daftar', [Rp99kController::class, 'daftar'])->name('daftar');
 });
 

@@ -17,6 +17,5 @@ class Rp288ControllerApi extends Controller
         $rp99k = new Rp288();
         $data = $rp99k->getIndex($search)->paginate(10);
         return response()->json(["data" => $data, "clubs" => $clubs['rows']], 200);
-        // return response()->json(["data" => "Rp 288"], 200);
     }
 }

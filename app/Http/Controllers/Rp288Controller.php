@@ -23,6 +23,32 @@ class Rp288Controller extends Controller
         return view("public/promo/288/daftar", ['clubs' => $this->apiModels->allClubs()]);
     }
 
+    public function generate()
+    {
+        return view("public/promo/288/generate");
+    }
+
+    public function updateKode(Request $request)
+    {
+        $rp288s = Rp288::where('email', $request->email)->first();
+        if (!$rp288s) {
+            return redirect()->route('288.daftar')->withInput()->with('alert', 'Email anda belum terdaftar di 288 kami');
+        }
+        $clubs_kode = $this->apiModels->allClubs($rp288s->club_id);
+        $request->validate([
+            'email' => 'required|email',
+        ]);
+        Rp288::where('email', $rp288s->email)
+                    ->update([
+                        'kode' => 'UA-288-' . date('YmdH') . '-' . $clubs_kode['codename'] . '-' . rand(100, 999)
+                    ]);
+        $rp288sUpdate = Rp288::where('email', $request->email)->first();
+        $rp288sUpdate->url = url('288/confirm?kode=') ;
+        $clubs = $this->apiModels->allClubs()['rows'];
+        Mail::to( $rp288sUpdate->email )->send(new SendEmail($rp288sUpdate, $clubs));
+        return redirect()->route('288.daftar', ['kode' => $rp288sUpdate->kode])->with('success', 'Silahkan cek Email yang kami kirim ke ')->with('email', $rp288sUpdate->email);
+    }
+
     public function save(Request $request)
     {
         $request->validate(
@@ -77,7 +103,7 @@ class Rp288Controller extends Controller
         $order = $midtrans->getStatusOrder($dataReq->kode);
         if ($order['status_code'] != 404) {
             // dd($order);
-            return redirect()->route('v2.back-in-shape.status', ['id' => $order['order_id']]);
+            return redirect()->route('order.status', ['id' => $order['order_id']]);
         }
         $params = array(
             'transaction_details' => array(
