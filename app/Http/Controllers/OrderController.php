@@ -17,15 +17,14 @@ class OrderController extends Controller
     {
         
     }
-
-    public function status($id)
+    
+    function productOrder($kode)
     {
-        $dataStatus = new ApiMidtrans();
         $dataOrder = null;
-        $rp99k = Rp99k::where('kode', $id)->first();
-        $rp77k = Rp77k::where('kode', $id)->first();
-        $rp288k = Rp288::where('kode', $id)->first();
-        $rp199k = Rp199::where('kode', $id)->first();
+        $rp99k = Rp99k::where('kode', $kode)->first();
+        $rp77k = Rp77k::where('kode', $kode)->first();
+        $rp288k = Rp288::where('kode', $kode)->first();
+        $rp199k = Rp199::where('kode', $kode)->first();
         
         if ($rp99k) { 
             $dataOrder = $rp99k; 
@@ -43,6 +42,13 @@ class OrderController extends Controller
             $dataOrder = $rp199k; 
             $dataOrder->order_name = '199 membership';
         }
+        return $dataOrder;
+    }
+
+    public function status($id)
+    {
+        $dataStatus = new ApiMidtrans();
+        $dataOrder = $this->productOrder($id);
         if ($dataOrder === null) { return redirect()->route('order.notData'); }
         $data = [
             'status' => $dataStatus->getStatusOrder($id),
@@ -84,58 +90,36 @@ class OrderController extends Controller
 
     public function searchDetail($id = NULL)
     {
-        // dd(dataOrderJoin($id));
-        function dataOrderJoin($id) {
-            return DB::table('rp99ks')
-                    ->join('orders', 'rp99ks.kode', '=', 'orders.order_id')
-                    ->where('kode', $id)->first();
-        }
+        $dataOrder = NULL;
         $dataStatus = new ApiMidtrans();
-        $local = Orders::where('order_id', $id)->first();
+        $order = Orders::where('order_id', $id)->first();
         $midtrans = $dataStatus->getStatusOrder($id);
-        if (!$local) {
-            if ($midtrans['status_code'] != 200) {
-                $dataOrder = dataOrderJoin($id);
-                $data = [
-                    'status' => $dataStatus->getStatusOrder($id),
-                    'dataOrder' => $dataOrder
-                ];
-                return view("public/member/daftar/order/searchDetail", $data);
-            } else {
-                $dataOrder99k = Rp99k::where('kode', $id)->first();
-                $dataMidtrans = json_encode($midtrans);
+        $productOrder = $this->productOrder($id);
+        if (!$order && $midtrans['status_code'] == 200) {
+            // Sudah tersimpan di midtrans tapi belum tersipan di local
+            $dataMidtrans = json_encode($midtrans);
+            if ($productOrder) {
                 $order = Orders::create([
-                    'order_name' => "99K",
-                    'order_id' => $dataOrder99k->kode,
+                    'order_name' => $productOrder->order_name,
+                    'order_id' => $productOrder->kode,
                     'gross_amount' => $midtrans['gross_amount'],
                     'status' => $midtrans['transaction_status'],
                     'transaction_id' => $midtrans['transaction_id'],
                     'payment_type' => $midtrans['payment_type'],
                     'json_midtrans' => $dataMidtrans
                 ]);
-                $dataOrder = dataOrderJoin($id);
-                $data = [
-                    'status' => $dataStatus->getStatusOrder($id),
-                    'dataOrder' => $dataOrder
-                ];
-                return view("public/member/daftar/order/searchDetail", $data);
             }
-        } else {
-            if ($local->status !== $midtrans['transaction_status']) {
-                // echo "rubah status";
-                Orders::where('order_id', $local->order_id)
-                    ->update([
-                        'status' => $midtrans['transaction_status'],
-                        'json_midtrans' => json_encode($midtrans)
-                    ]);
-            }
-            $dataOrder = dataOrderJoin($id);
-            $data = [
-                'status' => $dataStatus->getStatusOrder($id),
-                'dataOrder' => $dataOrder
-            ];
-            return view("public/member/daftar/order/searchDetail", $data);
         }
+        if ($productOrder) {
+            $dataOrder = $order->toArray();
+            $dataOrder += $productOrder->toArray();
+        }
+        $data = [
+            'status' => $midtrans,
+            'dataOrder' => $dataOrder
+        ];
+        // dd($data);
+        return view("public/member/daftar/order/searchDetail", $data);
     }
 
     public function save(Request $request)

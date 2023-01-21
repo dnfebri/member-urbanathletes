@@ -1,5 +1,5 @@
 <div class="px-4 mt-8">
-  @if($dataOrder === NULL)
+  @if($dataOrder === NULL || $status["status_code"] == 404)
     <div class="flex justify-center items-center">
       <h1 class="font-bold">Data tidak ditemukan</h1>
     </div>
@@ -16,12 +16,12 @@
         <tr class="border-b">
           <td class="py-2">Nama</td>
           <td class="py-2">:</td>
-          <td class="py-2">{{$dataOrder->nama}}</td>
+          <td class="py-2">{{$dataOrder["nama"]}}</td>
         </tr>
         <tr class="border-b">
           <td class="py-2">Email</td>
           <td class="py-2">:</td>
-          <td class="py-2">{{$dataOrder->email}}</td>
+          <td class="py-2">{{$dataOrder["email"]}}</td>
         </tr>
         <tr class="border-b">
           <td class="py-2">Total Pembayaran</td>
