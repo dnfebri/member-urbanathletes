@@ -4,12 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Models\ApiMidtrans;
 use App\Models\Orders;
+use App\Models\Rp199;
 use App\Models\Rp288;
 use App\Models\Rp77k;
 use App\Models\Rp99k;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Laravel\Ui\Presets\Vue;
 
 class OrderController extends Controller
 {
@@ -25,6 +25,7 @@ class OrderController extends Controller
         $rp99k = Rp99k::where('kode', $id)->first();
         $rp77k = Rp77k::where('kode', $id)->first();
         $rp288k = Rp288::where('kode', $id)->first();
+        $rp199k = Rp199::where('kode', $id)->first();
         
         if ($rp99k) { 
             $dataOrder = $rp99k; 
@@ -37,6 +38,10 @@ class OrderController extends Controller
         if ($rp288k) { 
             $dataOrder = $rp288k; 
             $dataOrder->order_name = '288 membership';
+        }
+        if ($rp199k) { 
+            $dataOrder = $rp199k; 
+            $dataOrder->order_name = '199 membership';
         }
         if ($dataOrder === null) { return redirect()->route('order.notData'); }
         $data = [

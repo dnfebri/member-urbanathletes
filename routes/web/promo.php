@@ -3,13 +3,23 @@
 use App\Http\Controllers\BackInShapeController;
 use App\Http\Controllers\ContentController;
 use App\Http\Controllers\InvoiceController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\PublicController;
+use App\Http\Controllers\Rp199Controller;
 use App\Http\Controllers\Rp288Controller;
 use App\Http\Controllers\Rp77kController;
 use App\Http\Controllers\Rp99kController;
 use App\Http\Controllers\Sixpack3Controller;
 use Illuminate\Support\Facades\Route;
 
+
+Route::prefix('order')->name('order.')->group(function(){
+  Route::get('', [OrderController::class, 'notData'])->name('notData');
+  Route::post('', [OrderController::class, 'save'])->name('save'); // <=== ini masih dipakai
+  Route::get('/{id}/status', [OrderController::class, 'status'])->name('status');
+  Route::get('/status/{id}', [OrderController::class, 'searchDetail']);
+  Route::get('/status', [OrderController::class, 'search'])->name('search');
+});
 
 Route::prefix('daftar')->name('daftar.')->group(function () {
   // Route::get('', [PublicController::class, 'daftar'])->name('gym');
@@ -66,6 +76,18 @@ Route::prefix('288')->name('288.')->group(function () {
   Route::post('', [Rp288Controller::class, 'save'])->name('save');
   Route::post('order', [Rp288Controller::class, 'order'])->name('order');
   Route::put('/generate',[Rp288Controller::class, 'updateKode'])->name('updateKode');
+  // Route::get('/daftar', [Rp99kController::class, 'daftar'])->name('daftar');
+});
+
+Route::prefix('199')->name('199.')->group(function () {
+  Route::get('', function () {return view("public/promo/199/index");})->name('index');
+  Route::get('/daftar', [Rp199Controller::class, 'daftar'])->name('daftar');
+  Route::get('/generate', [Rp199Controller::class, 'generate'])->name('generate');
+  Route::get('/confirm', [Rp199Controller::class, 'confirm'])->name('confirm');
+  Route::get('/send/{kode}', [Rp199Controller::class, 'send'])->name('send');
+  Route::post('', [Rp199Controller::class, 'save'])->name('save');
+  Route::post('order', [Rp199Controller::class, 'order'])->name('order');
+  Route::put('/generate',[Rp199Controller::class, 'updateKode'])->name('updateKode');
   // Route::get('/daftar', [Rp99kController::class, 'daftar'])->name('daftar');
 });
 
